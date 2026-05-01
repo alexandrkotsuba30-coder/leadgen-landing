@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: alexandrkotsuba30-coder/leadgen-landing
+  branch: main
+  base_url: https://www.reklama-test.by
+  auth_endpoint: /api/auth
+
+site_url: https://www.reklama-test.by
+display_url: https://www.reklama-test.by
+logo_url: /favicon.ico
+publish_mode: simple
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Контент сайта"
+    files:
+      - label: "Главная страница"
+        name: "landing"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Бренд"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Название", name: "name", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Бейдж", name: "badge", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "text" }
+              - { label: "Подзаголовок", name: "subtitle", widget: "text" }
+              - { label: "Текст кнопки 1", name: "primaryCta", widget: "string" }
+              - { label: "Текст кнопки 2", name: "secondaryCta", widget: "string" }
+          - label: "Форма заявки"
+            name: "leadForm"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "text" }
+              - { label: "Подзаголовок", name: "subtitle", widget: "text" }
+              - { label: "Кнопка", name: "button", widget: "string" }
+          - label: "Контакты"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - { label: "Telegram (текст)", name: "telegramLabel", widget: "string" }
+              - { label: "Telegram URL", name: "telegramUrl", widget: "string" }
+              - { label: "Телефон (текст)", name: "phoneLabel", widget: "string" }
+              - { label: "Телефон URL", name: "phoneUrl", widget: "string" }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Лидогенерация для бизнеса — заявки через рекламу и лендинги</title>
-  <meta name="description" content="Настройка лидогенерации для бизнеса: лендинг, реклама, аналитика и заявки. Работа с локальным бизнесом, услугами, строительством, обучением и B2B." />
+  <title id="seoTitle">Лидогенерация для бизнеса — заявки через рекламу и лендинги</title>
+  <meta id="seoDescription" name="description" content="Настройка лидогенерации для бизнеса: лендинг, реклама, аналитика и заявки. Работа с локальным бизнесом, услугами, строительством, обучением и B2B." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -27,7 +27,7 @@
 <body class="bg-bg text-white antialiased">
   <header class="sticky top-0 z-30 border-b border-white/10 bg-bg/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-      <a href="#hero" class="text-sm font-semibold tracking-wide">Лидогенерация</a>
+      <a id="brandName" href="#hero" class="text-sm font-semibold tracking-wide">Лидогенерация</a>
       <nav class="hidden gap-6 text-sm text-gray-300 md:flex">
         <a href="#services" class="hover:text-white">Услуги</a>
         <a href="#process" class="hover:text-white">Процесс</a>
@@ -42,16 +42,16 @@
     <section id="hero" class="mx-auto max-w-6xl px-4 pb-14 pt-14 sm:px-6 sm:pt-20">
       <div class="grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-center">
         <div>
-          <p class="mb-4 inline-block rounded-full border border-accent/50 px-3 py-1 text-xs text-accent">Реклама + лендинг + аналитика</p>
-          <h1 class="text-3xl font-bold leading-tight sm:text-5xl">
+          <p id="heroBadge" class="mb-4 inline-block rounded-full border border-accent/50 px-3 py-1 text-xs text-accent">Реклама + лендинг + аналитика</p>
+          <h1 id="heroTitle" class="text-3xl font-bold leading-tight sm:text-5xl">
             Привожу заявки для бизнеса через рекламу, лендинг и аналитику
           </h1>
-          <p class="mt-5 max-w-2xl text-base text-gray-300 sm:text-lg">
+          <p id="heroSubtitle" class="mt-5 max-w-2xl text-base text-gray-300 sm:text-lg">
             Настраиваю связку: оффер → сайт → реклама → заявки. Работаю с услугами, строительством, обучением и локальным бизнесом.
           </p>
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="#lead-form" class="rounded-xl bg-accent px-6 py-3 text-center font-semibold text-black hover:opacity-90">Получить консультацию</a>
-            <a href="#contact" class="rounded-xl border border-white/20 px-6 py-3 text-center font-semibold hover:border-white/40">Написать в Telegram</a>
+            <a id="heroPrimaryCta" href="#lead-form" class="rounded-xl bg-accent px-6 py-3 text-center font-semibold text-black hover:opacity-90">Получить консультацию</a>
+            <a id="heroSecondaryCta" href="#contact" class="rounded-xl border border-white/20 px-6 py-3 text-center font-semibold hover:border-white/40">Написать в Telegram</a>
           </div>
         </div>
         <div class="rounded-2xl border border-white/10 bg-panel p-5 shadow-soft">
@@ -154,14 +154,14 @@
 
     <section id="lead-form" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <div class="rounded-2xl border border-white/10 bg-panel p-6 sm:p-8">
-        <h2 class="text-2xl font-bold sm:text-4xl">Хотите понять, сколько заявок можно получать в вашей нише?</h2>
-        <p class="mt-3 text-gray-300">Оставьте контакты — разберу вашу ситуацию и предложу первый план запуска.</p>
+        <h2 id="leadFormTitle" class="text-2xl font-bold sm:text-4xl">Хотите понять, сколько заявок можно получать в вашей нише?</h2>
+        <p id="leadFormSubtitle" class="mt-3 text-gray-300">Оставьте контакты — разберу вашу ситуацию и предложу первый план запуска.</p>
 
         <form id="leadForm" class="mt-6 grid gap-4 sm:grid-cols-2">
           <input id="name" type="text" placeholder="Имя" required class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring" />
           <input id="phone" type="text" placeholder="Телефон" required class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring" />
           <textarea id="niche" placeholder="Ниша / комментарий" rows="4" class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring sm:col-span-2"></textarea>
-          <button type="submit" class="sm:col-span-2 rounded-xl bg-accent px-6 py-3 font-semibold text-black hover:opacity-90">Получить разбор</button>
+          <button id="leadFormButton" type="submit" class="sm:col-span-2 rounded-xl bg-accent px-6 py-3 font-semibold text-black hover:opacity-90">Получить разбор</button>
         </form>
 
         <p id="formNote" class="mt-3 text-sm text-muted"></p>
@@ -171,8 +171,8 @@
     <section id="contact" class="mx-auto max-w-6xl px-4 pb-16 pt-4 sm:px-6">
       <h2 class="text-2xl font-bold sm:text-4xl">Контакты</h2>
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
-        <a href="https://t.me/Alexandr_K1503" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">Telegram</a>
-        <a href="tel:+375447375050" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">+375(44)737-50-50</a>
+        <a id="contactTelegram" href="https://t.me/Alexandr_K1503" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">Telegram</a>
+        <a id="contactPhone" href="tel:+375447375050" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">+375(44)737-50-50</a>
       </div>
     </section>
   </main>
@@ -202,6 +202,50 @@
 
       note.textContent = 'Открылся Telegram с текстом заявки. Отправьте сообщение, чтобы я получил заявку.';
     });
+
+    // Load editable content from CMS JSON (if unavailable, fallback to static HTML above)
+    (async () => {
+      try {
+        const resp = await fetch('/content/site.json', { cache: 'no-store' });
+        if (!resp.ok) return;
+        const data = await resp.json();
+        if (!data || typeof data !== 'object') return;
+
+        const setText = (id, value) => {
+          if (!value) return;
+          const el = document.getElementById(id);
+          if (el) el.textContent = value;
+        };
+        const setHref = (id, value) => {
+          if (!value) return;
+          const el = document.getElementById(id);
+          if (el) el.setAttribute('href', value);
+        };
+
+        if (data.seo?.title) document.title = data.seo.title;
+        if (data.seo?.description) {
+          const meta = document.getElementById('seoDescription');
+          if (meta) meta.setAttribute('content', data.seo.description);
+        }
+
+        setText('brandName', data.brand?.name);
+        setText('heroBadge', data.hero?.badge);
+        setText('heroTitle', data.hero?.title);
+        setText('heroSubtitle', data.hero?.subtitle);
+        setText('heroPrimaryCta', data.hero?.primaryCta);
+        setText('heroSecondaryCta', data.hero?.secondaryCta);
+        setText('leadFormTitle', data.leadForm?.title);
+        setText('leadFormSubtitle', data.leadForm?.subtitle);
+        setText('leadFormButton', data.leadForm?.button);
+
+        setText('contactTelegram', data.contacts?.telegramLabel);
+        setText('contactPhone', data.contacts?.phoneLabel);
+        setHref('contactTelegram', data.contacts?.telegramUrl);
+        setHref('contactPhone', data.contacts?.phoneUrl);
+      } catch (err) {
+        // Keep static content if JSON is unavailable.
+      }
+    })();
 
     // TODO: Real lead delivery options
     // Option A (Formspree):
