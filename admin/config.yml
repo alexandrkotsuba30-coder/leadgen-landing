@@ -33,7 +33,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Название", name: "name", widget: "string" }
-          - label: "Hero"
+          - label: "Первый экран"
             name: "hero"
             widget: "object"
             fields:
@@ -53,7 +53,7 @@ collections:
             name: "contacts"
             widget: "object"
             fields:
-              - { label: "Telegram (текст)", name: "telegramLabel", widget: "string" }
+              - { label: "Telegram текст", name: "telegramLabel", widget: "string" }
               - { label: "Telegram URL", name: "telegramUrl", widget: "string" }
-              - { label: "Телефон (текст)", name: "phoneLabel", widget: "string" }
+              - { label: "Телефон текст", name: "phoneLabel", widget: "string" }
               - { label: "Телефон URL", name: "phoneUrl", widget: "string" }

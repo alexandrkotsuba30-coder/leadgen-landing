@@ -1,263 +1,1231 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="seoTitle">Лидогенерация для бизнеса — заявки через рекламу и лендинги</title>
-  <meta id="seoDescription" name="description" content="Настройка лидогенерации для бизнеса: лендинг, реклама, аналитика и заявки. Работа с локальным бизнесом, услугами, строительством, обучением и B2B." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#0D0D0D',
-            panel: '#161616',
-            muted: '#A3A3A3',
-            accent: '#F97316'
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,.25)'
-          }
-        }
+  <title id="seoTitle">Лидогенерация под ключ в Беларуси - лендинг, реклама, аналитика и заявки</title>
+  <meta id="seoDescription" name="description" content="Лидогенерация под ключ для бизнеса: разработка лендинга, запуск рекламы, настройка аналитики и получение заявок. Работаю с услугами, недвижимостью, обучением, ремонтом, B2B и локальным бизнесом." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.reklama-test.by/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Лидогенерация под ключ - заявки для бизнеса" />
+  <meta property="og:description" content="Собираю связку: оффер, лендинг, реклама, аналитика и заявки. Быстрый запуск для малого и среднего бизнеса." />
+  <meta property="og:url" content="https://www.reklama-test.by/" />
+  <meta name="theme-color" content="#101114" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101114;
+      --ink-2: #1d2026;
+      --paper: #f7f7f2;
+      --white: #ffffff;
+      --muted: #69707d;
+      --line: rgba(16, 17, 20, .14);
+      --lime: #c8ff4d;
+      --cyan: #65d8ff;
+      --coral: #ff6b4a;
+      --shadow: 0 20px 60px rgba(16, 17, 20, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Onest", "Segoe UI", sans-serif;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid rgba(255, 255, 255, .13);
+      background: rgba(16, 17, 20, .86);
+      color: var(--white);
+      backdrop-filter: blur(18px);
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 22px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--lime); color: var(--ink); }
+    .btn-dark { background: var(--ink); color: var(--white); }
+    .btn-outline { border-color: rgba(255, 255, 255, .24); color: var(--white); }
+    .btn-light { border-color: var(--line); background: var(--white); color: var(--ink); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 88svh;
+      padding: 82px 0 46px;
+      background:
+        linear-gradient(135deg, rgba(101, 216, 255, .16), transparent 36%),
+        linear-gradient(25deg, rgba(200, 255, 77, .12), transparent 38%),
+        var(--ink);
+      color: var(--white);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.92), rgba(0,0,0,.18));
+      z-index: -2;
+    }
+
+    .hero-visual {
+      position: absolute;
+      inset: auto 0 18px auto;
+      width: min(720px, 92vw);
+      height: 460px;
+      pointer-events: none;
+      opacity: .88;
+      z-index: -1;
+    }
+
+    .mobile-pipeline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .mobile-pipeline span {
+      min-height: 62px;
+      display: grid;
+      align-content: center;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      background: rgba(255,255,255,.07);
+      padding: 12px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .mobile-pipeline small {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--lime);
+      font-size: 11px;
+    }
+
+    .stage-card {
+      position: absolute;
+      width: 190px;
+      min-height: 96px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.09);
+      box-shadow: 0 22px 70px rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+    }
+
+    .stage-card small {
+      display: block;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 8px;
+    }
+
+    .stage-card strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .stage-card:nth-child(1) { left: 18px; top: 42px; }
+    .stage-card:nth-child(2) { left: 250px; top: 118px; border-color: rgba(200,255,77,.48); }
+    .stage-card:nth-child(3) { left: 460px; top: 20px; }
+    .stage-card:nth-child(4) { left: 350px; top: 278px; border-color: rgba(101,216,255,.46); }
+
+    .hero-line {
+      position: absolute;
+      left: 106px;
+      top: 108px;
+      width: 510px;
+      height: 220px;
+      border-top: 2px solid rgba(200,255,77,.42);
+      border-right: 2px solid rgba(101,216,255,.36);
+      transform: skewY(12deg);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 22px 0 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--lime);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--lime);
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      margin-top: 22px;
+      font-size: 44px;
+      line-height: .98;
+      font-weight: 800;
+      letter-spacing: 0;
+      max-width: 760px;
+    }
+
+    .hero-text {
+      margin-top: 24px;
+      max-width: 670px;
+      color: rgba(255,255,255,.75);
+      font-size: 18px;
+    }
+
+    .hero-text strong {
+      color: var(--white);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 30px;
+      max-width: 360px;
+    }
+
+    .hero-facts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 34px;
+      max-width: 720px;
+    }
+
+    .fact {
+      border-left: 2px solid var(--lime);
+      padding-left: 14px;
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--coral);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .band-dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .band-dark .lead { color: rgba(255,255,255,.68); }
+    .band-dark .section-kicker { color: var(--lime); }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-3,
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 10px 34px rgba(16,17,20,.06);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .dark-card {
+      border-color: rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      box-shadow: none;
+    }
+
+    .dark-card p,
+    .dark-card li { color: rgba(255,255,255,.68); }
+
+    .step {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .step-num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--lime);
+      font-weight: 800;
+    }
+
+    .service-card {
+      display: grid;
+      gap: 14px;
+      min-height: 160px;
+    }
+
+    .service-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .case-card {
+      display: grid;
+      gap: 18px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .case-shot {
+      min-height: 190px;
+      padding: 18px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .case-window {
+      height: 154px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      padding: 14px;
+      background:
+        linear-gradient(90deg, rgba(200,255,77,.24), transparent 50%),
+        rgba(255,255,255,.08);
+      display: grid;
+      gap: 10px;
+      align-content: center;
+    }
+
+    .case-window span {
+      display: block;
+      height: 10px;
+      border-radius: 2px;
+      background: rgba(255,255,255,.22);
+    }
+
+    .case-window span:nth-child(1) { width: 72%; background: var(--lime); }
+    .case-window span:nth-child(2) { width: 92%; }
+    .case-window span:nth-child(3) { width: 55%; background: rgba(101,216,255,.46); }
+
+    .case-body {
+      padding: 0 22px 22px;
+    }
+
+    .case-link {
+      display: inline-flex;
+      margin-top: 14px;
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 4px;
+      text-underline-offset: 4px;
+    }
+
+    .price-card {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .price-card .btn {
+      width: 100%;
+    }
+
+    .price-card.featured {
+      border-color: rgba(16,17,20,.72);
+      background: var(--ink);
+      color: var(--white);
+      transform: translateY(-4px);
+    }
+
+    .price-card.featured p,
+    .price-card.featured li { color: rgba(255,255,255,.72); }
+
+    .price {
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .price small {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .price-card.featured .price small { color: rgba(255,255,255,.58); }
+
+    .clean-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .clean-list li {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .clean-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55em;
+      width: 10px;
+      height: 10px;
+      background: var(--lime);
+      border-radius: 2px;
+    }
+
+    .proof {
+      display: grid;
+      gap: 18px;
+      border-top: 1px solid rgba(255,255,255,.16);
+      padding-top: 26px;
+      margin-top: 30px;
+    }
+
+    .proof strong {
+      color: var(--lime);
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .form-layout {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .lead-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      color: rgba(255,255,255,.72);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      padding: 14px 14px;
+      outline: none;
+    }
+
+    select option { color: var(--ink); }
+    textarea { resize: vertical; min-height: 118px; }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--lime);
+      box-shadow: 0 0 0 3px rgba(200,255,77,.18);
+    }
+
+    .form-note {
+      min-height: 22px;
+      color: rgba(255,255,255,.68);
+      font-size: 14px;
+    }
+
+    .form-note.success { color: var(--lime); }
+    .form-note.error { color: #ffb4a3; }
+
+    .faq {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq details {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .faq p {
+      margin-top: 12px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.7);
+      padding: 40px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (min-width: 680px) {
+      .mobile-pipeline { display: none; }
+      .hero-actions { flex-direction: row; max-width: none; }
+      .hero-facts { grid-template-columns: repeat(2, 1fr); }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .form-layout { grid-template-columns: .85fr 1.15fr; }
+      .footer-grid { grid-template-columns: 1fr auto; align-items: center; }
+    }
+
+    @media (min-width: 920px) {
+      .nav-links { display: flex; }
+      h1 { font-size: 72px; }
+      h2 { font-size: 46px; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .hero-text { font-size: 20px; }
+      .proof { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    @media (min-width: 1180px) {
+      h1 { font-size: 86px; }
+      .hero { padding-top: 96px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
       }
     }
-  </script>
+
+    @media (max-width: 679px) {
+      .wrap {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .site-header .btn {
+        min-height: 42px;
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 44px 0 34px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .hero-copy {
+        padding: 8px 0 0;
+      }
+
+      .eyebrow {
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+      }
+
+      h1 {
+        margin-top: 18px;
+        font-size: 43px;
+        line-height: .95;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .hero-text {
+        margin-top: 18px;
+        font-size: 18px;
+        line-height: 1.42;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .case-shot {
+        min-height: 150px;
+      }
+
+      .case-window {
+        height: 118px;
+      }
+    }
+
+    @media (max-width: 359px) {
+      h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-bg text-white antialiased">
-  <header class="sticky top-0 z-30 border-b border-white/10 bg-bg/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-      <a id="brandName" href="#hero" class="text-sm font-semibold tracking-wide">Лидогенерация</a>
-      <nav class="hidden gap-6 text-sm text-gray-300 md:flex">
-        <a href="#services" class="hover:text-white">Услуги</a>
-        <a href="#process" class="hover:text-white">Процесс</a>
-        <a href="#formats" class="hover:text-white">Форматы</a>
-        <a href="#contact" class="hover:text-white">Контакты</a>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a id="brandName" class="brand" href="#hero" aria-label="На первый экран">
+        <span class="brand-mark">LC</span>
+        <span>LeadCore</span>
+      </a>
+      <nav class="nav-links" aria-label="Главная навигация">
+        <a href="#system">Связка</a>
+        <a href="#examples">Примеры</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#lead-form">Заявка</a>
       </nav>
-      <a href="#lead-form" class="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-black hover:opacity-90">Получить разбор</a>
+      <a class="btn btn-primary" href="#lead-form">Получить план</a>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="mx-auto max-w-6xl px-4 pb-14 pt-14 sm:px-6 sm:pt-20">
-      <div class="grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-center">
-        <div>
-          <p id="heroBadge" class="mb-4 inline-block rounded-full border border-accent/50 px-3 py-1 text-xs text-accent">Реклама + лендинг + аналитика</p>
-          <h1 id="heroTitle" class="text-3xl font-bold leading-tight sm:text-5xl">
-            Привожу заявки для бизнеса через рекламу, лендинг и аналитику
-          </h1>
-          <p id="heroSubtitle" class="mt-5 max-w-2xl text-base text-gray-300 sm:text-lg">
-            Настраиваю связку: оффер → сайт → реклама → заявки. Работаю с услугами, строительством, обучением и локальным бизнесом.
-          </p>
-          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a id="heroPrimaryCta" href="#lead-form" class="rounded-xl bg-accent px-6 py-3 text-center font-semibold text-black hover:opacity-90">Получить консультацию</a>
-            <a id="heroSecondaryCta" href="#contact" class="rounded-xl border border-white/20 px-6 py-3 text-center font-semibold hover:border-white/40">Написать в Telegram</a>
+    <section id="hero" class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-line"></div>
+        <div class="stage-card"><small>01</small><strong>Оффер</strong></div>
+        <div class="stage-card"><small>02</small><strong>Лендинг</strong></div>
+        <div class="stage-card"><small>03</small><strong>Реклама</strong></div>
+        <div class="stage-card"><small>04</small><strong>Заявки</strong></div>
+      </div>
+      <div class="wrap">
+        <div class="hero-copy">
+          <p id="heroBadge" class="eyebrow">Сайт + реклама + аналитика</p>
+          <h1 id="heroTitle">Лидогенерация под ключ</h1>
+          <p id="heroSubtitle" class="hero-text">Собираю для бизнеса понятную систему привлечения клиентов: упаковываем оффер, делаем посадочную страницу, запускаем рекламу, подключаем аналитику и заявки в Telegram.</p>
+          <div class="hero-actions">
+            <a id="heroPrimaryCta" class="btn btn-primary" href="#lead-form">Получить план запуска</a>
+            <a id="heroSecondaryCta" class="btn btn-outline" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+          <div class="mobile-pipeline" aria-label="Схема лидогенерации">
+            <span><small>01</small>Оффер</span>
+            <span><small>02</small>Лендинг</span>
+            <span><small>03</small>Реклама</span>
+            <span><small>04</small>Заявки</span>
+          </div>
+          <div class="hero-facts" aria-label="Ключевые условия">
+            <div class="fact">Запуск простой связки за 3-7 дней</div>
+            <div class="fact">Рекламный бюджет от $500</div>
+            <div class="fact">Работа с услугами, обучением, недвижимостью и B2B</div>
+            <div class="fact">Фокус на заявках, цене лида и понятных цифрах</div>
           </div>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-panel p-5 shadow-soft">
-          <ul class="space-y-3 text-sm sm:text-base">
-            <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-accent"></span><span>Запуск за 3–7 дней</span></li>
-            <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-accent"></span><span>Прозрачная аналитика</span></li>
-            <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-accent"></span><span>Работа с рекламным бюджетом от $500</span></li>
-            <li class="flex items-start gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-accent"></span><span>Фокус на заявках, а не на красивых отчётах</span></li>
-          </ul>
+      </div>
+    </section>
+
+    <section id="system">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Понятная картинка</p>
+          <h2>Не “просто сайт”, а связка до заявки</h2>
+          <p class="lead">Большинство страниц не продают, потому что в них нет маршрута: кому показываем рекламу, что обещаем, куда ведем человека и как измеряем результат. Я собираю эту цепочку целиком.</p>
+        </div>
+        <div class="grid grid-4">
+          <article class="card step">
+            <span class="step-num">1</span>
+            <h3>Оффер</h3>
+            <p>Формулируем понятное предложение под нишу, город и чек.</p>
+          </article>
+          <article class="card step">
+            <span class="step-num">2</span>
+            <h3>Лендинг</h3>
+            <p>Собираем страницу с сильным первым экраном, пакетами и формами.</p>
+          </article>
+          <article class="card step">
+            <span class="step-num">3</span>
+            <h3>Трафик</h3>
+            <p>Запускаем Google, Яндекс или Meta под конкретную задачу.</p>
+          </article>
+          <article class="card step">
+            <span class="step-num">4</span>
+            <h3>Аналитика</h3>
+            <p>Смотрим заявки, стоимость лида, конверсию и слабые места.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="services" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Что я делаю</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Лендинг под оффер</article>
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Google Ads / Яндекс Директ</article>
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Meta Ads</article>
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Аналитика и цели</article>
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Тестирование гипотез</article>
-        <article class="rounded-xl border border-white/10 bg-panel p-5">Оптимизация стоимости заявки</article>
+    <section id="services" class="band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Что делаю</p>
+          <h2>Закрываю ключевые части запуска</h2>
+          <p class="lead">Можно начать с простого лендинга, а можно сразу собрать систему под заявки и тест рекламных гипотез.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card dark-card service-card">
+            <span class="service-label">Landing</span>
+            <h3>Лендинг под оффер</h3>
+            <p>Структура, тексты, блоки доверия, пакеты, форма и мобильная версия.</p>
+          </article>
+          <article class="card dark-card service-card">
+            <span class="service-label">Ads</span>
+            <h3>Контекст и таргет</h3>
+            <p>Google Ads, Яндекс Директ, Meta Ads. Канал выбираем под нишу.</p>
+          </article>
+          <article class="card dark-card service-card">
+            <span class="service-label">Numbers</span>
+            <h3>Аналитика и цели</h3>
+            <p>Настраиваем события, цели, формы и контроль заявок.</p>
+          </article>
+          <article class="card dark-card service-card">
+            <span class="service-label">Offer</span>
+            <h3>Тест гипотез</h3>
+            <p>Проверяем разные смыслы: цена, подарок, консультация, расчет, пробный формат.</p>
+          </article>
+          <article class="card dark-card service-card">
+            <span class="service-label">CPL</span>
+            <h3>Оптимизация цены заявки</h3>
+            <p>Смотрим, где теряется бюджет, и усиливаем работающие объявления.</p>
+          </article>
+          <article class="card dark-card service-card">
+            <span class="service-label">Telegram</span>
+            <h3>Заявки в Telegram</h3>
+            <p>Форма отправляет заявку в чат с ботом, чтобы не ждать почту и таблицы.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="audience" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Кому подойдёт</h2>
-      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 text-gray-200">
-        <div class="rounded-xl border border-white/10 p-4">Строительные и ремонтные услуги</div>
-        <div class="rounded-xl border border-white/10 p-4">Обучение и курсы</div>
-        <div class="rounded-xl border border-white/10 p-4">Локальный бизнес</div>
-        <div class="rounded-xl border border-white/10 p-4">B2B-услуги</div>
-        <div class="rounded-xl border border-white/10 p-4">Недвижимость</div>
-        <div class="rounded-xl border border-white/10 p-4">Услуги с высоким чеком</div>
+    <section id="examples">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Примеры</p>
+          <h2>Проекты и ниши, на которых видно подход</h2>
+          <p class="lead">Не придумываю фейковые цифры. Здесь показываем направления, где уже есть понятная логика лендинга: оффер, CTA, доверие, тарифы или заявка.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card case-card">
+            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-body">
+              <h3>Недвижимость в Минске</h3>
+              <p>Оценка объекта, консультация, отдельный сайт под объект и рекламная связка.</p>
+              <a class="case-link" href="https://minsk.centr7a.by/" target="_blank" rel="noopener">Смотреть пример</a>
+            </div>
+          </article>
+          <article class="card case-card">
+            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-body">
+              <h3>Школа рисования</h3>
+              <p>Пробное занятие, лид-форма, преимущества, преподаватели и понятный CTA.</p>
+              <a class="case-link" href="https://indigo-minsk.by/" target="_blank" rel="noopener">Смотреть пример</a>
+            </div>
+          </article>
+          <article class="card case-card">
+            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-body">
+              <h3>Интенсив по ИИ</h3>
+              <p>Упаковка программы, аудитории, тарифов, спикеров и регистрации на событие.</p>
+              <a class="case-link" href="https://aipeople.by/" target="_blank" rel="noopener">Смотреть пример</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="process" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Как проходит работа</h2>
-      <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        <li class="rounded-xl border border-white/10 bg-panel p-4"><span class="text-accent">1.</span> Разбираю нишу, оффер и конкурентов</li>
-        <li class="rounded-xl border border-white/10 bg-panel p-4"><span class="text-accent">2.</span> Собираю или дорабатываю посадочную страницу</li>
-        <li class="rounded-xl border border-white/10 bg-panel p-4"><span class="text-accent">3.</span> Настраиваю рекламу и аналитику</li>
-        <li class="rounded-xl border border-white/10 bg-panel p-4"><span class="text-accent">4.</span> Запускаю тест</li>
-        <li class="rounded-xl border border-white/10 bg-panel p-4"><span class="text-accent">5.</span> Оптимизирую связку по стоимости заявки</li>
-      </ol>
-    </section>
-
-    <section id="formats" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl font-bold sm:text-4xl">Форматы работы</h2>
-        <p class="text-sm text-muted">Стоимость зависит от ниши и объёма работ</p>
-      </div>
-      <div class="mt-6 grid gap-4 lg:grid-cols-3">
-        <article class="rounded-2xl border border-white/10 bg-panel p-6">
-          <h3 class="text-xl font-semibold">Быстрый запуск</h3>
-          <p class="mt-2 text-gray-300">Для проверки спроса</p>
-          <p class="mt-4 text-sm text-gray-300">Лендинг + базовая реклама + аналитика</p>
-        </article>
-        <article class="rounded-2xl border border-accent/60 bg-panel p-6 shadow-soft">
-          <p class="text-xs text-accent">Рекомендуемый формат</p>
-          <h3 class="mt-2 text-xl font-semibold">Лидогенерация под ключ</h3>
-          <p class="mt-4 text-sm text-gray-300">Сайт, реклама, аналитика, оптимизация</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-panel p-6">
-          <h3 class="text-xl font-semibold">Аудит и усиление</h3>
-          <p class="mt-2 text-gray-300">Если реклама уже есть, но заявки дорогие или слабые</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="why" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Почему со мной</h2>
-      <ul class="mt-6 grid gap-3 text-gray-200 sm:grid-cols-2">
-        <li class="rounded-xl border border-white/10 p-4">9+ лет в интернет-маркетинге</li>
-        <li class="rounded-xl border border-white/10 p-4">Опыт в недвижимости и услугах</li>
-        <li class="rounded-xl border border-white/10 p-4">Понимаю не только рекламу, но и продажи</li>
-        <li class="rounded-xl border border-white/10 p-4">Работаю с цифрами: заявки, цена лида, конверсия</li>
-        <li class="rounded-xl border border-white/10 p-4 sm:col-span-2">Не обещаю чудес, сначала тестирую гипотезы</li>
-      </ul>
-    </section>
-
-    <section id="start" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Что нужно для старта</h2>
-      <ul class="mt-6 space-y-3 text-gray-200">
-        <li class="rounded-xl border border-white/10 p-4">Ниша и город</li>
-        <li class="rounded-xl border border-white/10 p-4">Текущий сайт или идея оффера</li>
-        <li class="rounded-xl border border-white/10 p-4">Рекламный бюджет</li>
-        <li class="rounded-xl border border-white/10 p-4">Доступы к рекламным кабинетам, если они есть</li>
-        <li class="rounded-xl border border-white/10 p-4">Понимание маржинальности услуги</li>
-      </ul>
-    </section>
-
-    <section id="cases" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Примеры проектов</h2>
-      <div class="mt-6 rounded-2xl border border-dashed border-white/20 bg-panel p-6 text-gray-300">
-        Добавить реальные кейсы позже.
+    <section id="packages" class="band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Пакеты</p>
+          <h2>Три формата под разный уровень запуска</h2>
+          <p class="lead">Цена фиксирует стартовый объем работ. Рекламный бюджет оплачивается отдельно и идет в рекламные кабинеты.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card price-card">
+            <h3>Сайт под заявки</h3>
+            <div class="price">$250 <small>старт</small></div>
+            <p>Для бизнеса, которому нужен быстрый лендинг и форма заявки.</p>
+            <ul class="clean-list">
+              <li>Структура лендинга</li>
+              <li>Тексты под оффер</li>
+              <li>Мобильная версия</li>
+              <li>Форма заявки в Telegram</li>
+              <li>Базовая SEO-подготовка</li>
+            </ul>
+            <a class="btn btn-light" href="#lead-form" data-package-link="Сайт под заявки - $250">Выбрать пакет</a>
+          </article>
+          <article class="card price-card featured">
+            <h3>Запуск рекламы</h3>
+            <div class="price">$490 <small>рекомендую</small></div>
+            <p>Лендинг, аналитика и первичный рекламный тест.</p>
+            <ul class="clean-list">
+              <li>Все из пакета $250</li>
+              <li>Настройка целей и событий</li>
+              <li>Подготовка рекламной структуры</li>
+              <li>Запуск тестовых кампаний</li>
+              <li>Первичные выводы по заявкам</li>
+            </ul>
+            <a class="btn btn-primary" href="#lead-form" data-package-link="Запуск рекламы - $490">Выбрать пакет</a>
+          </article>
+          <article class="card price-card">
+            <h3>Под ключ</h3>
+            <div class="price">$1200 <small>система</small></div>
+            <p>Полный цикл: сайт, реклама, аналитика и оптимизация.</p>
+            <ul class="clean-list">
+              <li>Все из пакета $490</li>
+              <li>Несколько офферов и гипотез</li>
+              <li>Расширенная аналитика</li>
+              <li>Оптимизация по цене заявки</li>
+              <li>Сопровождение запуска</li>
+            </ul>
+            <a class="btn btn-light" href="#lead-form" data-package-link="Под ключ - $1200">Выбрать пакет</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="lead-form" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div class="rounded-2xl border border-white/10 bg-panel p-6 sm:p-8">
-        <h2 id="leadFormTitle" class="text-2xl font-bold sm:text-4xl">Хотите понять, сколько заявок можно получать в вашей нише?</h2>
-        <p id="leadFormSubtitle" class="mt-3 text-gray-300">Оставьте контакты — разберу вашу ситуацию и предложу первый план запуска.</p>
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Процесс</p>
+          <h2>Как проходит работа</h2>
+          <p class="lead">Я не начинаю с дизайна ради дизайна. Сначала разбираем, что именно человек должен понять на странице, почему оставить заявку и как мы поймем, что реклама работает.</p>
+        </div>
+        <div class="grid grid-4">
+          <article class="card step"><span class="step-num">1</span><h3>Разбор</h3><p>Ниша, город, услуга, чек, конкуренты и текущие источники заявок.</p></article>
+          <article class="card step"><span class="step-num">2</span><h3>Сборка</h3><p>Лендинг, тексты, пакеты, CTA, форма и мобильная адаптация.</p></article>
+          <article class="card step"><span class="step-num">3</span><h3>Запуск</h3><p>Рекламная структура, цели, события и отправка заявок в Telegram.</p></article>
+          <article class="card step"><span class="step-num">4</span><h3>Оптимизация</h3><p>Смотрим цену заявки, качество обращений и усиливаем рабочие связки.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <form id="leadForm" class="mt-6 grid gap-4 sm:grid-cols-2">
-          <input id="name" type="text" placeholder="Имя" required class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring" />
-          <input id="phone" type="text" placeholder="Телефон" required class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring" />
-          <textarea id="niche" placeholder="Ниша / комментарий" rows="4" class="w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 outline-none ring-accent focus:ring sm:col-span-2"></textarea>
-          <button id="leadFormButton" type="submit" class="sm:col-span-2 rounded-xl bg-accent px-6 py-3 font-semibold text-black hover:opacity-90">Получить разбор</button>
+    <section id="why" class="band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Почему со мной</p>
+          <h2>Я смотрю на сайт глазами рекламы и продаж</h2>
+          <p class="lead">Мне важна не просто красивая страница, а понятный маршрут до заявки: что человек видит, чему верит, где сомневается и почему оставляет контакт.</p>
+        </div>
+        <div class="proof">
+          <div><strong>9+</strong><span>лет в интернет-маркетинге</span></div>
+          <div><strong>BY</strong><span>опыт в недвижимости и услугах</span></div>
+          <div><strong>CPL</strong><span>работа с ценой заявки и конверсией</span></div>
+          <div><strong>Test</strong><span>сначала гипотезы, потом масштабирование</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead-form" class="band-dark">
+      <div class="wrap form-layout">
+        <div class="section-head">
+          <p class="section-kicker">Заявка</p>
+          <h2 id="leadFormTitle">Хотите понять, какой запуск нужен вашей нише?</h2>
+          <p id="leadFormSubtitle" class="lead">Оставьте контакты. Я посмотрю вашу ситуацию и предложу первый план: что делать с сайтом, рекламой и аналитикой.</p>
+          <ul class="clean-list">
+            <li>Заявка прилетает напрямую в Telegram</li>
+            <li>Можно указать пакет, который интересен</li>
+            <li>Если бот еще не настроен, форма откроет Telegram как запасной вариант</li>
+          </ul>
+        </div>
+        <form id="leadForm" class="lead-form" novalidate>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Александр" />
+          </div>
+          <div class="field">
+            <label for="contact">Телефон или Telegram</label>
+            <input id="contact" name="contact" type="text" autocomplete="tel" required placeholder="+375..." />
+          </div>
+          <div class="field">
+            <label for="package">Пакет</label>
+            <select id="package" name="package">
+              <option value="Не выбрал">Пока не выбрал</option>
+              <option value="Сайт под заявки - $250">Сайт под заявки - $250</option>
+              <option value="Запуск рекламы - $490">Запуск рекламы - $490</option>
+              <option value="Под ключ - $1200">Под ключ - $1200</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="niche">Ниша и задача</label>
+            <textarea id="niche" name="niche" placeholder="Например: ремонт квартир в Минске, нужен сайт и заявки"></textarea>
+          </div>
+          <button id="leadFormButton" class="btn btn-primary" type="submit">Получить разбор</button>
+          <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
         </form>
-
-        <p id="formNote" class="mt-3 text-sm text-muted"></p>
       </div>
     </section>
 
-    <section id="contact" class="mx-auto max-w-6xl px-4 pb-16 pt-4 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-4xl">Контакты</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2">
-        <a id="contactTelegram" href="https://t.me/Alexandr_K1503" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">Telegram</a>
-        <a id="contactPhone" href="tel:+375447375050" class="rounded-xl border border-white/10 p-4 hover:border-accent/70">+375(44)737-50-50</a>
+    <section id="seo-text">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">SEO</p>
+          <h2>Лидогенерация для малого и среднего бизнеса</h2>
+          <p class="lead">Я помогаю предпринимателям запускать лидогенерацию под ключ: от посадочной страницы и упаковки оффера до рекламы, аналитики и контроля заявок. Такой формат подходит локальному бизнесу, услугам, строительству, ремонту, недвижимости, обучению и B2B-компаниям, которым нужны не просмотры, а обращения потенциальных клиентов.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Что входит в лидогенерацию под ключ?</summary>
+            <p>Оффер, лендинг, рекламные кампании, аналитика, формы заявок и первичная оптимизация по стоимости лида.</p>
+          </details>
+          <details>
+            <summary>Можно ли начать только с сайта?</summary>
+            <p>Да. Для этого есть пакет за $250: он подходит, если сначала нужно быстро собрать посадочную страницу под рекламу.</p>
+          </details>
+          <details>
+            <summary>С каким рекламным бюджетом можно стартовать?</summary>
+            <p>Обычно тест имеет смысл начинать от $500 рекламного бюджета, чтобы получить данные по кликам, заявкам и стоимости лида.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
 
+  <footer id="contact" class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>LeadCore</strong>
+        <p>Лендинги, реклама, аналитика и заявки для бизнеса.</p>
+      </div>
+      <div class="contact-links">
+        <a id="contactTelegram" class="btn btn-outline" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Telegram</a>
+        <a id="contactPhone" class="btn btn-outline" href="tel:+375447375050">+375 (44) 737-50-50</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Лидогенерация под ключ",
+      "areaServed": "Belarus",
+      "provider": {
+        "@type": "Person",
+        "name": "Александр"
+      },
+      "serviceType": "Лендинг, реклама и аналитика для получения заявок",
+      "offers": [
+        { "@type": "Offer", "name": "Сайт под заявки", "price": "250", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Запуск рекламы", "price": "490", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Лидогенерация под ключ", "price": "1200", "priceCurrency": "USD" }
+      ]
+    }
+  </script>
+
   <script>
-    const form = document.getElementById('leadForm');
-    const note = document.getElementById('formNote');
+    const analyticsState = {
+      yandexMetrikaId: "",
+      ga4Id: ""
+    };
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+    function initAnalytics(config) {
+      analyticsState.yandexMetrikaId = String(config?.yandexMetrikaId || "").trim();
+      analyticsState.ga4Id = String(config?.ga4Id || "").trim();
 
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const niche = document.getElementById('niche').value.trim();
+      if (analyticsState.ga4Id) {
+        const ga = document.createElement("script");
+        ga.async = true;
+        ga.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsState.ga4Id)}`;
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag(){ dataLayer.push(arguments); };
+        gtag("js", new Date());
+        gtag("config", analyticsState.ga4Id);
+      }
 
-      const text = [
-        'Новая заявка с лендинга',
-        `Имя: ${name}`,
-        `Телефон: ${phone}`,
-        `Ниша/комментарий: ${niche || '-'}`
-      ].join('\n');
+      if (analyticsState.yandexMetrikaId) {
+        window.ym = window.ym || function(){ (window.ym.a = window.ym.a || []).push(arguments); };
+        window.ym.l = 1 * new Date();
+        const ymScript = document.createElement("script");
+        ymScript.async = true;
+        ymScript.src = "https://mc.yandex.ru/metrika/tag.js";
+        document.head.appendChild(ymScript);
+        ym(analyticsState.yandexMetrikaId, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true
+        });
+      }
+    }
 
-      // Temporary frontend-only fallback:
-      // Opens Telegram deep-link with prefilled lead details.
-      const tgText = encodeURIComponent(text);
-      window.open(`https://t.me/Alexandr_K1503?text=${tgText}`, '_blank');
+    (async function loadAnalyticsConfig() {
+      try {
+        if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
+        const response = await fetch("/api/config", { cache: "no-store" });
+        if (!response.ok) return;
+        const config = await response.json();
+        initAnalytics(config);
+      } catch (error) {
+        // Analytics are optional; the site must work without these variables.
+      }
+    })();
 
-      note.textContent = 'Открылся Telegram с текстом заявки. Отправьте сообщение, чтобы я получил заявку.';
+    const leadForm = document.getElementById("leadForm");
+    const note = document.getElementById("formNote");
+    const packageSelect = document.getElementById("package");
+    const telegramFallback = "https://t.me/Alexandr_K1503";
+
+    document.querySelectorAll("[data-package-link]").forEach((link) => {
+      link.addEventListener("click", () => {
+        packageSelect.value = link.getAttribute("data-package-link");
+      });
     });
 
-    // Load editable content from CMS JSON (if unavailable, fallback to static HTML above)
+    function setNote(text, state) {
+      note.textContent = text;
+      note.className = `form-note ${state || ""}`.trim();
+    }
+
+    function trackLead() {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "lead_submit", { event_category: "form" });
+      }
+      if (typeof window.ym === "function" && analyticsState.yandexMetrikaId) {
+        window.ym(analyticsState.yandexMetrikaId, "reachGoal", "lead_submit");
+      }
+    }
+
+    function openTelegramFallback(payload) {
+      const text = [
+        "Новая заявка с сайта reklama-test.by",
+        `Имя: ${payload.name}`,
+        `Контакт: ${payload.contact}`,
+        `Пакет: ${payload.packageName}`,
+        `Ниша/задача: ${payload.niche || "-"}`
+      ].join("\n");
+      window.open(`${telegramFallback}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    }
+
+    leadForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        name: document.getElementById("name").value.trim(),
+        contact: document.getElementById("contact").value.trim(),
+        packageName: packageSelect.value,
+        niche: document.getElementById("niche").value.trim(),
+        page: window.location.href
+      };
+
+      if (!payload.name || !payload.contact) {
+        setNote("Заполните имя и контакт, чтобы я мог ответить.", "error");
+        return;
+      }
+
+      setNote("Отправляю заявку в Telegram...", "");
+
+      try {
+        const response = await fetch("/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.error || "Lead delivery failed");
+
+        trackLead();
+        leadForm.reset();
+        setNote("Заявка отправлена. Я получил ее в Telegram.", "success");
+      } catch (error) {
+        openTelegramFallback(payload);
+        setNote("Бот еще нужно подключить. Открыл Telegram с готовым текстом заявки.", "error");
+      }
+    });
+
     (async () => {
       try {
-        const resp = await fetch('/content/site.json', { cache: 'no-store' });
+        const resp = await fetch("/content/site.json", { cache: "no-store" });
         if (!resp.ok) return;
         const data = await resp.json();
-        if (!data || typeof data !== 'object') return;
+        if (!data || typeof data !== "object") return;
 
         const setText = (id, value) => {
-          if (!value) return;
           const el = document.getElementById(id);
-          if (el) el.textContent = value;
+          if (el && value) el.textContent = value;
         };
         const setHref = (id, value) => {
-          if (!value) return;
           const el = document.getElementById(id);
-          if (el) el.setAttribute('href', value);
+          if (el && value) el.setAttribute("href", value);
         };
 
         if (data.seo?.title) document.title = data.seo.title;
         if (data.seo?.description) {
-          const meta = document.getElementById('seoDescription');
-          if (meta) meta.setAttribute('content', data.seo.description);
+          const meta = document.getElementById("seoDescription");
+          if (meta) meta.setAttribute("content", data.seo.description);
         }
 
-        setText('brandName', data.brand?.name);
-        setText('heroBadge', data.hero?.badge);
-        setText('heroTitle', data.hero?.title);
-        setText('heroSubtitle', data.hero?.subtitle);
-        setText('heroPrimaryCta', data.hero?.primaryCta);
-        setText('heroSecondaryCta', data.hero?.secondaryCta);
-        setText('leadFormTitle', data.leadForm?.title);
-        setText('leadFormSubtitle', data.leadForm?.subtitle);
-        setText('leadFormButton', data.leadForm?.button);
-
-        setText('contactTelegram', data.contacts?.telegramLabel);
-        setText('contactPhone', data.contacts?.phoneLabel);
-        setHref('contactTelegram', data.contacts?.telegramUrl);
-        setHref('contactPhone', data.contacts?.phoneUrl);
+        setText("heroBadge", data.hero?.badge);
+        setText("heroTitle", data.hero?.title);
+        setText("heroSubtitle", data.hero?.subtitle);
+        setText("heroPrimaryCta", data.hero?.primaryCta);
+        setText("heroSecondaryCta", data.hero?.secondaryCta);
+        setText("leadFormTitle", data.leadForm?.title);
+        setText("leadFormSubtitle", data.leadForm?.subtitle);
+        setText("leadFormButton", data.leadForm?.button);
+        setText("contactTelegram", data.contacts?.telegramLabel);
+        setText("contactPhone", data.contacts?.phoneLabel);
+        setHref("contactTelegram", data.contacts?.telegramUrl);
+        setHref("contactPhone", data.contacts?.phoneUrl);
       } catch (err) {
-        // Keep static content if JSON is unavailable.
+        // Static content remains available if CMS JSON is not loaded.
       }
     })();
-
-    // TODO: Real lead delivery options
-    // Option A (Formspree):
-    // - Add action="https://formspree.io/f/YOUR_ID" method="POST" to <form>
-    // - Keep fields name="name" name="phone" name="niche"
-    //
-    // Option B (Telegram Bot webhook/proxy):
-    // - Never expose bot token in frontend production code.
-    // - Create a tiny backend endpoint that receives form data and calls:
-    //   https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/sendMessage
-    //   with chat_id=<TELEGRAM_CHAT_ID> and text=<lead_text>
-    // - Then replace mailto logic with fetch('/api/lead', { method:'POST', body: JSON.stringify(...) })
   </script>
 </body>
 </html>
