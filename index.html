@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="seoTitle">Лидогенерация под ключ в Беларуси - лендинг, реклама, аналитика и заявки</title>
-  <meta id="seoDescription" name="description" content="Лидогенерация под ключ для бизнеса: разработка лендинга, запуск рекламы, настройка аналитики и получение заявок. Работаю с услугами, недвижимостью, обучением, ремонтом, B2B и локальным бизнесом." />
+  <title id="seoTitle">Стратегия лидогенерации для бизнеса - аудит, лендинг, реклама и заявки</title>
+  <meta id="seoDescription" name="description" content="Аудит и стратегия лидогенерации для бизнеса: анализ ниши, оффер, посадочная страница, реклама, аналитика и заявки. Работаю с услугами, недвижимостью, обучением, ремонтом и локальным бизнесом." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://www.reklama-test.by/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
-  <meta property="og:title" content="Лидогенерация под ключ - заявки для бизнеса" />
-  <meta property="og:description" content="Собираю связку: оффер, лендинг, реклама, аналитика и заявки. Быстрый запуск для малого и среднего бизнеса." />
+  <meta property="og:title" content="Стратегия лидогенерации - от анализа до заявок" />
+  <meta property="og:description" content="Сначала разбираю нишу, оффер и цифры. Потом собираю лендинг, рекламу, аналитику и заявки." />
   <meta property="og:url" content="https://www.reklama-test.by/" />
   <meta name="theme-color" content="#101114" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,15 +18,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #101114;
-      --ink-2: #1d2026;
-      --paper: #f7f7f2;
+      --ink: #111318;
+      --ink-2: #20242b;
+      --paper: #f4f1ea;
       --white: #ffffff;
       --muted: #69707d;
       --line: rgba(16, 17, 20, .14);
-      --lime: #c8ff4d;
-      --cyan: #65d8ff;
-      --coral: #ff6b4a;
+      --lime: #baff32;
+      --cyan: #42c7d8;
+      --coral: #ff5b3d;
       --shadow: 0 20px 60px rgba(16, 17, 20, .12);
     }
 
@@ -83,7 +83,7 @@
       height: 34px;
       display: grid;
       place-items: center;
-      border-radius: 8px;
+      border-radius: 999px;
       background: var(--lime);
       color: var(--ink);
       font-weight: 800;
@@ -112,7 +112,11 @@
     }
 
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--lime); color: var(--ink); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--lime), #dfff73);
+      color: var(--ink);
+      box-shadow: 0 14px 34px rgba(186,255,50,.2);
+    }
     .btn-dark { background: var(--ink); color: var(--white); }
     .btn-outline { border-color: rgba(255, 255, 255, .24); color: var(--white); }
     .btn-light { border-color: var(--line); background: var(--white); color: var(--ink); }
@@ -123,8 +127,8 @@
       min-height: 88svh;
       padding: 82px 0 46px;
       background:
-        linear-gradient(135deg, rgba(101, 216, 255, .16), transparent 36%),
-        linear-gradient(25deg, rgba(200, 255, 77, .12), transparent 38%),
+        linear-gradient(135deg, rgba(66, 199, 216, .14), transparent 36%),
+        linear-gradient(25deg, rgba(186, 255, 50, .13), transparent 38%),
         var(--ink);
       color: var(--white);
       isolation: isolate;
@@ -289,6 +293,7 @@
 
     section {
       padding: 72px 0;
+      scroll-margin-top: 86px;
     }
 
     .section-head {
@@ -338,9 +343,11 @@
     .card {
       min-width: 0;
       border: 1px solid var(--line);
-      background: var(--white);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88)),
+        var(--white);
       color: var(--ink);
-      border-radius: 8px;
+      border-radius: 24px;
       padding: 22px;
       box-shadow: 0 10px 34px rgba(16,17,20,.06);
     }
@@ -359,8 +366,16 @@
 
     .dark-card {
       border-color: rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(186,255,50,.14), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+      color: var(--white);
       box-shadow: none;
+    }
+
+    .dark-card h3,
+    .dark-card .service-label {
+      color: var(--white);
     }
 
     .dark-card p,
@@ -405,34 +420,20 @@
 
     .case-shot {
       min-height: 190px;
-      padding: 18px;
       background: var(--ink);
       color: var(--white);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(16,17,20,.08);
     }
 
-    .case-window {
-      height: 154px;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 8px;
-      padding: 14px;
-      background:
-        linear-gradient(90deg, rgba(200,255,77,.24), transparent 50%),
-        rgba(255,255,255,.08);
-      display: grid;
-      gap: 10px;
-      align-content: center;
-    }
-
-    .case-window span {
+    .case-shot img {
       display: block;
-      height: 10px;
-      border-radius: 2px;
-      background: rgba(255,255,255,.22);
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      object-position: top center;
+      filter: saturate(.98) contrast(1.02);
     }
-
-    .case-window span:nth-child(1) { width: 72%; background: var(--lime); }
-    .case-window span:nth-child(2) { width: 92%; }
-    .case-window span:nth-child(3) { width: 55%; background: rgba(101,216,255,.46); }
 
     .case-body {
       padding: 0 22px 22px;
@@ -450,9 +451,11 @@
     }
 
     .price-card {
+      position: relative;
       display: grid;
       gap: 18px;
       align-content: start;
+      overflow: hidden;
     }
 
     .price-card .btn {
@@ -460,10 +463,27 @@
     }
 
     .price-card.featured {
-      border-color: rgba(16,17,20,.72);
-      background: var(--ink);
+      border-color: rgba(186,255,50,.42);
+      background:
+        radial-gradient(circle at 26% 0%, rgba(186,255,50,.23), transparent 34%),
+        radial-gradient(circle at 100% 20%, rgba(66,199,216,.14), transparent 30%),
+        var(--ink);
       color: var(--white);
       transform: translateY(-4px);
+      box-shadow: 0 28px 80px rgba(16,17,20,.34), 0 0 0 1px rgba(186,255,50,.12) inset;
+    }
+
+    .featured-badge {
+      width: fit-content;
+      border: 1px solid rgba(186,255,50,.36);
+      border-radius: 999px;
+      background: rgba(186,255,50,.13);
+      color: var(--lime);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
     }
 
     .price-card.featured p,
@@ -519,9 +539,13 @@
     .proof strong {
       color: var(--lime);
       display: block;
-      font-size: 30px;
+      font-size: 24px;
       line-height: 1;
       margin-bottom: 6px;
+    }
+
+    .proof span {
+      color: rgba(255,255,255,.76);
     }
 
     .form-layout {
@@ -549,7 +573,7 @@
     input, textarea, select {
       width: 100%;
       border: 1px solid rgba(255,255,255,.18);
-      border-radius: 8px;
+      border-radius: 18px;
       background: rgba(255,255,255,.08);
       color: var(--white);
       padding: 14px 14px;
@@ -730,16 +754,16 @@
   <header class="site-header">
     <div class="wrap nav">
       <a id="brandName" class="brand" href="#hero" aria-label="На первый экран">
-        <span class="brand-mark">LC</span>
+        <span class="brand-mark">ЛК</span>
         <span>LeadCore</span>
       </a>
       <nav class="nav-links" aria-label="Главная навигация">
-        <a href="#system">Связка</a>
+        <a href="#system">Стратегия</a>
         <a href="#examples">Примеры</a>
         <a href="#packages">Пакеты</a>
         <a href="#lead-form">Заявка</a>
       </nav>
-      <a class="btn btn-primary" href="#lead-form">Получить план</a>
+      <a class="btn btn-primary" href="#lead-form">Разобрать нишу</a>
     </div>
   </header>
 
@@ -747,31 +771,31 @@
     <section id="hero" class="hero">
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-line"></div>
-        <div class="stage-card"><small>01</small><strong>Оффер</strong></div>
-        <div class="stage-card"><small>02</small><strong>Лендинг</strong></div>
-        <div class="stage-card"><small>03</small><strong>Реклама</strong></div>
+        <div class="stage-card"><small>01</small><strong>Анализ</strong></div>
+        <div class="stage-card"><small>02</small><strong>Стратегия</strong></div>
+        <div class="stage-card"><small>03</small><strong>Упаковка</strong></div>
         <div class="stage-card"><small>04</small><strong>Заявки</strong></div>
       </div>
       <div class="wrap">
         <div class="hero-copy">
-          <p id="heroBadge" class="eyebrow">Сайт + реклама + аналитика</p>
-          <h1 id="heroTitle">Лидогенерация под ключ</h1>
-          <p id="heroSubtitle" class="hero-text">Собираю для бизнеса понятную систему привлечения клиентов: упаковываем оффер, делаем посадочную страницу, запускаем рекламу, подключаем аналитику и заявки в Telegram.</p>
+          <p id="heroBadge" class="eyebrow">Аналитика + стратегия + лидогенерация</p>
+          <h1 id="heroTitle">Сначала стратегия. Потом заявки.</h1>
+          <p id="heroSubtitle" class="hero-text">Разбираю нишу, оффер, конкурентов и цифры бизнеса. После этого собираю понятный план лидогенерации: посадочная страница, реклама, аналитика и заявки в Telegram.</p>
           <div class="hero-actions">
-            <a id="heroPrimaryCta" class="btn btn-primary" href="#lead-form">Получить план запуска</a>
+            <a id="heroPrimaryCta" class="btn btn-primary" href="#lead-form">Разобрать мою нишу</a>
             <a id="heroSecondaryCta" class="btn btn-outline" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
           </div>
           <div class="mobile-pipeline" aria-label="Схема лидогенерации">
-            <span><small>01</small>Оффер</span>
-            <span><small>02</small>Лендинг</span>
-            <span><small>03</small>Реклама</span>
+            <span><small>01</small>Анализ</span>
+            <span><small>02</small>Стратегия</span>
+            <span><small>03</small>Запуск</span>
             <span><small>04</small>Заявки</span>
           </div>
           <div class="hero-facts" aria-label="Ключевые условия">
-            <div class="fact">Запуск простой связки за 3-7 дней</div>
+            <div class="fact">Сначала разбор ниши и стратегии</div>
             <div class="fact">Рекламный бюджет от $500</div>
-            <div class="fact">Работа с услугами, обучением, недвижимостью и B2B</div>
-            <div class="fact">Фокус на заявках, цене лида и понятных цифрах</div>
+            <div class="fact">Работа с услугами, обучением, недвижимостью и локальным бизнесом</div>
+            <div class="fact">Главный вход - стратегия запуска за $490</div>
           </div>
         </div>
       </div>
@@ -781,29 +805,29 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Понятная картинка</p>
-          <h2>Не “просто сайт”, а связка до заявки</h2>
-          <p class="lead">Большинство страниц не продают, потому что в них нет маршрута: кому показываем рекламу, что обещаем, куда ведем человека и как измеряем результат. Я собираю эту цепочку целиком.</p>
+          <h2>Лидогенерация начинается не с рекламы</h2>
+          <p class="lead">Перед запуском нужно понять, кому продаём, какой оффер даст отклик, где клиент принимает решение и какие цифры должны сойтись. Поэтому первый шаг - аналитика и стратегия.</p>
         </div>
         <div class="grid grid-4">
           <article class="card step">
             <span class="step-num">1</span>
-            <h3>Оффер</h3>
-            <p>Формулируем понятное предложение под нишу, город и чек.</p>
+            <h3>Анализ</h3>
+            <p>Смотрим нишу, конкурентов, чек, маржинальность и текущий путь клиента.</p>
           </article>
           <article class="card step">
             <span class="step-num">2</span>
-            <h3>Лендинг</h3>
-            <p>Собираем страницу с сильным первым экраном, пакетами и формами.</p>
+            <h3>Стратегия</h3>
+            <p>Решаем, какой оффер тестировать, куда вести трафик и что считать успехом.</p>
           </article>
           <article class="card step">
             <span class="step-num">3</span>
-            <h3>Трафик</h3>
-            <p>Запускаем Google, Яндекс или Meta под конкретную задачу.</p>
+            <h3>Упаковка</h3>
+            <p>Готовим лендинг, смыслы, форму, пакеты и точки доверия.</p>
           </article>
           <article class="card step">
             <span class="step-num">4</span>
-            <h3>Аналитика</h3>
-            <p>Смотрим заявки, стоимость лида, конверсию и слабые места.</p>
+            <h3>Запуск</h3>
+            <p>Подключаем рекламу, аналитику и заявки в Telegram.</p>
           </article>
         </div>
       </div>
@@ -813,37 +837,37 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Что делаю</p>
-          <h2>Закрываю ключевые части запуска</h2>
-          <p class="lead">Можно начать с простого лендинга, а можно сразу собрать систему под заявки и тест рекламных гипотез.</p>
+          <h2>Собираю стратегию, а потом систему привлечения</h2>
+          <p class="lead">Задача сайта - привести бизнес к разговору о стратегии. Уже после разбора становится понятно, нужен только план, быстрый запуск или полноценная лидогенерация под ключ.</p>
         </div>
         <div class="grid grid-3">
           <article class="card dark-card service-card">
-            <span class="service-label">Landing</span>
-            <h3>Лендинг под оффер</h3>
-            <p>Структура, тексты, блоки доверия, пакеты, форма и мобильная версия.</p>
+            <span class="service-label">Разбор</span>
+            <h3>Аналитика ниши</h3>
+            <p>Конкуренты, спрос, текущие источники клиентов, слабые места и точки роста.</p>
           </article>
           <article class="card dark-card service-card">
-            <span class="service-label">Ads</span>
-            <h3>Контекст и таргет</h3>
-            <p>Google Ads, Яндекс Директ, Meta Ads. Канал выбираем под нишу.</p>
+            <span class="service-label">Смысл</span>
+            <h3>Оффер и упаковка</h3>
+            <p>Формулируем, что обещать клиенту, чтобы заявка была осмысленной.</p>
           </article>
           <article class="card dark-card service-card">
-            <span class="service-label">Numbers</span>
-            <h3>Аналитика и цели</h3>
-            <p>Настраиваем события, цели, формы и контроль заявок.</p>
+            <span class="service-label">Страница</span>
+            <h3>Посадочная страница</h3>
+            <p>Лендинг под один сценарий: понять, поверить, оставить контакт.</p>
           </article>
           <article class="card dark-card service-card">
-            <span class="service-label">Offer</span>
-            <h3>Тест гипотез</h3>
-            <p>Проверяем разные смыслы: цена, подарок, консультация, расчет, пробный формат.</p>
+            <span class="service-label">Реклама</span>
+            <h3>Канал привлечения</h3>
+            <p>Выбираем рекламный канал под нишу, бюджет и скорость проверки.</p>
           </article>
           <article class="card dark-card service-card">
-            <span class="service-label">CPL</span>
-            <h3>Оптимизация цены заявки</h3>
-            <p>Смотрим, где теряется бюджет, и усиливаем работающие объявления.</p>
+            <span class="service-label">Цифры</span>
+            <h3>Цена заявки</h3>
+            <p>Считаем стоимость обращения, конверсию и качество заявок.</p>
           </article>
           <article class="card dark-card service-card">
-            <span class="service-label">Telegram</span>
+            <span class="service-label">Контакт</span>
             <h3>Заявки в Telegram</h3>
             <p>Форма отправляет заявку в чат с ботом, чтобы не ждать почту и таблицы.</p>
           </article>
@@ -855,31 +879,31 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Примеры</p>
-          <h2>Проекты и ниши, на которых видно подход</h2>
-          <p class="lead">Не придумываю фейковые цифры. Здесь показываем направления, где уже есть понятная логика лендинга: оффер, CTA, доверие, тарифы или заявка.</p>
+          <h2>На каких проектах видно логику упаковки</h2>
+          <p class="lead">Это не блок “смотрите красивые картинки”. Здесь показываю разные типы задач: недвижимость, обучение, событие. В каждом случае важны оффер, доверие, понятный следующий шаг и аналитика.</p>
         </div>
         <div class="grid grid-3">
           <article class="card case-card">
-            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-shot"><img src="/assets/cases/centr7a.png" alt="Пример сайта по недвижимости в Минске" loading="lazy"></div>
             <div class="case-body">
               <h3>Недвижимость в Минске</h3>
-              <p>Оценка объекта, консультация, отдельный сайт под объект и рекламная связка.</p>
+              <p>Здесь важны доверие, экспертность, понятный объект разговора и заявка на консультацию.</p>
               <a class="case-link" href="https://minsk.centr7a.by/" target="_blank" rel="noopener">Смотреть пример</a>
             </div>
           </article>
           <article class="card case-card">
-            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-shot"><img src="/assets/cases/indigo.png" alt="Пример сайта школы рисования в Минске" loading="lazy"></div>
             <div class="case-body">
               <h3>Школа рисования</h3>
-              <p>Пробное занятие, лид-форма, преимущества, преподаватели и понятный CTA.</p>
+              <p>Здесь важны эмоция, пробное занятие, снятие сомнений и простой путь к заявке.</p>
               <a class="case-link" href="https://indigo-minsk.by/" target="_blank" rel="noopener">Смотреть пример</a>
             </div>
           </article>
           <article class="card case-card">
-            <div class="case-shot"><div class="case-window"><span></span><span></span><span></span></div></div>
+            <div class="case-shot"><img src="/assets/cases/aipeople.png" alt="Пример сайта интенсива по нейросетям для бизнеса" loading="lazy"></div>
             <div class="case-body">
               <h3>Интенсив по ИИ</h3>
-              <p>Упаковка программы, аудитории, тарифов, спикеров и регистрации на событие.</p>
+              <p>Здесь важны программа, кому подходит, ценность события и регистрация.</p>
               <a class="case-link" href="https://aipeople.by/" target="_blank" rel="noopener">Смотреть пример</a>
             </div>
           </article>
@@ -891,48 +915,51 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Пакеты</p>
-          <h2>Три формата под разный уровень запуска</h2>
-          <p class="lead">Цена фиксирует стартовый объем работ. Рекламный бюджет оплачивается отдельно и идет в рекламные кабинеты.</p>
+          <h2>Вход через аналитику и стратегию</h2>
+          <p class="lead">Здесь не продаётся “просто сайт”. Три пакета - это три уровня входа в работу: быстро увидеть слабые места, собрать стратегию запуска или сразу довести систему до первых заявок. Самый разумный вход - стратегия за $490.</p>
         </div>
         <div class="grid grid-3">
           <article class="card price-card">
-            <h3>Сайт под заявки</h3>
-            <div class="price">$250 <small>старт</small></div>
-            <p>Для бизнеса, которому нужен быстрый лендинг и форма заявки.</p>
+            <h3>Экспресс-разбор</h3>
+            <div class="price">$250 <small>аудит</small></div>
+            <p>Для бизнеса, который хочет быстро понять слабые места и точки роста.</p>
             <ul class="clean-list">
-              <li>Структура лендинга</li>
-              <li>Тексты под оффер</li>
-              <li>Мобильная версия</li>
-              <li>Форма заявки в Telegram</li>
-              <li>Базовая SEO-подготовка</li>
+              <li>Анализ текущей ситуации</li>
+              <li>Разбор оффера и сайта</li>
+              <li>Конкуренты и спрос</li>
+              <li>Первые гипотезы для заявок</li>
+              <li>Короткий план следующих шагов</li>
             </ul>
-            <a class="btn btn-light" href="#lead-form" data-package-link="Сайт под заявки - $250">Выбрать пакет</a>
+            <a class="btn btn-light" href="#lead-form" data-package-link="Экспресс-разбор - $250">Выбрать пакет</a>
           </article>
           <article class="card price-card featured">
-            <h3>Запуск рекламы</h3>
-            <div class="price">$490 <small>рекомендую</small></div>
-            <p>Лендинг, аналитика и первичный рекламный тест.</p>
+            <span class="featured-badge">Рекомендую начать отсюда</span>
+            <h3>Стратегия запуска</h3>
+            <div class="price">$490 <small>лучший вход</small></div>
+            <p>Главный формат: аналитика, стратегия и понятный план лидогенерации.</p>
             <ul class="clean-list">
-              <li>Все из пакета $250</li>
-              <li>Настройка целей и событий</li>
-              <li>Подготовка рекламной структуры</li>
-              <li>Запуск тестовых кампаний</li>
-              <li>Первичные выводы по заявкам</li>
+              <li>Все из разбора $250</li>
+              <li>Карта воронки и офферов</li>
+              <li>Структура лендинга</li>
+              <li>План рекламного теста</li>
+              <li>Метрики и точки контроля</li>
+              <li>План действий на первые 2 недели</li>
             </ul>
-            <a class="btn btn-primary" href="#lead-form" data-package-link="Запуск рекламы - $490">Выбрать пакет</a>
+            <a class="btn btn-primary" href="#lead-form" data-package-link="Стратегия запуска - $490">Выбрать пакет</a>
           </article>
           <article class="card price-card">
-            <h3>Под ключ</h3>
-            <div class="price">$1200 <small>система</small></div>
-            <p>Полный цикл: сайт, реклама, аналитика и оптимизация.</p>
+            <h3>Лидогенерация под ключ</h3>
+            <div class="price">$1200 <small>запуск</small></div>
+            <p>Когда стратегия утверждена и нужно собрать систему до первых заявок.</p>
             <ul class="clean-list">
-              <li>Все из пакета $490</li>
-              <li>Несколько офферов и гипотез</li>
-              <li>Расширенная аналитика</li>
-              <li>Оптимизация по цене заявки</li>
+              <li>Стратегия запуска</li>
+              <li>Лендинг или доработка страницы</li>
+              <li>Настройка рекламы</li>
+              <li>Заявки в Telegram</li>
+              <li>Аналитика и оптимизация</li>
               <li>Сопровождение запуска</li>
             </ul>
-            <a class="btn btn-light" href="#lead-form" data-package-link="Под ключ - $1200">Выбрать пакет</a>
+            <a class="btn btn-light" href="#lead-form" data-package-link="Лидогенерация под ключ - $1200">Выбрать пакет</a>
           </article>
         </div>
       </div>
@@ -943,13 +970,13 @@
         <div class="section-head">
           <p class="section-kicker">Процесс</p>
           <h2>Как проходит работа</h2>
-          <p class="lead">Я не начинаю с дизайна ради дизайна. Сначала разбираем, что именно человек должен понять на странице, почему оставить заявку и как мы поймем, что реклама работает.</p>
+          <p class="lead">Я не начинаю с дизайна ради дизайна. Сначала разбираем бизнес, цифры и спрос. Потом фиксируем стратегию, собираем упаковку и только после этого запускаем рекламный тест.</p>
         </div>
         <div class="grid grid-4">
-          <article class="card step"><span class="step-num">1</span><h3>Разбор</h3><p>Ниша, город, услуга, чек, конкуренты и текущие источники заявок.</p></article>
-          <article class="card step"><span class="step-num">2</span><h3>Сборка</h3><p>Лендинг, тексты, пакеты, CTA, форма и мобильная адаптация.</p></article>
-          <article class="card step"><span class="step-num">3</span><h3>Запуск</h3><p>Рекламная структура, цели, события и отправка заявок в Telegram.</p></article>
-          <article class="card step"><span class="step-num">4</span><h3>Оптимизация</h3><p>Смотрим цену заявки, качество обращений и усиливаем рабочие связки.</p></article>
+          <article class="card step"><span class="step-num">1</span><h3>Разбор</h3><p>Ниша, город, услуга, чек, маржа, конкуренты и текущие источники заявок.</p></article>
+          <article class="card step"><span class="step-num">2</span><h3>Стратегия</h3><p>Решаем, какой оффер тестировать, кому показывать рекламу и куда вести человека.</p></article>
+          <article class="card step"><span class="step-num">3</span><h3>Сборка</h3><p>Лендинг, тексты, пакеты, форма, аналитика и нормальная мобильная адаптация.</p></article>
+          <article class="card step"><span class="step-num">4</span><h3>Запуск и выводы</h3><p>Запускаем тест, смотрим заявки, цену обращения и понимаем, что усиливать дальше.</p></article>
         </div>
       </div>
     </section>
@@ -963,9 +990,9 @@
         </div>
         <div class="proof">
           <div><strong>9+</strong><span>лет в интернет-маркетинге</span></div>
-          <div><strong>BY</strong><span>опыт в недвижимости и услугах</span></div>
-          <div><strong>CPL</strong><span>работа с ценой заявки и конверсией</span></div>
-          <div><strong>Test</strong><span>сначала гипотезы, потом масштабирование</span></div>
+          <div><strong>Недвижимость</strong><span>опыт в услугах и сделках с высоким чеком</span></div>
+          <div><strong>Цена заявки</strong><span>смотрю на стоимость обращения и качество лида</span></div>
+          <div><strong>Гипотезы</strong><span>сначала проверяем, потом масштабируем</span></div>
         </div>
       </div>
     </section>
@@ -975,11 +1002,11 @@
         <div class="section-head">
           <p class="section-kicker">Заявка</p>
           <h2 id="leadFormTitle">Хотите понять, какой запуск нужен вашей нише?</h2>
-          <p id="leadFormSubtitle" class="lead">Оставьте контакты. Я посмотрю вашу ситуацию и предложу первый план: что делать с сайтом, рекламой и аналитикой.</p>
+          <p id="leadFormSubtitle" class="lead">Оставьте контакты. Начнём не с обещаний, а с разбора: что сейчас мешает получать заявки и какой маршрут запуска выбрать.</p>
           <ul class="clean-list">
             <li>Заявка прилетает напрямую в Telegram</li>
-            <li>Можно указать пакет, который интересен</li>
-            <li>Если бот еще не настроен, форма откроет Telegram как запасной вариант</li>
+            <li>Пакет $490 подходит для нормального входа в работу</li>
+            <li>После заявки я предложу первый маршрут запуска</li>
           </ul>
         </div>
         <form id="leadForm" class="lead-form" novalidate>
@@ -995,9 +1022,9 @@
             <label for="package">Пакет</label>
             <select id="package" name="package">
               <option value="Не выбрал">Пока не выбрал</option>
-              <option value="Сайт под заявки - $250">Сайт под заявки - $250</option>
-              <option value="Запуск рекламы - $490">Запуск рекламы - $490</option>
-              <option value="Под ключ - $1200">Под ключ - $1200</option>
+              <option value="Экспресс-разбор - $250">Экспресс-разбор - $250</option>
+              <option value="Стратегия запуска - $490">Стратегия запуска - $490</option>
+              <option value="Лидогенерация под ключ - $1200">Лидогенерация под ключ - $1200</option>
             </select>
           </div>
           <div class="field">
@@ -1013,18 +1040,18 @@
     <section id="seo-text">
       <div class="wrap">
         <div class="section-head">
-          <p class="section-kicker">SEO</p>
-          <h2>Лидогенерация для малого и среднего бизнеса</h2>
-          <p class="lead">Я помогаю предпринимателям запускать лидогенерацию под ключ: от посадочной страницы и упаковки оффера до рекламы, аналитики и контроля заявок. Такой формат подходит локальному бизнесу, услугам, строительству, ремонту, недвижимости, обучению и B2B-компаниям, которым нужны не просмотры, а обращения потенциальных клиентов.</p>
+          <p class="section-kicker">Поиск</p>
+          <h2>Лидогенерация для малого и среднего бизнеса начинается со стратегии</h2>
+          <p class="lead">Я помогаю предпринимателям запускать лидогенерацию под ключ: сначала разбираю нишу, конкурентов, оффер, маржинальность и путь клиента, а потом предлагаю понятную связку из лендинга, рекламы, аналитики и заявок. Такой формат подходит локальному бизнесу, услугам, строительству, ремонту, недвижимости, обучению и корпоративным услугам, где нужны не просмотры, а обращения потенциальных клиентов.</p>
         </div>
         <div class="faq">
           <details>
-            <summary>Что входит в лидогенерацию под ключ?</summary>
-            <p>Оффер, лендинг, рекламные кампании, аналитика, формы заявок и первичная оптимизация по стоимости лида.</p>
+            <summary>Почему сначала нужна стратегия?</summary>
+            <p>Без стратегии легко потратить бюджет на рекламу, которая ведёт людей на слабый оффер или непонятную страницу. Сначала нужно понять, кому продаём, что обещаем, какой канал тестируем и какие цифры считаем нормой.</p>
           </details>
           <details>
-            <summary>Можно ли начать только с сайта?</summary>
-            <p>Да. Для этого есть пакет за $250: он подходит, если сначала нужно быстро собрать посадочную страницу под рекламу.</p>
+            <summary>Чем пакет $490 отличается от обычного аудита?</summary>
+            <p>В пакете $250 вы получаете быстрый разбор и первые гипотезы. В пакете $490 появляется стратегия запуска: оффер, структура лендинга, план рекламного теста, метрики и понятные следующие шаги.</p>
           </details>
           <details>
             <summary>С каким рекламным бюджетом можно стартовать?</summary>
@@ -1052,16 +1079,16 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Лидогенерация под ключ",
+      "name": "Стратегия лидогенерации и запуск заявок",
       "areaServed": "Belarus",
       "provider": {
         "@type": "Person",
         "name": "Александр"
       },
-      "serviceType": "Лендинг, реклама и аналитика для получения заявок",
+      "serviceType": "Аудит, стратегия, лендинг, реклама и аналитика для получения заявок",
       "offers": [
-        { "@type": "Offer", "name": "Сайт под заявки", "price": "250", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Запуск рекламы", "price": "490", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Экспресс-разбор", "price": "250", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Стратегия запуска", "price": "490", "priceCurrency": "USD" },
         { "@type": "Offer", "name": "Лидогенерация под ключ", "price": "1200", "priceCurrency": "USD" }
       ]
     }
