@@ -596,6 +596,16 @@
     .form-note.success { color: var(--lime); }
     .form-note.error { color: #ffb4a3; }
 
+    .trap-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
     .faq {
       border-top: 1px solid var(--line);
     }
@@ -1098,13 +1108,17 @@
           </ul>
         </div>
         <form id="leadForm" class="lead-form" novalidate>
+          <div class="trap-field" aria-hidden="true">
+            <label for="website">Сайт</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
           <div class="field">
             <label for="name">Имя</label>
-            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Александр" />
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Александр" />
           </div>
           <div class="field">
             <label for="contact">Телефон или Telegram</label>
-            <input id="contact" name="contact" type="text" autocomplete="tel" required placeholder="+375..." />
+            <input id="contact" name="contact" type="text" autocomplete="tel" required maxlength="80" placeholder="+375..." />
           </div>
           <div class="field">
             <label for="package">Пакет</label>
@@ -1117,7 +1131,7 @@
           </div>
           <div class="field">
             <label for="niche">Ниша и задача</label>
-            <textarea id="niche" name="niche" placeholder="Например: ремонт квартир в Минске, нужен сайт и заявки"></textarea>
+            <textarea id="niche" name="niche" maxlength="1000" placeholder="Например: ремонт квартир в Минске, нужен сайт и заявки"></textarea>
           </div>
           <button id="leadFormButton" class="btn btn-primary" type="submit">Получить разбор</button>
           <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
@@ -1273,6 +1287,7 @@
     const leadForm = document.getElementById("leadForm");
     const note = document.getElementById("formNote");
     const packageSelect = document.getElementById("package");
+    const submitButton = document.getElementById("leadFormButton");
     const telegramFallback = "https://t.me/Alexandr_K1503";
 
     document.querySelectorAll("[data-package-link]").forEach((link) => {
@@ -1314,6 +1329,7 @@
         contact: document.getElementById("contact").value.trim(),
         packageName: packageSelect.value,
         niche: document.getElementById("niche").value.trim(),
+        website: document.getElementById("website").value.trim(),
         page: window.location.href
       };
 
@@ -1322,7 +1338,13 @@
         return;
       }
 
+      if (payload.name.length > 80 || payload.contact.length > 80 || payload.niche.length > 1000) {
+        setNote("Слишком длинный текст. Сократите заявку и отправьте ещё раз.", "error");
+        return;
+      }
+
       setNote("Отправляю заявку в Telegram...", "");
+      submitButton.disabled = true;
 
       try {
         const response = await fetch("/api/lead", {
@@ -1335,10 +1357,12 @@
 
         trackLead();
         leadForm.reset();
-        setNote("Заявка отправлена. Я получил ее в Telegram.", "success");
+        setNote("Заявка отправлена. Сейчас откроется страница подтверждения.", "success");
+        window.location.href = "/thanks/";
       } catch (error) {
         openTelegramFallback(payload);
         setNote("Бот еще нужно подключить. Открыл Telegram с готовым текстом заявки.", "error");
+        submitButton.disabled = false;
       }
     });
 

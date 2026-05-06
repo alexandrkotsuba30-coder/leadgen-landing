@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Заявка отправлена - LeadCore</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#101114" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101114;
+      --paper: #f4f1ea;
+      --lime: #baff32;
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100svh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(186,255,50,.18), transparent 32%),
+        radial-gradient(circle at 85% 78%, rgba(66,199,216,.12), transparent 34%),
+        var(--ink);
+      color: white;
+      font-family: "Onest", "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(720px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 30px 90px rgba(0,0,0,.32);
+      padding: clamp(28px, 6vw, 58px);
+    }
+
+    .mark {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 800;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 8vw, 68px);
+      line-height: .98;
+      letter-spacing: -.04em;
+    }
+
+    p {
+      max-width: 560px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 3vw, 20px);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    a {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      padding: 13px 18px;
+      color: inherit;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .primary {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">ЛК</div>
+    <h1>Заявка отправлена</h1>
+    <p>Я получил контакт и задачу. Если всё ок, отвечу в Telegram или по телефону и предложу первый маршрут запуска.</p>
+    <div class="actions">
+      <a class="primary" href="/">Вернуться на сайт</a>
+      <a class="secondary" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+  </main>
+
+  <script>
+    (async () => {
+      try {
+        const response = await fetch("/api/config", { cache: "no-store" });
+        if (!response.ok) return;
+        const config = await response.json();
+        const yandexMetrikaId = String(config?.yandexMetrikaId || "").trim();
+        if (!yandexMetrikaId) return;
+
+        window.ym = window.ym || function(){ (window.ym.a = window.ym.a || []).push(arguments); };
+        window.ym.l = 1 * new Date();
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://mc.yandex.ru/metrika/tag.js";
+        document.head.appendChild(script);
+        ym(yandexMetrikaId, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true
+        });
+        ym(yandexMetrikaId, "reachGoal", "lead_submit");
+      } catch (error) {
+        // The thank-you page works even if analytics are unavailable.
+      }
+    })();
+  </script>
+</body>
+</html>

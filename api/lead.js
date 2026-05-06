@@ -14,6 +14,10 @@ function sendJson(res, statusCode, payload) {
   res.end(JSON.stringify(payload));
 }
 
+function limitText(value, maxLength) {
+  return String(value || "").trim().slice(0, maxLength);
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     sendJson(res, 405, { ok: false, error: "Method not allowed" });
@@ -37,19 +41,30 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const name = String(body.name || "").trim();
-  const contact = String(body.contact || "").trim();
-  const packageName = String(body.packageName || "Не выбрал").trim();
-  const niche = String(body.niche || "").trim();
-  const page = String(body.page || "").trim();
+  const spamTrap = String(body.website || "").trim();
+  if (spamTrap) {
+    sendJson(res, 200, { ok: true });
+    return;
+  }
+
+  const name = limitText(body.name, 80);
+  const contact = limitText(body.contact, 80);
+  const packageName = limitText(body.packageName || "Не выбрал", 120);
+  const niche = limitText(body.niche, 1000);
+  const page = limitText(body.page, 300);
 
   if (!name || !contact) {
     sendJson(res, 400, { ok: false, error: "Name and contact are required" });
     return;
   }
 
+  if (name.length < 2 || contact.length < 3) {
+    sendJson(res, 400, { ok: false, error: "Lead fields are too short" });
+    return;
+  }
+
   const text = [
-    "Новая заявка с reklama-test.by",
+    "Новая заявка с leadcore.by",
     "",
     `Имя: ${name}`,
     `Контакт: ${contact}`,
