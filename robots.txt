@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://www.reklama-test.by/sitemap.xml
+Sitemap: https://leadcore.by/sitemap.xml
