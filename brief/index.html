@@ -1,0 +1,881 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бриф на лидогенерацию - LeadCore</title>
+  <meta name="description" content="Короткий бриф LeadCore: разбор продукта, аудитории, экономики и задач перед запуском лендинга и рекламных кампаний." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://leadcore.by/brief/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Бриф на лидогенерацию - LeadCore" />
+  <meta property="og:description" content="Заполните короткий бриф, чтобы я понял нишу, оффер, экономику и предложил разумный вход в запуск." />
+  <meta property="og:url" content="https://leadcore.by/brief/" />
+  <meta property="og:image" content="https://leadcore.by/assets/og-leadcore.png?v=20260511-2" />
+  <meta name="theme-color" content="#101114" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101114;
+      --panel: #1c2026;
+      --paper: #f4f1ea;
+      --white: #ffffff;
+      --muted: #69707d;
+      --line: rgba(16, 17, 20, .14);
+      --soft-line: rgba(255, 255, 255, .13);
+      --lime: #baff32;
+      --cyan: #42c7d8;
+      --shadow: 0 24px 70px rgba(16, 17, 20, .16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 88% 8%, rgba(186,255,50,.24), transparent 28%),
+        radial-gradient(circle at 88% 88%, rgba(66,199,216,.20), transparent 24%),
+        linear-gradient(135deg, #f4f1ea 0%, #efeade 55%, #dde6d4 100%);
+      color: var(--ink);
+      font-family: "Onest", "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(16,17,20,.1);
+      background: rgba(244,241,234,.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--lime), #d8ff58 60%, var(--cyan));
+      color: var(--ink);
+      box-shadow: 0 18px 42px rgba(186,255,50,.22);
+    }
+
+    .btn-outline {
+      border-color: rgba(16,17,20,.18);
+      background: rgba(255,255,255,.42);
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: 64px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .brief-shell {
+      border-radius: 34px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(16,17,20,.12);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: clamp(28px, 4vw, 54px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      width: 540px;
+      height: 18px;
+      left: -130px;
+      top: 145px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--lime), var(--cyan));
+      transform: rotate(-42deg);
+      opacity: .55;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: #415047;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--lime);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .94;
+      letter-spacing: -.065em;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: #3f4650;
+      font-size: clamp(18px, 2.1vw, 24px);
+      font-weight: 600;
+    }
+
+    .hero-points {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(16,17,20,.07);
+      color: #222831;
+      font-weight: 700;
+    }
+
+    .side-card {
+      min-height: 100%;
+      border-radius: 34px;
+      padding: 26px;
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      display: grid;
+      align-content: space-between;
+      gap: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .side-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -120px -170px auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(186,255,50,.22);
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric {
+      min-height: 118px;
+      border-radius: 22px;
+      border: 1px solid var(--soft-line);
+      background: rgba(255,255,255,.06);
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--lime);
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .metric span {
+      color: rgba(255,255,255,.74);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .side-note {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--soft-line);
+      padding-top: 20px;
+      color: rgba(255,255,255,.74);
+      font-weight: 600;
+    }
+
+    .brief-section {
+      padding: 32px 0 76px;
+    }
+
+    .brief-shell {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      overflow: hidden;
+    }
+
+    .rail {
+      padding: 28px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .rail h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .rail p {
+      margin: 0 0 24px;
+      color: rgba(255,255,255,.68);
+      font-weight: 600;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 14.28%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--lime), var(--cyan));
+      transition: width .25s ease;
+    }
+
+    .steps-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps-list li {
+      border-radius: 14px;
+      padding: 10px 12px;
+      color: rgba(255,255,255,.54);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .steps-list li.active {
+      background: rgba(186,255,50,.14);
+      color: var(--white);
+    }
+
+    .brief-form {
+      padding: clamp(22px, 4vw, 42px);
+      background: rgba(255,255,255,.74);
+    }
+
+    .step-panel { display: none; }
+    .step-panel.active { display: block; animation: rise .25s ease both; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-kicker {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .step-panel h3 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+      letter-spacing: -.05em;
+    }
+
+    .step-help {
+      margin: 0 0 28px;
+      max-width: 720px;
+      color: #4b535f;
+      font-weight: 600;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    label,
+    .label {
+      color: #242a33;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid rgba(16,17,20,.14);
+      border-radius: 18px;
+      background: rgba(255,255,255,.78);
+      color: var(--ink);
+      padding: 15px 16px;
+      font: inherit;
+      font-weight: 600;
+      outline: none;
+      transition: border .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    textarea {
+      min-height: 116px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(66,199,216,.72);
+      box-shadow: 0 0 0 4px rgba(66,199,216,.12);
+      background: #fff;
+    }
+
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      min-height: 54px;
+      border: 1px solid rgba(16,17,20,.12);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255,255,255,.62);
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    .chip input {
+      width: auto;
+      margin: 3px 0 0;
+      accent-color: var(--lime);
+    }
+
+    .trap-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .form-note {
+      min-height: 24px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .form-note.error { color: #d33a2c; }
+    .form-note.success { color: #3d7f27; }
+
+    .success-box {
+      display: none;
+      border-radius: 24px;
+      padding: 24px;
+      background: rgba(186,255,50,.18);
+      border: 1px solid rgba(16,17,20,.12);
+    }
+
+    .success-box.show { display: block; }
+
+    .footer {
+      padding: 24px 0 44px;
+      color: rgba(16,17,20,.55);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .nav { min-height: 64px; }
+      .nav-actions .btn-outline { display: none; }
+      .hero { padding-top: 36px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-points { grid-template-columns: 1fr; }
+      .side-card { min-height: auto; }
+      .brief-shell { grid-template-columns: 1fr; }
+      .rail { padding: 22px; }
+      .steps-list { display: none; }
+      .grid-2, .chips { grid-template-columns: 1fr; }
+      .form-nav { position: sticky; bottom: 0; padding: 14px 0 0; background: linear-gradient(to top, rgba(244,241,234,1), rgba(244,241,234,.82)); }
+      .form-nav .btn { flex: 1; }
+    }
+
+    @media (max-width: 420px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      h1 { font-size: 40px; }
+      .brief-form { padding: 20px 16px; }
+      .metric-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="На главную LeadCore"><span class="brand-mark">LC</span><span>LeadCore</span></a>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="/">Основной сайт</a>
+        <a class="btn btn-primary" href="#brief">Заполнить бриф</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Бриф перед запуском</p>
+          <h1>Поймём, какие лиды вам реально нужны</h1>
+          <p class="hero-text">Эту страницу удобно отправить в начале переписки. Ответы помогут быстро понять нишу, продукт, экономику, оффер и выбрать разумный вход: базовый лендинг, запуск за 1421 р. или расширенную проработку.</p>
+          <ul class="hero-points">
+            <li>Не про “сделайте красиво”, а про качество заявок</li>
+            <li>Заполнение занимает 7-10 минут</li>
+            <li>Ответы прилетают напрямую в Telegram</li>
+            <li>После брифа проще предложить честный маршрут запуска</li>
+          </ul>
+        </div>
+        <aside class="side-card" aria-label="Что важно в брифе">
+          <div class="metric-grid">
+            <div class="metric"><strong>01</strong><span>Кто для вас хороший клиент</span></div>
+            <div class="metric"><strong>02</strong><span>Что продаём и где границы оффера</span></div>
+            <div class="metric"><strong>03</strong><span>Сколько может стоить заявка</span></div>
+            <div class="metric"><strong>04</strong><span>Какой первый тест запускать</span></div>
+          </div>
+          <p class="side-note">Если какой-то ответ пока неизвестен — оставьте поле пустым или напишите “не знаю”. Это тоже полезный сигнал.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="brief" class="brief-section">
+      <div class="wrap brief-shell">
+        <aside class="rail">
+          <h2>Короткий бриф</h2>
+          <p>Собираем минимум информации, чтобы не гадать и не запускать рекламу вслепую.</p>
+          <div class="progress" aria-label="Прогресс заполнения"><span id="progressBar"></span></div>
+          <ol class="steps-list" id="stepsList">
+            <li class="active">Контакты</li>
+            <li>Продукт</li>
+            <li>Экономика</li>
+            <li>Цель</li>
+            <li>Оффер</li>
+            <li>Маркетинг</li>
+            <li>Финал</li>
+          </ol>
+        </aside>
+
+        <form id="briefForm" class="brief-form" novalidate>
+          <div class="trap-field" aria-hidden="true">
+            <label for="website">Сайт</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <section class="step-panel active" data-step="0">
+            <p class="step-kicker">Шаг 1 из 7</p>
+            <h3>Контакты</h3>
+            <p class="step-help">Куда написать после разбора и как понять, о каком проекте речь.</p>
+            <div class="grid-2">
+              <div class="field"><label for="name">Имя *</label><input id="name" name="name" required maxlength="80" autocomplete="name" placeholder="Александр" /></div>
+              <div class="field"><label for="contact">Телефон или Telegram *</label><input id="contact" name="contact" required maxlength="100" autocomplete="tel" placeholder="+375... или @username" /></div>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label for="company">Компания / проект</label><input id="company" name="company" maxlength="160" placeholder="Название или ниша" /></div>
+              <div class="field"><label for="projectLink">Сайт / соцсети, если есть</label><input id="projectLink" name="projectLink" maxlength="240" placeholder="https://..." /></div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="1">
+            <p class="step-kicker">Шаг 2 из 7</p>
+            <h3>Продукт и рынок</h3>
+            <p class="step-help">Здесь важно понять, что именно продвигаем и кого хотим привлечь.</p>
+            <div class="field"><label for="product">Что продаёте?</label><textarea id="product" name="product" maxlength="700" placeholder="Продукт, услуга, объект, курс, проект. Что входит, для кого, какой результат получает клиент?"></textarea></div>
+            <div class="grid-2">
+              <div class="field"><label for="geo">География</label><input id="geo" name="geo" maxlength="160" placeholder="Минск, Беларусь, СНГ, онлайн..." /></div>
+              <div class="field"><label for="clientType">Тип клиента</label><select id="clientType" name="clientType"><option value="">Выберите</option><option>B2C</option><option>B2B</option><option>B2B + B2C</option><option>Пока не уверен</option></select></div>
+            </div>
+            <div class="field"><label for="idealClient">Кто идеальный клиент?</label><textarea id="idealClient" name="idealClient" maxlength="700" placeholder="Кто покупает лучше всего? Кого наоборот не хочется привлекать?"></textarea></div>
+          </section>
+
+          <section class="step-panel" data-step="2">
+            <p class="step-kicker">Шаг 3 из 7</p>
+            <h3>Экономика заявки</h3>
+            <p class="step-help">Чтобы не привести дешёвые, но бесполезные заявки, нужно понимать цифры.</p>
+            <div class="grid-2">
+              <div class="field"><label for="averageCheck">Средний чек</label><input id="averageCheck" name="averageCheck" maxlength="160" placeholder="Например: 800 BYN / 1500$" /></div>
+              <div class="field"><label for="margin">Маржа / прибыль</label><input id="margin" name="margin" maxlength="160" placeholder="Если можно примерно" /></div>
+              <div class="field"><label for="dealCycle">Цикл сделки</label><select id="dealCycle" name="dealCycle"><option value="">Выберите</option><option>Покупают сразу</option><option>1-3 дня</option><option>1-2 недели</option><option>Месяц и больше</option><option>Зависит от клиента</option></select></div>
+              <div class="field"><label for="targetLeadPrice">Какая цена лида ок?</label><input id="targetLeadPrice" name="targetLeadPrice" maxlength="160" placeholder="Если знаете ориентир" /></div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="3">
+            <p class="step-kicker">Шаг 4 из 7</p>
+            <h3>Цель запуска</h3>
+            <p class="step-help">Выберите, что нужно получить от первого этапа.</p>
+            <div class="label">Главная задача</div>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="goals" value="Проверить спрос" /> Проверить спрос</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Получать заявки" /> Получать заявки</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Снизить цену лида" /> Снизить цену лида</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Понять стратегию" /> Понять стратегию</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Запустить новый продукт" /> Запустить новый продукт</label>
+              <label class="chip"><input type="checkbox" name="goals" value="Переделать старый сайт" /> Переделать старый сайт</label>
+            </div>
+            <div class="field"><label for="blockers">Что сейчас мешает получать нормальные заявки?</label><textarea id="blockers" name="blockers" maxlength="900" placeholder="Нет сайта, плохая реклама, дорогие заявки, непонятный оффер, нет аналитики..."></textarea></div>
+          </section>
+
+          <section class="step-panel" data-step="4">
+            <p class="step-kicker">Шаг 5 из 7</p>
+            <h3>Оффер и доверие</h3>
+            <p class="step-help">Здесь рождается фильтр: кому понятно, кому интересно, кому можно верить.</p>
+            <div class="field"><label for="offer">Что самое сильное в предложении?</label><textarea id="offer" name="offer" maxlength="900" placeholder="Почему должны выбрать вас? Цена, скорость, гарантия, опыт, результат, уникальные условия..."></textarea></div>
+            <div class="grid-2">
+              <div class="field"><label for="proof">Какие есть доказательства?</label><textarea id="proof" name="proof" maxlength="700" placeholder="Кейсы, отзывы, фото, сертификаты, цифры, известные клиенты..."></textarea></div>
+              <div class="field"><label for="objections">Какие сомнения у клиента?</label><textarea id="objections" name="objections" maxlength="700" placeholder="Дорого, не верят, долго думают, сравнивают, боятся ошибиться..."></textarea></div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="5">
+            <p class="step-kicker">Шаг 6 из 7</p>
+            <h3>Текущий маркетинг</h3>
+            <p class="step-help">Понимаем, что уже есть и что можно использовать в запуске.</p>
+            <div class="label">Что уже есть?</div>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="assets" value="Сайт" /> Сайт</label>
+              <label class="chip"><input type="checkbox" name="assets" value="Соцсети" /> Соцсети</label>
+              <label class="chip"><input type="checkbox" name="assets" value="Реклама" /> Реклама</label>
+              <label class="chip"><input type="checkbox" name="assets" value="Метрика/аналитика" /> Метрика/аналитика</label>
+              <label class="chip"><input type="checkbox" name="assets" value="Кейсы/отзывы" /> Кейсы/отзывы</label>
+              <label class="chip"><input type="checkbox" name="assets" value="Ничего нет" /> Ничего нет</label>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label for="sources">Откуда сейчас приходят клиенты?</label><textarea id="sources" name="sources" maxlength="700" placeholder="Сарафан, Instagram, сайт, Яндекс, Google, рекомендации..."></textarea></div>
+              <div class="field"><label for="adBudget">Ориентир рекламного бюджета</label><input id="adBudget" name="adBudget" maxlength="160" placeholder="Например: от $500 на тест" /></div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="6">
+            <p class="step-kicker">Шаг 7 из 7</p>
+            <h3>Финал</h3>
+            <p class="step-help">Последний штрих: какой вход кажется ближе и что будет считаться хорошим результатом.</p>
+            <div class="grid-2">
+              <div class="field"><label for="packageName">Какой формат ближе?</label><select id="packageName" name="packageName"><option>Пока не знаю</option><option>Лендинг - 750 р.</option><option>Лендинг + рекламные кампании - 1421 р.</option><option>Расширенный запуск - 3480 р.</option></select></div>
+              <div class="field"><label for="startTime">Когда хотите стартовать?</label><select id="startTime" name="startTime"><option>Пока не знаю</option><option>В ближайшие дни</option><option>В течение 1-2 недель</option><option>В этом месяце</option><option>Позже</option></select></div>
+            </div>
+            <div class="field"><label for="successCriteria">Что будет хорошим результатом?</label><textarea id="successCriteria" name="successCriteria" maxlength="900" placeholder="Например: 20 заявок в месяц, понять спрос, получить первые обращения, снизить цену лида..."></textarea></div>
+          </section>
+
+          <div id="successBox" class="success-box">
+            <strong>Бриф отправлен.</strong>
+            <p>Ответы ушли в Telegram. Я посмотрю информацию и предложу следующий шаг.</p>
+          </div>
+
+          <div class="form-nav">
+            <button id="prevBtn" class="btn btn-outline" type="button">Назад</button>
+            <button id="nextBtn" class="btn btn-primary" type="button">Дальше</button>
+            <button id="submitBtn" class="btn btn-primary" type="submit" hidden>Отправить бриф</button>
+          </div>
+          <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">LeadCore · Бриф для первичного разбора проекта · <a href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Telegram</a></div>
+  </footer>
+
+  <script>
+    const panels = [...document.querySelectorAll('.step-panel')];
+    const progressBar = document.getElementById('progressBar');
+    const stepsList = document.getElementById('stepsList');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('briefForm');
+    const note = document.getElementById('formNote');
+    const successBox = document.getElementById('successBox');
+    let currentStep = 0;
+    let yandexMetrikaId = '';
+    let ga4Id = '';
+
+    function setNote(text, state = '') {
+      note.textContent = text;
+      note.className = `form-note ${state}`.trim();
+    }
+
+    function updateStep() {
+      panels.forEach((panel, index) => panel.classList.toggle('active', index === currentStep));
+      [...stepsList.children].forEach((item, index) => item.classList.toggle('active', index === currentStep));
+      progressBar.style.width = `${((currentStep + 1) / panels.length) * 100}%`;
+      prevBtn.disabled = currentStep === 0;
+      nextBtn.hidden = currentStep === panels.length - 1;
+      submitBtn.hidden = currentStep !== panels.length - 1;
+      setNote('');
+      document.getElementById('brief').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function validateCurrentStep() {
+      const required = [...panels[currentStep].querySelectorAll('[required]')];
+      const invalid = required.find((field) => !field.value.trim());
+      if (invalid) {
+        invalid.focus();
+        setNote('Заполните обязательные поля на этом шаге.', 'error');
+        return false;
+      }
+      return true;
+    }
+
+    function getCheckboxValues(name) {
+      return [...form.querySelectorAll(`input[name="${name}"]:checked`)].map((input) => input.value);
+    }
+
+    function collectPayload() {
+      return {
+        website: form.website.value,
+        name: form.name.value.trim(),
+        contact: form.contact.value.trim(),
+        company: form.company.value.trim(),
+        projectLink: form.projectLink.value.trim(),
+        product: form.product.value.trim(),
+        geo: form.geo.value.trim(),
+        clientType: form.clientType.value,
+        idealClient: form.idealClient.value.trim(),
+        averageCheck: form.averageCheck.value.trim(),
+        margin: form.margin.value.trim(),
+        dealCycle: form.dealCycle.value,
+        targetLeadPrice: form.targetLeadPrice.value.trim(),
+        goals: getCheckboxValues('goals'),
+        blockers: form.blockers.value.trim(),
+        offer: form.offer.value.trim(),
+        proof: form.proof.value.trim(),
+        objections: form.objections.value.trim(),
+        assets: getCheckboxValues('assets'),
+        sources: form.sources.value.trim(),
+        adBudget: form.adBudget.value.trim(),
+        packageName: form.packageName.value,
+        startTime: form.startTime.value,
+        successCriteria: form.successCriteria.value.trim(),
+        page: window.location.href
+      };
+    }
+
+    function trackBriefSubmit() {
+      if (yandexMetrikaId && typeof ym === 'function') ym(yandexMetrikaId, 'reachGoal', 'brief_submit');
+      if (ga4Id && typeof gtag === 'function') gtag('event', 'brief_submit');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentStep = Math.max(0, currentStep - 1);
+      updateStep();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (!validateCurrentStep()) return;
+      currentStep = Math.min(panels.length - 1, currentStep + 1);
+      updateStep();
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!validateCurrentStep()) return;
+      const payload = collectPayload();
+      if (payload.name.length < 2 || payload.contact.length < 3) {
+        setNote('Укажите имя и контакт для связи.', 'error');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      setNote('Отправляю бриф в Telegram...');
+
+      try {
+        const response = await fetch('/api/brief', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error('Brief delivery failed');
+        trackBriefSubmit();
+        successBox.classList.add('show');
+        form.reset();
+        setNote('Бриф отправлен. Спасибо!', 'success');
+        currentStep = panels.length - 1;
+        updateStep();
+        successBox.classList.add('show');
+      } catch (error) {
+        const message = encodeURIComponent([
+          'Здравствуйте! Хочу отправить бриф по проекту.',
+          `Имя: ${payload.name}`,
+          `Контакт: ${payload.contact}`,
+          `Проект: ${payload.company || '-'}`,
+          `Что продаём: ${payload.product || '-'}`
+        ].join('\n'));
+        setNote('Не получилось отправить автоматически. Открыл Telegram с черновиком сообщения.', 'error');
+        window.open(`https://t.me/Alexandr_K1503?text=${message}`, '_blank', 'noopener');
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    (async function loadAnalytics() {
+      try {
+        const response = await fetch('/api/config', { cache: 'no-store' });
+        if (!response.ok) return;
+        const config = await response.json();
+        yandexMetrikaId = config.yandexMetrikaId || '';
+        ga4Id = config.ga4Id || '';
+
+        if (yandexMetrikaId && !window.ym) {
+          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date(); k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+          ym(yandexMetrikaId, 'init', { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+        }
+
+        if (ga4Id && !window.gtag) {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+          document.head.appendChild(script);
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function(){ dataLayer.push(arguments); };
+          gtag('js', new Date());
+          gtag('config', ga4Id);
+        }
+      } catch (error) {
+        // The brief works without analytics.
+      }
+    })();
+
+    updateStep();
+  </script>
+</body>
+</html>
