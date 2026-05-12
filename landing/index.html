@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Создание лендинга за 725 р. | Сайт под заявки | LeadCore</title>
+  <meta name="description" content="Создание одностраничного лендинга за 725 р.: структура продаж, мобильная версия, форма заявки, отправка в Telegram, Яндекс Метрика и базовая SEO-подготовка." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://leadcore.by/landing/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Лендинг за 725 р. под заявки - LeadCore" />
+  <meta property="og:description" content="Одностраничный сайт под продукт, услугу или проект: тексты, структура, мобильная версия, форма, Telegram и Метрика." />
+  <meta property="og:url" content="https://leadcore.by/landing/" />
+  <meta property="og:site_name" content="LeadCore" />
+  <meta property="og:image" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
+  <meta property="og:image:secure_url" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Лендинг за 725 р. под заявки - LeadCore" />
+  <meta name="twitter:description" content="Быстрый одностраничный сайт с формой, Telegram и метрикой для проверки предложения." />
+  <meta name="twitter:image" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
+  <meta name="theme-color" content="#111318" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #111318;
+      --paper: #f4f1e8;
+      --white: #fff;
+      --muted: #657080;
+      --line: rgba(17, 19, 24, .14);
+      --soft: rgba(255, 255, 255, .12);
+      --lime: #baff32;
+      --cyan: #45c7d8;
+      --orange: #ff8a1e;
+      --shadow: 0 26px 80px rgba(17, 19, 24, .18);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      font-family: "Onest", "Segoe UI", sans-serif;
+      line-height: 1.5;
+      background:
+        radial-gradient(circle at 12% 6%, rgba(186,255,50,.28), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(69,199,216,.18), transparent 26%),
+        linear-gradient(135deg, #f4f1e8 0%, #ece8d7 48%, #dfe8d8 100%);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(17,19,24,.1);
+      background: rgba(244,241,232,.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 14px 35px rgba(186,255,50,.32);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      color: #3c4652;
+      text-decoration: none;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover { background: rgba(255,255,255,.56); }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 13px 20px;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(90deg, var(--lime), #d7ff66 58%, var(--cyan)); box-shadow: 0 18px 44px rgba(186,255,50,.24); }
+    .btn-dark { color: var(--white); background: var(--ink); border-color: rgba(255,255,255,.08); }
+    .btn-ghost { background: rgba(255,255,255,.48); border-color: rgba(17,19,24,.14); }
+
+    .hero { padding: 62px 0 38px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .visual-card {
+      border: 1px solid rgba(17,19,24,.12);
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: clamp(28px, 5vw, 58px);
+      background: rgba(255,255,255,.58);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 18px;
+      top: 142px;
+      left: -160px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--lime), var(--cyan));
+      transform: rotate(-42deg);
+      opacity: .55;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: #43513f;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--lime);
+    }
+
+    h1, h2, h3 { margin: 0; letter-spacing: -.045em; }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: clamp(40px, 6.4vw, 78px);
+      line-height: .94;
+    }
+
+    h2 {
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: clamp(31px, 4vw, 54px);
+      line-height: 1.02;
+    }
+
+    .hero-text,
+    .lead {
+      color: #4d5866;
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 650;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 660px;
+      margin: 22px 0 0;
+      font-size: clamp(18px, 2.1vw, 23px);
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .trust-row {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-row li {
+      min-height: 96px;
+      padding: 15px;
+      border: 1px solid rgba(17,19,24,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.56);
+      color: #3e4651;
+      font-weight: 800;
+    }
+
+    .trust-row strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 600px;
+      background: #111318;
+      color: var(--white);
+    }
+
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      inset: -15% -25% auto auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(186,255,50,.28);
+      filter: blur(18px);
+    }
+
+    .browser-mock {
+      position: relative;
+      z-index: 1;
+      margin: 26px;
+      min-height: 440px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 28px;
+      background: radial-gradient(circle at 78% 15%, rgba(69,199,216,.18), transparent 32%), linear-gradient(160deg, #191e25 0%, #101114 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+
+    .browser-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .dots { display: flex; gap: 7px; }
+    .dots span { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.3); }
+    .dots span:first-child { background: var(--lime); }
+
+    .url-pill {
+      max-width: 230px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mock-content {
+      display: grid;
+      grid-template-columns: 1fr .72fr;
+      gap: 18px;
+      padding: 28px;
+      align-items: center;
+    }
+
+    .mock-title {
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
+
+    .mock-lines { display: grid; gap: 10px; margin: 22px 0; }
+    .mock-lines span { height: 12px; border-radius: 999px; background: rgba(255,255,255,.18); }
+    .mock-lines span:nth-child(1) { width: 86%; background: var(--lime); }
+    .mock-lines span:nth-child(2) { width: 72%; }
+    .mock-lines span:nth-child(3) { width: 58%; background: rgba(69,199,216,.72); }
+
+    .mock-cta {
+      display: inline-flex;
+      padding: 11px 14px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .phone-card {
+      min-height: 270px;
+      border-radius: 28px;
+      padding: 16px;
+      background: #f7f4ea;
+      color: var(--ink);
+      transform: rotate(2deg);
+      box-shadow: 0 28px 60px rgba(0,0,0,.28);
+    }
+
+    .phone-card .mini-bar {
+      width: 54px;
+      height: 6px;
+      margin: 0 auto 18px;
+      border-radius: 999px;
+      background: rgba(17,19,24,.18);
+    }
+
+    .phone-card strong { display: block; font-size: 24px; line-height: 1.05; letter-spacing: -.04em; }
+    .phone-card p { margin: 12px 0 16px; color: #5d6875; font-size: 14px; font-weight: 700; }
+    .phone-card .fieldline { height: 40px; margin-top: 10px; border-radius: 14px; background: rgba(17,19,24,.08); }
+
+    .price-stamp {
+      position: absolute;
+      right: 24px;
+      bottom: 22px;
+      z-index: 2;
+      width: 186px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 26px;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .price-stamp span { display: block; color: rgba(255,255,255,.62); font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .price-stamp strong { display: block; margin-top: 2px; color: var(--lime); font-family: "Unbounded", "Onest", sans-serif; font-size: 34px; line-height: 1; letter-spacing: -.06em; }
+
+    section { padding: 42px 0; }
+    .section-head { max-width: 760px; margin-bottom: 24px; }
+    .section-kicker { margin: 0 0 10px; color: #6c7660; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .lead { margin: 14px 0 0; }
+
+    .grid-3, .grid-2 { display: grid; gap: 16px; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      min-height: 190px;
+      padding: 24px;
+      border: 1px solid rgba(17,19,24,.12);
+      border-radius: 28px;
+      background: rgba(255,255,255,.58);
+      box-shadow: 0 18px 48px rgba(17,19,24,.08);
+    }
+
+    .card.dark {
+      color: var(--white);
+      background: linear-gradient(160deg, #20252d, #111318);
+      border-color: rgba(255,255,255,.12);
+    }
+
+    .card h3 { font-size: 24px; line-height: 1.05; }
+    .card p, .card li { color: #596575; font-size: 16px; font-weight: 650; }
+    .card.dark p, .card.dark li { color: rgba(255,255,255,.72); }
+    .card ul { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .card li::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 9px; border-radius: 50%; background: var(--lime); vertical-align: middle; }
+
+    .band-dark {
+      margin: 44px 0;
+      padding: 64px 0;
+      color: var(--white);
+      background: radial-gradient(circle at 10% 14%, rgba(186,255,50,.18), transparent 26%), radial-gradient(circle at 90% 80%, rgba(69,199,216,.16), transparent 30%), #101114;
+    }
+
+    .band-dark .section-kicker { color: var(--lime); }
+    .band-dark .lead { color: rgba(255,255,255,.72); }
+    .band-dark .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); box-shadow: none; }
+    .band-dark .card p, .band-dark .card li { color: rgba(255,255,255,.72); }
+
+    .includes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .check-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .check-list li { padding: 14px 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: rgba(255,255,255,.05); color: rgba(255,255,255,.78); font-weight: 750; }
+    .check-list li strong { color: var(--white); }
+
+    .not-included {
+      border: 1px solid rgba(255,138,30,.34);
+      border-radius: 28px;
+      padding: 24px;
+      background: rgba(255,138,30,.08);
+    }
+
+    .not-included h3 { color: #ffd3ad; }
+
+    .process {
+      counter-reset: step;
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .process li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(17,19,24,.12);
+    }
+
+    .process li::before {
+      content: counter(step, decimal-leading-zero);
+      width: 54px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--ink);
+      color: var(--lime);
+      font-weight: 900;
+    }
+
+    .process strong { display: block; font-size: 18px; }
+    .process span { display: block; margin-top: 3px; color: #5b6675; font-weight: 650; }
+
+    .offer-strip {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 28px;
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .offer-strip p { margin: 6px 0 0; color: rgba(17,19,24,.74); font-weight: 750; }
+
+    .form-section { padding: 58px 0 74px; }
+    .form-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: 18px; align-items: stretch; }
+    .form-panel, .form-copy { border: 1px solid rgba(255,255,255,.12); border-radius: 32px; background: rgba(255,255,255,.06); }
+    .form-copy { padding: clamp(24px, 4vw, 42px); }
+    .form-copy h2 { color: var(--white); }
+    .form-copy ul { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+    .form-copy li { padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,.06); color: rgba(255,255,255,.76); font-weight: 750; }
+
+    .lead-form { display: grid; gap: 14px; padding: clamp(18px, 4vw, 32px); }
+    .field { display: grid; gap: 7px; }
+    label { color: rgba(255,255,255,.74); font-size: 14px; font-weight: 850; }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 15px 16px;
+      color: var(--white);
+      background: rgba(255,255,255,.08);
+      font: inherit;
+      outline: none;
+    }
+
+    textarea { min-height: 124px; resize: vertical; }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.4); }
+    input:focus, textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 4px rgba(186,255,50,.1); }
+
+    .trap-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-note { min-height: 24px; margin: 0; color: rgba(255,255,255,.68); font-weight: 750; }
+    .form-note.success { color: var(--lime); }
+    .form-note.error { color: #ffb4a3; }
+
+    .footer { padding: 38px 0; border-top: 1px solid rgba(17,19,24,.12); background: rgba(255,255,255,.42); }
+    .footer-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .legal-card { padding: 22px; border: 1px solid rgba(17,19,24,.12); border-radius: 24px; background: rgba(255,255,255,.58); }
+    .legal-card h3 { margin-bottom: 12px; font-size: 20px; }
+    .legal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; color: #3e4652; font-weight: 700; }
+    .legal-list span { display: block; color: #8a919d; font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .legal-details { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(17,19,24,.12); color: #4c5663; font-weight: 650; }
+    .legal-details summary { cursor: pointer; color: var(--ink); font-weight: 900; }
+
+    @media (max-width: 920px) {
+      .hero-grid, .grid-3, .grid-2, .includes, .form-grid, .footer-grid { grid-template-columns: 1fr; }
+      .trust-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .visual-card { min-height: auto; }
+      .mock-content { grid-template-columns: 1fr; }
+      .phone-card { transform: none; }
+      .price-stamp { position: relative; right: auto; bottom: auto; margin: 0 26px 26px; width: auto; }
+      .offer-strip { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 24px, 1160px); }
+      .nav { min-height: 64px; }
+      .nav-links a:not(.btn) { display: none; }
+      .brand span:last-child { display: none; }
+      .hero { padding-top: 34px; }
+      .hero-card, .visual-card { border-radius: 28px; }
+      h1 { font-size: clamp(34px, 10vw, 48px); }
+      h2 { font-size: clamp(28px, 9vw, 42px); }
+      .hero-card { padding: 26px 20px; }
+      .hero-actions .btn { width: 100%; }
+      .trust-row { grid-template-columns: 1fr; }
+      .trust-row li { min-height: auto; }
+      .browser-mock { margin: 14px; border-radius: 22px; }
+      .mock-content { padding: 20px; }
+      .phone-card { min-height: auto; }
+      section { padding: 34px 0; }
+      .band-dark { padding: 46px 0; margin: 28px 0; }
+      .card { min-height: auto; padding: 20px; border-radius: 22px; }
+      .process li { grid-template-columns: 1fr; }
+      .form-section { padding-bottom: 54px; }
+      .footer { padding: 26px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="LeadCore"><span class="brand-mark">LC</span><span>LeadCore</span></a>
+      <nav class="nav-links" aria-label="Навигация">
+        <a href="#included">Что входит</a>
+        <a href="#process">Процесс</a>
+        <a class="btn btn-primary" href="#lead-form">Заказать лендинг</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-card">
+          <p class="eyebrow">Создание лендинга за 725 р.</p>
+          <h1>Лендинг, который помогает получать заявки, а не просто висит в интернете</h1>
+          <p class="hero-text">Соберу одностраничный сайт под один продукт, услугу или проект: понятный первый экран, структура продаж, мобильная версия, форма заявки, отправка в Telegram и базовая аналитика.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#lead-form">Хочу лендинг за 725 р.</a>
+            <a class="btn btn-ghost" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+          <ul class="trust-row">
+            <li><strong>725 р.</strong>фиксированная цена пакета</li>
+            <li><strong>3-7</strong>дней при готовых вводных</li>
+            <li><strong>90%</strong>фокус на мобильном трафике</li>
+            <li><strong>TG</strong>заявки сразу в Telegram</li>
+          </ul>
+        </div>
+
+        <aside class="visual-card" aria-label="Визуальный пример лендинга">
+          <div class="browser-mock">
+            <div class="browser-top">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <div class="url-pill">leadcore.by/landing/</div>
+            </div>
+            <div class="mock-content">
+              <div>
+                <div class="mock-title">Ваш оффер в понятную страницу</div>
+                <div class="mock-lines"><span></span><span></span><span></span></div>
+                <div class="mock-cta">Оставить заявку</div>
+              </div>
+              <div class="phone-card">
+                <div class="mini-bar"></div>
+                <strong>Лендинг под заявки</strong>
+                <p>Коротко, ясно, с формой и доверием. Без лишней красоты ради красоты.</p>
+                <div class="fieldline"></div>
+                <div class="fieldline"></div>
+                <div class="fieldline"></div>
+              </div>
+            </div>
+          </div>
+          <div class="price-stamp"><span>Пакет</span><strong>725 р.</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Когда это нужно</p>
+          <h2>Если нужен быстрый сайт под одну понятную задачу</h2>
+          <p class="lead">Пакет подходит, когда не нужен большой проект на месяцы. Нужно быстро упаковать предложение, показать его клиентам и принимать заявки.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Нет сайта или он устарел</h3><p>Нужна аккуратная страница, которую можно отправлять клиентам, ставить в профиль, запускать в рекламу или использовать как презентацию.</p></article>
+          <article class="card"><h3>Есть продукт, но нет упаковки</h3><p>Помогу разложить предложение: кому подходит, что входит, почему вам можно доверять и что делать дальше.</p></article>
+          <article class="card"><h3>Нужен старт без лишнего бюджета</h3><p>Собираем базовую посадочную страницу, форму, метрику и Telegram. Рекламу можно подключить следующим этапом.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="included" class="band-dark">
+      <div class="wrap includes">
+        <div>
+          <p class="section-kicker">Что входит</p>
+          <h2>За 725 р. вы получаете не шаблон, а рабочую основу под заявки</h2>
+          <p class="lead">Это базовый лендинг. Его задача - быстро и понятно объяснить предложение, убрать лишние вопросы и привести человека к форме заявки.</p>
+        </div>
+        <div class="card dark">
+          <h3>Состав пакета</h3>
+          <ul>
+            <li>Одностраничный лендинг под один продукт, услугу или проект</li>
+            <li>Структура продаж: первый экран, боли, решение, доверие, этапы, форма</li>
+            <li>Короткие тексты без воды и сложных формулировок</li>
+            <li>Адаптация под мобильные, потому что большая часть трафика с телефона</li>
+            <li>Форма заявки с отправкой в Telegram</li>
+            <li>Подключение Яндекс Метрики, если счётчик уже есть</li>
+            <li>Базовая SEO-подготовка: title, description, заголовки, social preview</li>
+            <li>Публикация на Vercel или подготовка к подключению вашего домена</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap" style="margin-top: 18px;">
+        <div class="grid-2">
+          <div class="not-included">
+            <h3>Что не входит в пакет 725 р.</h3>
+            <ul class="check-list">
+              <li><strong>Настройка рекламных кампаний</strong> - это следующий пакет за 1421 р.</li>
+              <li><strong>Глубокая стратегия и аналитика</strong> - это расширенный запуск за 3480 р.</li>
+              <li><strong>CRM, квизы, сложные интеграции</strong> - обсуждаются отдельно, если они реально нужны.</li>
+            </ul>
+          </div>
+          <div class="card dark">
+            <h3>Почему так честнее</h3>
+            <p>За 725 р. мы не обещаем поток клиентов. Мы делаем сильную базу: страницу, которая нормально объясняет предложение и готова принимать заявки. Если нужна реклама и тест трафика, лучше сразу смотреть пакет 1421 р.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Логика страницы</p>
+          <h2>Что делает лендинг продающим</h2>
+          <p class="lead">Красивый блок сам по себе не продаёт. Продаёт связка: понятный оффер, доказательства, конкретика и простое действие.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Первый экран</h3><p>Человек за 3-5 секунд понимает, что вы предлагаете, для кого это и зачем оставлять заявку.</p></article>
+          <article class="card"><h3>Доверие</h3><p>Показываем факты: опыт, примеры, фото, отзывы, сертификаты, условия, этапы работы или другие доказательства.</p></article>
+          <article class="card"><h3>Форма</h3><p>Минимум полей, крупная кнопка, понятный призыв. Заявка сразу приходит в Telegram, чтобы не терять обращение.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap grid-2">
+        <div class="section-head">
+          <p class="section-kicker">Процесс</p>
+          <h2>Как проходит работа</h2>
+          <p class="lead">Без бесконечных созвонов и хаоса. Сначала быстро собираем вводные, потом делаем страницу, проверяем и запускаем.</p>
+          <div class="offer-strip">
+            <div><strong>Если после лендинга захотите рекламу</strong><p>Можно перейти к пакету 1421 р.: лендинг + настройка необходимых рекламных кампаний.</p></div>
+            <a class="btn btn-dark" href="/brief/">Заполнить бриф</a>
+          </div>
+        </div>
+        <ol class="process">
+          <li><div><strong>Вы оставляете заявку</strong><span>Ниша, контакт, что нужно продвигать и есть ли материалы.</span></div></li>
+          <li><div><strong>Собираю структуру</strong><span>Формулирую первый экран, блоки доверия, оффер и путь к заявке.</span></div></li>
+          <li><div><strong>Делаю дизайн и мобильную версию</strong><span>Страница должна нормально смотреться на телефоне, а не только на большом экране.</span></div></li>
+          <li><div><strong>Подключаю форму и метрику</strong><span>Заявки идут в Telegram, аналитика готова к первому трафику.</span></div></li>
+          <li><div><strong>Публикую и отдаю ссылку</strong><span>Вы получаете готовую страницу, которую уже можно показывать клиентам.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Для каких ниш</p>
+          <h2>Подходит для бизнеса, где нужно быстро объяснить предложение</h2>
+          <p class="lead">Лендинг можно собрать под услуги, товары, локальные проекты, обучение, недвижимость, ремонт, мебель, B2B или отдельный оффер.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Ремонт и строительство</h3><p>Ремонт квартир, потолки, кухни, двери, мебель, электрика, сантехника, клининг после ремонта.</p></article>
+          <article class="card"><h3>Обучение и консультации</h3><p>Курсы, наставничество, разовые консультации, локальные образовательные продукты.</p></article>
+          <article class="card"><h3>Недвижимость и B2B</h3><p>Отдельные объекты, оценка, юридические услуги, B2B-предложения и локальные сервисы.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-dark form-section" id="lead-form">
+      <div class="wrap form-grid">
+        <div class="form-copy">
+          <p class="section-kicker">Заявка</p>
+          <h2>Хотите лендинг за 725 р.?</h2>
+          <p class="lead">Оставьте контакт. Я посмотрю задачу и скажу, можно ли уложиться в базовый пакет или лучше сразу делать запуск с рекламными кампаниями.</p>
+          <ul>
+            <li>Ответ придёт лично от меня</li>
+            <li>Заявка сразу попадает в Telegram</li>
+            <li>Если вводных мало, начнём с короткого брифа</li>
+          </ul>
+        </div>
+        <form id="leadForm" class="form-panel lead-form" novalidate>
+          <div class="trap-field" aria-hidden="true">
+            <label for="website">Сайт</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <input type="hidden" id="package" name="package" value="Лендинг - 725 р." />
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Александр" />
+          </div>
+          <div class="field">
+            <label for="contact">Телефон или Telegram</label>
+            <input id="contact" name="contact" type="text" autocomplete="tel" required maxlength="80" placeholder="+375... или @username" />
+          </div>
+          <div class="field">
+            <label for="niche">Что нужно продвинуть?</label>
+            <textarea id="niche" name="niche" maxlength="1000" placeholder="Например: кухни под заказ в Минске, нужен лендинг с формой заявки"></textarea>
+          </div>
+          <button id="leadFormButton" class="btn btn-primary" type="submit">Заказать лендинг</button>
+          <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">SEO-блок</p>
+          <h2>Создание лендинга для бизнеса</h2>
+          <p class="lead">LeadCore делает одностраничные сайты для предпринимателей и малого бизнеса: лендинг под заявки, запуск продукта, локальную услугу, отдельный оффер или рекламную кампанию. Главный фокус - не просто дизайн, а понятная структура, мобильная версия, форма заявки, аналитика и готовность к первому трафику.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <section class="legal-card">
+        <h3>Реквизиты</h3>
+        <ul class="legal-list">
+          <li><span>Исполнитель</span>ИП Коцуба Александр Витальевич</li>
+          <li><span>УНП</span>291847826</li>
+          <li><span>Расчётный счёт BYN</span>BY69TECN30139257000000000010</li>
+          <li><span>Банк</span>ОАО «Технобанк», BIC/SWIFT: TECNBY22</li>
+        </ul>
+      </section>
+      <section class="legal-card">
+        <h3>Контакты</h3>
+        <ul class="legal-list">
+          <li><span>Telegram</span><a href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">@Alexandr_K1503</a></li>
+          <li><span>Телефон</span><a href="tel:+375447375050">+375 (44) 737-50-50</a></li>
+          <li><span>Сайт</span><a href="https://leadcore.by/">leadcore.by</a></li>
+        </ul>
+        <details class="legal-details">
+          <summary>Политика обработки заявок</summary>
+          <p>Данные из формы используются только для связи по заявке: имя, телефон или Telegram, выбранный пакет и комментарий по задаче. Информация приходит в Telegram-чат исполнителя и не продаётся третьим лицам.</p>
+        </details>
+      </section>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Создание лендинга за 725 р.",
+    "description": "Одностраничный лендинг под заявки: структура, тексты, мобильная версия, форма, Telegram, Яндекс Метрика и базовая SEO-подготовка.",
+    "provider": {
+      "@type": "Person",
+      "name": "Александр Коцуба",
+      "url": "https://leadcore.by/",
+      "telephone": "+375447375050"
+    },
+    "areaServed": "BY",
+    "offers": {
+      "@type": "Offer",
+      "price": "725",
+      "priceCurrency": "BYN",
+      "url": "https://leadcore.by/landing/"
+    }
+  }
+  </script>
+
+  <script>
+    const analyticsState = { yandexMetrikaId: "", ga4Id: "" };
+
+    function initAnalytics(config) {
+      analyticsState.yandexMetrikaId = String(config.yandexMetrikaId || "").trim();
+      analyticsState.ga4Id = String(config.ga4Id || "").trim();
+
+      if (analyticsState.ga4Id) {
+        const gaScript = document.createElement("script");
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsState.ga4Id)}`;
+        document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ window.dataLayer.push(arguments); };
+        window.gtag("js", new Date());
+        window.gtag("config", analyticsState.ga4Id);
+      }
+
+      if (analyticsState.yandexMetrikaId) {
+        (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        window.ym(analyticsState.yandexMetrikaId, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true
+        });
+      }
+    }
+
+    (async function loadAnalyticsConfig() {
+      try {
+        if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
+        const response = await fetch("/api/config", { cache: "no-store" });
+        if (!response.ok) return;
+        initAnalytics(await response.json());
+      } catch (error) {
+        // Analytics are optional; the page must work without them.
+      }
+    })();
+
+    const leadForm = document.getElementById("leadForm");
+    const note = document.getElementById("formNote");
+    const submitButton = document.getElementById("leadFormButton");
+    const telegramFallback = "https://t.me/Alexandr_K1503";
+
+    function setNote(text, state) {
+      note.textContent = text;
+      note.className = `form-note ${state || ""}`.trim();
+    }
+
+    function trackLead() {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "lead_submit", { event_category: "form", page_type: "landing_725" });
+        window.gtag("event", "landing_lead_submit", { event_category: "form" });
+      }
+      if (typeof window.ym === "function" && analyticsState.yandexMetrikaId) {
+        window.ym(analyticsState.yandexMetrikaId, "reachGoal", "lead_submit");
+        window.ym(analyticsState.yandexMetrikaId, "reachGoal", "landing_lead_submit");
+      }
+    }
+
+    function openTelegramFallback(payload) {
+      const text = [
+        "Заявка на лендинг за 725 р. с leadcore.by/landing",
+        `Имя: ${payload.name}`,
+        `Контакт: ${payload.contact}`,
+        `Задача: ${payload.niche || "-"}`
+      ].join("\n");
+      window.open(`${telegramFallback}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    }
+
+    leadForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        name: document.getElementById("name").value.trim(),
+        contact: document.getElementById("contact").value.trim(),
+        packageName: document.getElementById("package").value,
+        niche: document.getElementById("niche").value.trim(),
+        website: document.getElementById("website").value.trim(),
+        page: window.location.href
+      };
+
+      if (!payload.name || !payload.contact) {
+        setNote("Заполните имя и контакт, чтобы я мог ответить.", "error");
+        return;
+      }
+
+      if (payload.name.length > 80 || payload.contact.length > 80 || payload.niche.length > 1000) {
+        setNote("Слишком длинный текст. Сократите заявку и отправьте ещё раз.", "error");
+        return;
+      }
+
+      setNote("Отправляю заявку в Telegram...", "");
+      submitButton.disabled = true;
+
+      try {
+        const response = await fetch("/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.error || "Lead delivery failed");
+
+        trackLead();
+        leadForm.reset();
+        setNote("Заявка отправлена. Сейчас откроется страница подтверждения.", "success");
+        window.location.href = "/thanks/";
+      } catch (error) {
+        openTelegramFallback(payload);
+        setNote("Если бот временно не ответил, открыл Telegram с готовым текстом заявки.", "error");
+        submitButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
