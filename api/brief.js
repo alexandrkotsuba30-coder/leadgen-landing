@@ -59,6 +59,8 @@ module.exports = async function handler(req, res) {
 
   const name = limitText(body.name, 80);
   const contact = limitText(body.contact, 100);
+  const briefId = limitText(body.briefId, 40);
+  const briefMode = limitText(body.briefMode, 40);
 
   if (!name || !contact) {
     sendJson(res, 400, { ok: false, error: "Name and contact are required" });
@@ -68,6 +70,8 @@ module.exports = async function handler(req, res) {
   const submittedAt = new Date().toISOString();
   const text = cutTelegramMessage([
     "Новый бриф с leadcore.by/brief",
+    briefId ? `ID брифа: ${briefId}` : "",
+    briefMode ? `Режим: ${briefMode === "quick" ? "быстрый" : "полный"}` : "",
     "",
     "Контакты",
     `Имя: ${name}`,

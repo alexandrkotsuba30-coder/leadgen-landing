@@ -246,7 +246,7 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
       margin: 30px 0 0;
       padding: 0;
@@ -558,15 +558,17 @@
     }
 
     @media (max-width: 680px) {
-      .wrap { width: min(100% - 24px, 1160px); }
+      .wrap { width: min(100% - 20px, 1160px); }
       .nav { min-height: 64px; }
       .nav-links a:not(.btn) { display: none; }
+      .nav-links .btn { min-height: 42px; padding: 10px 13px; font-size: 13px; white-space: nowrap; }
       .brand span:last-child { display: none; }
       .hero { padding-top: 34px; }
       .hero-card, .visual-card { border-radius: 28px; }
-      h1 { font-size: clamp(34px, 10vw, 48px); }
+      h1 { font-size: clamp(30px, 8.8vw, 40px); line-height: 1; letter-spacing: -.055em; }
       h2 { font-size: clamp(28px, 9vw, 42px); }
-      .hero-card { padding: 26px 20px; }
+      .hero-card { padding: 24px 16px; }
+      .hero-text { font-size: 17px; }
       .hero-actions .btn { width: 100%; }
       .trust-row { grid-template-columns: 1fr; }
       .trust-row li { min-height: auto; }
@@ -589,7 +591,7 @@
       <nav class="nav-links" aria-label="Навигация">
         <a href="#included">Что входит</a>
         <a href="#process">Процесс</a>
-        <a class="btn btn-primary" href="#lead-form">Заказать лендинг</a>
+        <a class="btn btn-primary" href="#lead-form">Заказать</a>
       </nav>
     </div>
   </header>
@@ -599,14 +601,14 @@
       <div class="wrap hero-grid">
         <div class="hero-card">
           <p class="eyebrow">Создание лендинга за 725 р.</p>
-          <h1>Лендинг, который помогает получать заявки, а не просто висит в интернете</h1>
+          <h1>Лендинг под заявки за 725 р.</h1>
           <p class="hero-text">Соберу одностраничный сайт под один продукт, услугу или проект: понятный первый экран, структура продаж, мобильная версия, форма заявки, отправка в Telegram и базовая аналитика.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lead-form">Хочу лендинг за 725 р.</a>
             <a class="btn btn-ghost" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
           </div>
           <ul class="trust-row">
-            <li><strong>725 р.</strong>фиксированная цена пакета</li>
+            <li><strong>725 р.</strong>за готовый лендинг</li>
             <li><strong>3-7</strong>дней при готовых вводных</li>
             <li><strong>90%</strong>фокус на мобильном трафике</li>
             <li><strong>TG</strong>заявки сразу в Telegram</li>
