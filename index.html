@@ -345,6 +345,144 @@
     .band-dark .lead { color: rgba(255,255,255,.68); }
     .band-dark .section-kicker { color: var(--lime); }
 
+    .pdf-teaser {
+      padding-top: 0;
+    }
+
+    .pdf-teaser-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 24px;
+      border: 1px solid rgba(16,17,20,.12);
+      border-radius: 34px;
+      padding: clamp(24px, 5vw, 48px);
+      background:
+        radial-gradient(circle at 82% 12%, rgba(84,212,211,.24), transparent 30%),
+        radial-gradient(circle at 10% 92%, rgba(186,255,50,.26), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.98), rgba(244,248,232,.92));
+      box-shadow: 0 30px 80px rgba(16,17,20,.11);
+    }
+
+    .pdf-teaser-card::before {
+      content: "";
+      position: absolute;
+      inset: -40% auto auto 56%;
+      width: 90px;
+      height: 160%;
+      background: linear-gradient(180deg, rgba(84,212,211,.62), rgba(186,255,50,.42));
+      transform: rotate(38deg);
+      opacity: .75;
+    }
+
+    .pdf-teaser-copy,
+    .pdf-teaser-preview {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pdf-teaser-copy {
+      display: grid;
+      gap: 16px;
+      align-content: center;
+    }
+
+    .pdf-teaser-copy h2 {
+      max-width: 820px;
+    }
+
+    .pdf-points {
+      display: grid;
+      gap: 10px;
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #303946;
+      font-weight: 750;
+    }
+
+    .pdf-points li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .pdf-points li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 10px;
+      height: 10px;
+      margin-top: .48em;
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 0 0 6px rgba(186,255,50,.16);
+    }
+
+    .pdf-teaser-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .pdf-teaser-preview {
+      min-height: 320px;
+      border-radius: 28px;
+      padding: 22px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(186,255,50,.18), transparent 32%),
+        linear-gradient(160deg, #101114, #20242a);
+      color: var(--white);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+    }
+
+    .pdf-window {
+      height: 100%;
+      min-height: 276px;
+      display: grid;
+      align-content: space-between;
+      gap: 26px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 22px;
+      padding: 22px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .pdf-window-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      color: rgba(255,255,255,.64);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .pdf-window strong {
+      display: block;
+      max-width: 360px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: .96;
+      letter-spacing: -.045em;
+    }
+
+    .pdf-bars {
+      display: grid;
+      gap: 10px;
+      max-width: 340px;
+    }
+
+    .pdf-bars span {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+    }
+
+    .pdf-bars span:nth-child(1) { width: 100%; background: var(--lime); }
+    .pdf-bars span:nth-child(2) { width: 76%; }
+    .pdf-bars span:nth-child(3) { width: 58%; background: var(--cyan); }
+
     .grid {
       display: grid;
       gap: 14px;
@@ -747,6 +885,7 @@
       .mobile-pipeline { display: none; }
       .hero-actions { flex-direction: row; max-width: none; }
       .hero-facts { grid-template-columns: repeat(2, 1fr); }
+      .pdf-teaser-card { grid-template-columns: 1.05fr .95fr; align-items: stretch; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
       .form-layout { grid-template-columns: .85fr 1.15fr; }
       .footer-top { grid-template-columns: 1fr auto; align-items: center; }
@@ -869,6 +1008,7 @@
       </a>
       <nav class="nav-links" aria-label="Главная навигация">
         <a href="#system">Стратегия</a>
+        <a href="/pdf/">PDF</a>
         <a href="#examples">Примеры</a>
         <a href="#packages">Пакеты</a>
         <a href="#lead-form">Заявка</a>
@@ -906,6 +1046,34 @@
             <div class="fact">Тестовый рекламный бюджет от $500 - отдельно от стоимости работ</div>
             <div class="fact">Подходит услугам, товарам, проектам и локальному бизнесу</div>
             <div class="fact">Главный вход под рекламный тест - пакет за 1421 р.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pdf-leadmagnet" class="pdf-teaser" aria-label="Бесплатный PDF">
+      <div class="wrap">
+        <div class="pdf-teaser-card">
+          <div class="pdf-teaser-copy">
+            <p class="section-kicker">Бесплатный PDF</p>
+            <h2>50 рекламных связок, чтобы быстрее понять, что тестировать в вашей нише</h2>
+            <p class="lead">Это отдельная страница для холодного трафика и первых касаний. Человек оставляет контакт, получает PDF и сразу попадает в понятную воронку: Telegram, бриф или консультация.</p>
+            <ul class="pdf-points">
+              <li>офферы, креативы и сценарии запуска без маркетинговой воды;</li>
+              <li>подходит как мягкий вход перед брифом или пакетом за 1421 р.;</li>
+              <li>форма передаёт контакт в Telegram и фиксирует UTM-метки.</li>
+            </ul>
+            <div class="pdf-teaser-actions">
+              <a class="btn btn-primary" href="/pdf/">Открыть PDF-страницу</a>
+              <a class="btn btn-light" href="/pdf/#pdf-form">Забрать PDF</a>
+            </div>
+          </div>
+          <div class="pdf-teaser-preview" aria-hidden="true">
+            <div class="pdf-window">
+              <div class="pdf-window-top"><span>LeadCore PDF</span><span>2026</span></div>
+              <strong>50 связок под заявки</strong>
+              <div class="pdf-bars"><span></span><span></span><span></span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1188,6 +1356,7 @@
         <div class="contact-links">
           <a id="contactTelegram" class="btn btn-outline" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Telegram</a>
           <a id="contactPhone" class="btn btn-outline" href="tel:+375447375050">+375 (44) 737-50-50</a>
+          <a class="btn btn-outline" href="/pdf/">PDF для бизнеса</a>
         </div>
       </div>
 
