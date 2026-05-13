@@ -716,6 +716,7 @@
           <div id="successPanel" class="success-panel" role="region" aria-live="polite">
             <p>Контакт сохранён. Следующий шаг: можно сразу перейти в Telegram и ускорить получение файла.</p>
             <div class="success-actions">
+              <a id="downloadPdfLink" class="btn btn-primary" href="/pdf/leadcore-50-reklamnyh-svyazok-2026.pdf" target="_blank" rel="noopener">Скачать PDF</a>
               <a class="btn btn-dark" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
               <a class="btn btn-soft" href="/thanks/">Открыть страницу подтверждения</a>
             </div>
@@ -827,7 +828,20 @@
     const note = document.getElementById("formNote");
     const submitButton = document.getElementById("submitButton");
     const successPanel = document.getElementById("successPanel");
+    const downloadPdfLink = document.getElementById("downloadPdfLink");
     const traffic = readTrafficParams();
+    const pdfDownloadUrl = "/pdf/leadcore-50-reklamnyh-svyazok-2026.pdf";
+
+    function triggerPdfDownload() {
+      downloadPdfLink.href = pdfDownloadUrl;
+      const tempLink = document.createElement("a");
+      tempLink.href = pdfDownloadUrl;
+      tempLink.target = "_blank";
+      tempLink.rel = "noopener";
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      tempLink.remove();
+    }
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -870,6 +884,7 @@
         form.reset();
         setNote(note, "Контакт принят. Можно перейти в Telegram, чтобы ускорить получение PDF.", "success");
         successPanel.style.display = "block";
+        triggerPdfDownload();
       } catch (error) {
         openTelegramFallback(payload);
         setNote(note, "Автоотправка временно недоступна. Открыл Telegram с готовым текстом.", "error");
