@@ -13,7 +13,7 @@ module.exports = function handler(req, res) {
 
   sendJson(res, 200, {
     ok: true,
-    yandexMetrikaId: process.env.YANDEX_METRIKA_ID || "",
+    yandexMetrikaId: process.env.YANDEX_METRIKA_ID || "109084884",
     ga4Id: process.env.GA4_ID || ""
   });
 };

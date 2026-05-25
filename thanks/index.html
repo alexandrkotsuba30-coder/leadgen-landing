@@ -115,6 +115,19 @@
   <script>
     (async () => {
       try {
+        let shouldTrackLead = false;
+        try {
+          shouldTrackLead = window.sessionStorage.getItem("leadcoreLeadSubmitted") === "1";
+          if (shouldTrackLead) window.sessionStorage.removeItem("leadcoreLeadSubmitted");
+        } catch (error) {
+          shouldTrackLead = false;
+        }
+        const leadParam = new URLSearchParams(window.location.search).get("lead") === "1";
+        shouldTrackLead = shouldTrackLead || leadParam;
+        if (leadParam && window.history && typeof window.history.replaceState === "function") {
+          window.history.replaceState(null, "", "/thanks/");
+        }
+
         const response = await fetch("/api/config", { cache: "no-store" });
         if (!response.ok) return;
         const config = await response.json();
@@ -133,7 +146,9 @@
           accurateTrackBounce: true,
           webvisor: true
         });
-        ym(yandexMetrikaId, "reachGoal", "lead_submit");
+        if (shouldTrackLead) {
+          ym(yandexMetrikaId, "reachGoal", "lead_submit");
+        }
       } catch (error) {
         // The thank-you page works even if analytics are unavailable.
       }
