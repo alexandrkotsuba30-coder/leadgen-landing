@@ -1044,39 +1044,28 @@
       }
 
       .hero-visual {
-        min-height: 380px;
+        min-height: auto;
         order: 2;
+        display: grid;
+        place-items: center;
       }
 
       .hero-line {
-        width: 86%;
-        height: 64%;
-        right: 8px;
-        top: 48px;
+        display: none;
       }
 
       .hero-portrait-card {
-        right: 0;
-        bottom: 0;
-        width: min(260px, 72vw);
-        height: 350px;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: min(330px, 92vw);
+        height: 430px;
         border-radius: 28px;
       }
 
       .stage-card {
-        width: min(174px, 47vw);
-        min-height: 84px;
-        padding: 13px;
-        border-radius: 18px;
+        display: none;
       }
-
-      .stage-card strong {
-        font-size: 15px;
-      }
-
-      .signal-one { left: 0; top: 8px; }
-      .signal-two { right: 0; top: 96px; }
-      .signal-three { left: 0; bottom: 22px; }
 
       .hero-portrait-card figcaption {
         left: 12px;
