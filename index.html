@@ -694,6 +694,152 @@
       text-underline-offset: 4px;
     }
 
+    .economy-shell {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 22px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 34px;
+      padding: clamp(20px, 4vw, 36px);
+      background:
+        radial-gradient(circle at 88% 10%, rgba(196,255,47,.16), transparent 28%),
+        radial-gradient(circle at 12% 90%, rgba(84,213,219,.14), transparent 34%),
+        linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      box-shadow: 0 30px 100px rgba(0,0,0,.24);
+    }
+
+    .economy-shell::before {
+      content: "";
+      position: absolute;
+      inset: -20% auto auto 56%;
+      width: 180px;
+      height: 150%;
+      background: linear-gradient(180deg, rgba(196,255,47,.34), rgba(84,213,219,.18));
+      transform: rotate(34deg);
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    .economy-intro,
+    .economy-calculator,
+    .economy-result {
+      position: relative;
+      z-index: 1;
+    }
+
+    .economy-intro {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .economy-intro h2 {
+      max-width: 780px;
+    }
+
+    .economy-note {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid rgba(196,255,47,.28);
+      border-radius: 999px;
+      background: rgba(196,255,47,.1);
+      color: var(--lime);
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .economy-calculator {
+      display: grid;
+      gap: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 26px;
+      padding: clamp(16px, 3vw, 24px);
+      background: rgba(11,13,16,.5);
+      backdrop-filter: blur(18px);
+    }
+
+    .calc-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .calc-field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .calc-field label {
+      color: rgba(255,255,255,.7);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .calc-field input {
+      min-height: 54px;
+      border-radius: 16px;
+      border-color: rgba(255,255,255,.14);
+      background: rgba(255,255,255,.09);
+      font-weight: 800;
+    }
+
+    .economy-result {
+      display: grid;
+      gap: 12px;
+      border: 1px solid rgba(196,255,47,.32);
+      border-radius: 26px;
+      padding: clamp(18px, 3vw, 26px);
+      background:
+        radial-gradient(circle at 80% 0%, rgba(196,255,47,.22), transparent 34%),
+        rgba(11,13,16,.72);
+    }
+
+    .result-main {
+      display: grid;
+      gap: 4px;
+    }
+
+    .result-main span {
+      color: rgba(255,255,255,.62);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .result-main strong {
+      color: var(--lime);
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    .result-list {
+      display: grid;
+      gap: 10px;
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255,255,255,.76);
+      font-size: 15px;
+    }
+
+    .result-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 10px;
+    }
+
+    .result-list b {
+      color: var(--white);
+      white-space: nowrap;
+    }
+
     .price-card {
       position: relative;
       display: grid;
@@ -984,6 +1130,8 @@
       .hero-actions { flex-direction: row; max-width: none; }
       .hero-facts { grid-template-columns: repeat(2, 1fr); }
       .pdf-teaser-card { grid-template-columns: 1.05fr .95fr; align-items: stretch; }
+      .economy-shell { grid-template-columns: .88fr 1.12fr; align-items: stretch; }
+      .calc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
       .form-layout { grid-template-columns: .85fr 1.15fr; }
       .footer-top { grid-template-columns: 1fr auto; align-items: center; }
@@ -1144,6 +1292,7 @@
         <a href="#system">Система</a>
         <a href="/pdf/">PDF</a>
         <a href="#examples">Примеры</a>
+        <a href="#unit-economics">Калькулятор</a>
         <a href="#packages">Пакеты</a>
         <a href="#lead-form">Заявка</a>
       </nav>
@@ -1329,6 +1478,56 @@
               <a class="case-link" href="https://aipeople.by/" target="_blank" rel="noopener">Смотреть пример</a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="unit-economics" class="band-dark">
+      <div class="wrap">
+        <div class="economy-shell">
+          <div class="economy-intro">
+            <span class="economy-note">Базовая юнит-экономика</span>
+            <h2>Сначала считаем, сколько заявка может стоить бизнесу</h2>
+            <p class="lead">Если экономика не сходится, реклама быстро превращается в слив бюджета. Поэтому перед запуском я смотрю не только на красивый лендинг, а на чек, маржу, конверсию в продажу и допустимую стоимость заявки.</p>
+            <ul class="clean-list">
+              <li>показывает, какую стоимость заявки можно выдержать;</li>
+              <li>помогает понять минимальный тестовый бюджет;</li>
+              <li>объясняет, зачем нужны оффер, посадочная и аналитика.</li>
+            </ul>
+          </div>
+          <div class="economy-calculator" aria-label="Калькулятор стоимости заявки">
+            <div class="calc-grid">
+              <div class="calc-field">
+                <label for="calcCheck">Средний чек, р.</label>
+                <input id="calcCheck" type="number" inputmode="numeric" min="100" step="100" value="3000">
+              </div>
+              <div class="calc-field">
+                <label for="calcMargin">Маржа, %</label>
+                <input id="calcMargin" type="number" inputmode="decimal" min="1" max="100" step="1" value="35">
+              </div>
+              <div class="calc-field">
+                <label for="calcConversion">Конверсия заявки в продажу, %</label>
+                <input id="calcConversion" type="number" inputmode="decimal" min="1" max="100" step="1" value="15">
+              </div>
+              <div class="calc-field">
+                <label for="calcBudget">Тестовый рекламный бюджет, р.</label>
+                <input id="calcBudget" type="number" inputmode="numeric" min="100" step="100" value="1500">
+              </div>
+            </div>
+            <div class="economy-result" aria-live="polite">
+              <div class="result-main">
+                <span>Ориентир допустимой стоимости заявки</span>
+                <strong id="calcCpl">47 р.</strong>
+              </div>
+              <ul class="result-list">
+                <li><span>Валовая прибыль с продажи</span><b id="calcProfit">1050 р.</b></li>
+                <li><span>Допустимая цена привлечения клиента</span><b id="calcClientCost">315 р.</b></li>
+                <li><span>Заявок на тестовый бюджет</span><b id="calcLeads">32</b></li>
+                <li><span>Продаж при такой конверсии</span><b id="calcSales">5</b></li>
+              </ul>
+              <a class="btn btn-primary" href="#lead-form" data-package-link="Лендинг + рекламные кампании - 1421 р.">Разобрать мою экономику</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1614,6 +1813,55 @@
     const packageSelect = document.getElementById("package");
     const submitButton = document.getElementById("leadFormButton");
     const telegramFallback = "https://t.me/Alexandr_K1503";
+
+    const formatRub = (value) => `${Math.max(0, Math.round(value)).toLocaleString("ru-RU")} р.`;
+    const formatCount = (value) => Math.max(0, Math.round(value)).toLocaleString("ru-RU");
+
+    const calcInputs = {
+      check: document.getElementById("calcCheck"),
+      margin: document.getElementById("calcMargin"),
+      conversion: document.getElementById("calcConversion"),
+      budget: document.getElementById("calcBudget")
+    };
+
+    const calcOutputs = {
+      cpl: document.getElementById("calcCpl"),
+      profit: document.getElementById("calcProfit"),
+      clientCost: document.getElementById("calcClientCost"),
+      leads: document.getElementById("calcLeads"),
+      sales: document.getElementById("calcSales")
+    };
+
+    function readCalcValue(input, fallback) {
+      const value = Number.parseFloat(input?.value || "");
+      return Number.isFinite(value) && value > 0 ? value : fallback;
+    }
+
+    function updateLeadCostCalculator() {
+      if (!calcInputs.check || !calcOutputs.cpl) return;
+
+      const averageCheck = readCalcValue(calcInputs.check, 3000);
+      const marginPercent = Math.min(readCalcValue(calcInputs.margin, 35), 100);
+      const conversionPercent = Math.min(readCalcValue(calcInputs.conversion, 15), 100);
+      const budget = readCalcValue(calcInputs.budget, 1500);
+
+      const grossProfit = averageCheck * (marginPercent / 100);
+      const maxClientCost = grossProfit * 0.3;
+      const maxLeadCost = Math.max(1, maxClientCost * (conversionPercent / 100));
+      const estimatedLeads = budget / maxLeadCost;
+      const estimatedSales = estimatedLeads * (conversionPercent / 100);
+
+      calcOutputs.cpl.textContent = formatRub(maxLeadCost);
+      calcOutputs.profit.textContent = formatRub(grossProfit);
+      calcOutputs.clientCost.textContent = formatRub(maxClientCost);
+      calcOutputs.leads.textContent = formatCount(estimatedLeads);
+      calcOutputs.sales.textContent = formatCount(estimatedSales);
+    }
+
+    Object.values(calcInputs).forEach((input) => {
+      input?.addEventListener("input", updateLeadCostCalculator);
+    });
+    updateLeadCostCalculator();
 
     document.querySelectorAll("[data-package-link]").forEach((link) => {
       link.addEventListener("click", () => {
