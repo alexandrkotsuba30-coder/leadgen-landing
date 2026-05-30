@@ -1,0 +1,13 @@
+.vercel
+.pw-tilda-profile
+.agents
+*.log
+server*.err.log
+server*.out.log
+leadcore-*.png
+tmp-*.js
+tmp-*.cjs
+tmp-*.spec.js
+README-TILDA-AUTO.md
+tilda-autofill.js
+tilda-content.json

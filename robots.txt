@@ -1,6 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
 
 Sitemap: https://leadcore.by/sitemap.xml
+Host: leadcore.by
