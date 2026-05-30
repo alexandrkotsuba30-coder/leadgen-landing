@@ -1,10 +1,16 @@
 .vercel
 .pw-tilda-profile
 .agents
+output
 *.log
 server*.err.log
 server*.out.log
 leadcore-*.png
+/*-desktop-*.png
+/*-mobile-*.png
+/katya-*.png
+/kuhni-before-*.png
+/index.backup-*
 tmp-*.js
 tmp-*.cjs
 tmp-*.spec.js

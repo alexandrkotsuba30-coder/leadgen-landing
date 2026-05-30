@@ -1,4 +1,4 @@
-﻿# LeadCore
+# LeadCore
 
 ## О компании
 
@@ -25,6 +25,7 @@ LeadCore - проект Александра Коцубы. LeadCore собира
 - https://leadcore.by/pdf/ - PDF-аудит для прогрева бизнеса.
 - https://leadcore.by/renovation/ - нишевая страница под ремонт и смежные услуги.
 - https://leadcore.by/renovation/kuhni-na-zakaz/ - страница под кухни на заказ.
+- https://leadcore.by/renovation/designers/ - страница под дизайнеров интерьера.
 - https://leadcore.by/alexandrkotsuba2/ - страница Александра Коцубы.
 
 ## Контакты
