@@ -18,9 +18,14 @@ function timingSafeEqual(a, b) {
   return crypto.timingSafeEqual(left, right);
 }
 
+function getRequiredEnv(name) {
+  const value = String(process.env[name] || "").trim();
+  return value && value !== '""' ? value : "";
+}
+
 function isAuthorized(req) {
-  const expectedUser = process.env.ADMIN_USERNAME || "alex";
-  const expectedPassword = process.env.ADMIN_PASSWORD || "alex321";
+  const expectedUser = getRequiredEnv("ADMIN_USERNAME");
+  const expectedPassword = getRequiredEnv("ADMIN_PASSWORD");
   const header = req.headers.authorization || "";
 
   if (!expectedUser || !expectedPassword || !header.startsWith("Basic ")) {
