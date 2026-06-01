@@ -2,11 +2,11 @@ backend:
   name: github
   repo: alexandrkotsuba30-coder/leadgen-landing
   branch: main
-  base_url: https://www.reklama-test.by
+  base_url: https://leadcore.by
   auth_endpoint: /api/auth
 
-site_url: https://www.reklama-test.by
-display_url: https://www.reklama-test.by
+site_url: https://leadcore.by
+display_url: https://leadcore.by
 logo_url: /favicon.ico
 publish_mode: simple
 

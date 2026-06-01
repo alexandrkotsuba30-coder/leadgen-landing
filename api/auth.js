@@ -1,6 +1,6 @@
 module.exports = async function handler(req, res) {
   const clientId = process.env.GITHUB_OAUTH_CLIENT_ID;
-  const siteUrl = process.env.SITE_URL || "https://www.reklama-test.by";
+  const siteUrl = process.env.SITE_URL || "https://leadcore.by";
 
   if (!clientId) {
     res.statusCode = 500;

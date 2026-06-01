@@ -3,10 +3,346 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>reklama-test.by CMS</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LeadCore Admin</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071019;
+      --panel: rgba(13, 21, 32, 0.92);
+      --panel-strong: #0f1b29;
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #eef5fd;
+      --muted: #8ca2bb;
+      --accent: #b9ff26;
+      --danger: #ff7d63;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(185, 255, 38, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(86, 197, 219, 0.08), transparent 26%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .shell {
+      width: min(960px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+      align-content: start;
+    }
+
+    .login-shell {
+      min-height: calc(100vh - 48px);
+      display: grid;
+      place-items: center;
+    }
+
+    body.is-authenticated .login-shell {
+      min-height: auto;
+      place-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-card {
+      width: min(420px, 100%);
+      padding: 28px;
+    }
+
+    body.is-authenticated .login-card {
+      width: 100%;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 14px;
+      background: var(--accent);
+      color: #081018;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(28px, 5vw, 36px);
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    form,
+    .fields {
+      display: grid;
+      gap: 14px;
+    }
+
+    form {
+      margin-top: 22px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel-strong);
+      color: var(--text);
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 108px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(185, 255, 38, 0.65);
+      box-shadow: 0 0 0 3px rgba(185, 255, 38, 0.14);
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 14px;
+      min-height: 50px;
+      padding: 0 18px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #091017;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .status {
+      min-height: 22px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    .status.success {
+      color: var(--accent);
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+
+    .editor-shell {
+      padding: 22px;
+    }
+
+    .editor-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .editor-copy p {
+      margin-top: 8px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .editor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 16px;
+      }
+
+      .login-card,
+      .editor-shell {
+        padding: 20px;
+      }
+
+      .editor-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.8.3/dist/decap-cms.js"></script>
+  <div class="shell">
+    <section class="login-shell">
+      <div class="panel login-card">
+        <div class="brand" aria-hidden="true">LC</div>
+        <h1>LeadCore Admin</h1>
+        <p class="subtitle">Вход в закрытую панель.</p>
+
+        <form id="loginForm">
+          <label>
+            Логин
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </label>
+          <label>
+            Пароль
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="btn-primary" type="submit">Войти</button>
+        </form>
+
+        <p id="loginStatus" class="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <main id="editorShell" class="panel editor-shell is-hidden">
+      <div class="editor-toolbar">
+        <div class="editor-copy">
+          <h2>Редактор контента</h2>
+          <p>Изменения сохраняются в `content/site.json`.</p>
+        </div>
+        <div class="toolbar-actions">
+          <button id="reloadButton" class="btn-secondary" type="button">Обновить</button>
+          <button id="saveButton" class="btn-primary" type="button">Сохранить</button>
+        </div>
+      </div>
+
+      <div id="editorFields" class="fields">
+        <div class="editor-grid">
+          <label class="full">
+            SEO Title
+            <textarea id="seoTitle"></textarea>
+          </label>
+          <label class="full">
+            SEO Description
+            <textarea id="seoDescription"></textarea>
+          </label>
+          <label>
+            Название бренда
+            <input id="brandName" type="text" />
+          </label>
+          <label>
+            Badge
+            <input id="heroBadge" type="text" />
+          </label>
+          <label class="full">
+            Hero Title
+            <textarea id="heroTitle"></textarea>
+          </label>
+          <label class="full">
+            Hero Subtitle
+            <textarea id="heroSubtitle"></textarea>
+          </label>
+          <label>
+            Кнопка 1
+            <input id="heroPrimaryCta" type="text" />
+          </label>
+          <label>
+            Кнопка 2
+            <input id="heroSecondaryCta" type="text" />
+          </label>
+          <label class="full">
+            Заголовок формы
+            <textarea id="leadFormTitle"></textarea>
+          </label>
+          <label class="full">
+            Подзаголовок формы
+            <textarea id="leadFormSubtitle"></textarea>
+          </label>
+          <label>
+            Текст кнопки формы
+            <input id="leadFormButton" type="text" />
+          </label>
+          <label>
+            Telegram Label
+            <input id="telegramLabel" type="text" />
+          </label>
+          <label>
+            Telegram URL
+            <input id="telegramUrl" type="url" />
+          </label>
+          <label>
+            Телефон Label
+            <input id="phoneLabel" type="text" />
+          </label>
+          <label>
+            Телефон URL
+            <input id="phoneUrl" type="text" />
+          </label>
+        </div>
+      </div>
+
+      <p id="editorStatus" class="status" aria-live="polite"></p>
+    </main>
+  </div>
+
+  <script src="/admin/app.js"></script>
 </body>
 </html>

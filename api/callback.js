@@ -13,7 +13,7 @@ function renderResultPage(payloadScript) {
 module.exports = async function handler(req, res) {
   const clientId = process.env.GITHUB_OAUTH_CLIENT_ID;
   const clientSecret = process.env.GITHUB_OAUTH_CLIENT_SECRET;
-  const siteUrl = process.env.SITE_URL || "https://www.reklama-test.by";
+  const siteUrl = process.env.SITE_URL || "https://leadcore.by";
 
   if (!clientId || !clientSecret) {
     res.statusCode = 500;
