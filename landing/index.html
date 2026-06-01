@@ -27,7 +27,7 @@
   <meta name="theme-color" content="#101114" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="shortcut icon" href="/assets/favicon.svg" />
-  <link rel="preload" as="image" href="/assets/examples/leadcore-home-20260601-live.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/alexandr-kotsuba-leadcore-red-portrait.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -189,7 +189,7 @@
     }
 
     .hero-copy {
-      max-width: 640px;
+      max-width: 720px;
     }
 
     .eyebrow {
@@ -216,7 +216,7 @@
     }
 
     h1 {
-      max-width: 12ch;
+      max-width: 760px;
       font-family: "Unbounded", "Onest", sans-serif;
       font-size: 42px;
       line-height: 1.03;
@@ -276,6 +276,116 @@
     .hero-points span {
       display: block;
       margin-top: 2px;
+    }
+
+    .hero-note {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .58);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .hero-stage {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-portrait {
+      position: relative;
+      width: min(100%, 520px);
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #160909;
+      box-shadow: 0 30px 96px rgba(0, 0, 0, .42);
+    }
+
+    .hero-portrait img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-portrait::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(7, 9, 11, .12), rgba(7, 9, 11, .02) 52%, rgba(7, 9, 11, .42)),
+        linear-gradient(0deg, rgba(7, 9, 11, .84), transparent 56%);
+    }
+
+    .hero-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      z-index: 2;
+      border: 1px solid rgba(196, 255, 47, .32);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .hero-identity {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 3;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 22px;
+      background: rgba(8, 10, 13, .78);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .34);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-identity span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .hero-identity strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.08;
+    }
+
+    .hero-identity p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, .68);
+      font-weight: 800;
+    }
+
+    .identity-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .identity-tags b {
+      display: inline-flex;
+      padding: 7px 10px;
+      border: 1px solid rgba(196, 255, 47, .22);
+      border-radius: 999px;
+      background: rgba(196, 255, 47, .12);
+      color: var(--white);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 950;
     }
 
     .hero-visual {
@@ -934,8 +1044,8 @@
       .hero {
         padding: 58px 0 60px;
       }
-      .hero-grid { grid-template-columns: minmax(0, .95fr) minmax(320px, 1.05fr); gap: 28px; align-items: center; }
-      h1 { font-size: 56px; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); gap: 28px; align-items: center; }
+      h1 { font-size: 52px; }
       h2 { font-size: 38px; }
       .hero-actions { display: flex; flex-wrap: wrap; }
       .hero-points { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -948,8 +1058,8 @@
 
     @media (min-width: 1040px) {
       .nav-links a:not(.btn) { display: inline-flex; }
-      .hero-grid { grid-template-columns: minmax(0, .88fr) minmax(520px, 1.12fr); gap: 48px; }
-      h1 { font-size: 68px; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(440px, .78fr); gap: 58px; }
+      h1 { font-size: 58px; }
       h2 { font-size: 42px; }
       .metric-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .examples-grid,
@@ -985,6 +1095,7 @@
       section { padding: 48px 0; }
       .hero-lead { font-size: 16px; }
       .hero-actions .btn { width: 100%; }
+      .hero-note { font-size: 14px; }
       .hero-points {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 6px;
@@ -995,6 +1106,28 @@
         text-align: center;
       }
       .hero-points span { display: none; }
+      .hero-stage {
+        min-height: auto;
+        justify-content: stretch;
+      }
+      .hero-portrait {
+        width: 100%;
+        min-height: 450px;
+        border-radius: 24px;
+      }
+      .hero-portrait::after {
+        inset: 14px;
+        border-radius: 18px;
+      }
+      .hero-identity {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        padding: 16px;
+        border-radius: 18px;
+      }
+      .hero-identity strong { font-size: 20px; }
+      .hero-identity p { font-size: 14px; }
       .visual-card { border-radius: 12px; }
       .visual-url { font-size: 11px; }
       .visual-proof { grid-template-columns: 1fr; }
@@ -1028,33 +1161,33 @@
     <section class="hero" aria-labelledby="page-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">LeadCore | mobile-first сайты под заявки</p>
-          <h1 id="page-title">Сайт под заявки, готовый к рекламе</h1>
-          <p class="hero-lead">Соберу страницу, которую не стыдно отправить клиенту, показать в рекламе и поставить в работу: понятный оффер, доверие, примеры и заявка без лишнего шума.</p>
+          <p class="eyebrow">LeadCore / сайт под заявки</p>
+          <h1 id="page-title">Клиенты должны писать вам, а не просто смотреть сайт</h1>
+          <p class="hero-lead">Соберу страницу под один продукт или услугу: понятный оффер, доверие, примеры и заявка сразу в Telegram/CRM. Без пустой красоты ради красоты.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lead-form">Обсудить мой сайт</a>
-            <a class="btn btn-line" href="#examples">Посмотреть примеры</a>
+            <a class="btn btn-line" href="#packages">Посмотреть пакеты</a>
           </div>
+          <p class="hero-note">Стартуем с понятного входа: одна услуга, один город, 12 блоков в основном формате. Так быстрее видно, что человеку понятно и где он оставит заявку.</p>
           <div class="hero-points" aria-label="Что получает клиент">
-            <div><strong>Оффер</strong><span>человек сразу понимает, что вы продаете</span></div>
-            <div><strong>Доверие</strong><span>страница выглядит аккуратно на телефоне</span></div>
-            <div><strong>Заявка</strong><span>контакт уходит в понятный следующий шаг</span></div>
+            <div><strong>Оффер</strong><span>ясно, что купить</span></div>
+            <div><strong>Страница</strong><span>аккуратно на телефоне</span></div>
+            <div><strong>Заявка</strong><span>контакт сразу в работу</span></div>
           </div>
         </div>
 
-        <aside class="hero-visual" aria-label="Пример готового первого экрана сайта">
-          <div class="visual-card">
-            <div class="visual-top">
-              <div class="visual-dots"><span></span><span></span><span></span></div>
-              <div class="visual-url">пример готовой подачи</div>
-            </div>
-            <div class="visual-image-wrap">
-              <img src="/assets/examples/leadcore-home-20260601-live.webp" width="1280" height="800" alt="Пример главного экрана LeadCore с понятным оффером и заявкой" />
-            </div>
-            <div class="visual-proof" aria-label="Что видно в примере">
-              <span>сильный первый экран</span>
-              <span>понятный CTA</span>
-              <span>заявка без тупика</span>
+        <aside class="hero-stage" aria-label="Александр Коцуба и упаковка LeadCore">
+          <div class="hero-portrait">
+            <img src="/assets/alexandr-kotsuba-leadcore-red-portrait.jpg" alt="Александр Коцуба, LeadCore" width="900" height="1200" />
+            <div class="hero-identity">
+              <span>Александр Коцуба</span>
+              <strong>Упаковываю сайт в поток заявок</strong>
+              <p>8,5 лет в недвижимости и 9+ лет в интернет-маркетинге.</p>
+              <div class="identity-tags" aria-label="Фокус работы">
+                <b>оффер</b>
+                <b>страница</b>
+                <b>заявка</b>
+              </div>
             </div>
           </div>
         </aside>
