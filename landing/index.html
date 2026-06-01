@@ -371,19 +371,6 @@
       mask-composite: intersect;
     }
 
-    .hero-portrait::after {
-      content: "";
-      position: absolute;
-      inset: 18px 18px 64px;
-      z-index: 2;
-      border: 1px solid rgba(196, 255, 47, .18);
-      border-bottom-color: transparent;
-      border-radius: 28px 28px 46px 46px;
-      box-shadow: 0 0 90px rgba(196, 255, 47, .075);
-      mask-image: linear-gradient(to bottom, #000 0 72%, transparent 100%);
-      pointer-events: none;
-    }
-
     .hero-identity {
       position: absolute;
       left: 24px;
@@ -1168,10 +1155,6 @@
         width: 100%;
         min-height: 450px;
         border-radius: 24px;
-      }
-      .hero-portrait::after {
-        inset: 14px;
-        border-radius: 18px;
       }
       .hero-identity {
         left: 16px;
