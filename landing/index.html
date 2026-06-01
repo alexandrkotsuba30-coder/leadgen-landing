@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сайт, который не стыдно вести в рекламу | LeadCore</title>
-  <meta name="description" content="Mobile-first сайт под заявки для бизнеса: 12 блоков, понятный оффер, доверие, примеры, форма связи и подготовка к рекламе без студийной волокиты." />
+  <title>Сайт под заявки, готовый к рекламе | LeadCore</title>
+  <meta name="description" content="Mobile-first сайт под заявки для бизнеса: понятный оффер, доверие, реальные примеры, форма связи, 12 блоков и подготовка к рекламе без студийной волокиты." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://leadcore.by/landing/" />
   <link rel="alternate" hreflang="ru-BY" href="https://leadcore.by/landing/" />
   <link rel="alternate" hreflang="x-default" href="https://leadcore.by/landing/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
-  <meta property="og:title" content="Сайт под заявки, который можно сразу показывать клиентам" />
+  <meta property="og:title" content="Сайт под заявки, готовый к рекламе" />
   <meta property="og:description" content="12 блоков, mobile-first, оффер, доверие, примеры и форма заявки. Страница под рекламу, переписку и первые обращения." />
   <meta property="og:url" content="https://leadcore.by/landing/" />
   <meta property="og:site_name" content="LeadCore" />
@@ -21,13 +21,13 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Сайт под заявки, который можно сразу показывать клиентам" />
+  <meta name="twitter:title" content="Сайт под заявки, готовый к рекламе" />
   <meta name="twitter:description" content="12 блоков, mobile-first, оффер, доверие, примеры и форма заявки. Страница под рекламу и первые обращения." />
   <meta name="twitter:image" content="https://leadcore.by/assets/og-leadcore-landing-20260601.png" />
   <meta name="theme-color" content="#101114" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="shortcut icon" href="/assets/favicon.svg" />
-  <link rel="preload" as="image" href="/assets/examples/site-main-20260601-filled.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/examples/leadcore-home-20260601-live.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -49,7 +49,10 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      color-scheme: light;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -61,6 +64,7 @@
       font-family: "Onest", "Segoe UI", sans-serif;
       line-height: 1.5;
       text-rendering: optimizeLegibility;
+      -webkit-tap-highlight-color: rgba(196, 255, 47, .18);
       overflow-x: hidden;
     }
 
@@ -155,7 +159,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 22px 0 30px;
+      padding: 30px 0 34px;
       background:
         radial-gradient(circle at top right, rgba(97, 215, 224, .14), transparent 26%),
         radial-gradient(circle at top left, rgba(196, 255, 47, .14), transparent 18%),
@@ -180,8 +184,12 @@
       position: relative;
       z-index: 1;
       display: grid;
-      gap: 18px;
+      gap: 24px;
       align-items: start;
+    }
+
+    .hero-copy {
+      max-width: 640px;
     }
 
     .eyebrow {
@@ -208,10 +216,11 @@
     }
 
     h1 {
-      max-width: 11ch;
+      max-width: 12ch;
       font-family: "Unbounded", "Onest", sans-serif;
-      font-size: 44px;
+      font-size: 42px;
       line-height: 1.03;
+      text-wrap: balance;
     }
 
     h2 {
@@ -226,10 +235,10 @@
     }
 
     .hero-lead {
-      max-width: 34rem;
+      max-width: 36rem;
       margin: 16px 0 0;
-      color: rgba(255, 255, 255, .78);
-      font-size: 18px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 17px;
       font-weight: 700;
     }
 
@@ -241,18 +250,32 @@
 
     .hero-points {
       display: grid;
-      gap: 9px;
+      grid-template-columns: 1fr;
+      gap: 8px;
       margin-top: 22px;
     }
 
     .hero-points div {
-      padding: 12px 14px;
+      min-width: 0;
+      padding: 11px 12px;
       border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, .06);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .055);
       color: rgba(255, 255, 255, .8);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
+    }
+
+    .hero-points strong {
+      display: block;
+      color: var(--lime);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .hero-points span {
+      display: block;
+      margin-top: 2px;
     }
 
     .hero-visual {
@@ -267,6 +290,10 @@
       overflow: hidden;
       background: rgba(255, 255, 255, .05);
       box-shadow: 0 24px 64px rgba(0, 0, 0, .24);
+    }
+
+    .visual-card {
+      border-radius: 14px;
     }
 
     .visual-top {
@@ -310,6 +337,27 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
+    }
+
+    .visual-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .visual-proof span {
+      min-width: 0;
+      padding: 9px 8px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .055);
+      color: rgba(255, 255, 255, .82);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
     }
 
     .visual-overlay {
@@ -457,7 +505,9 @@
     }
 
     .example-body {
-      padding: 18px;
+      display: grid;
+      gap: 10px;
+      padding: 16px;
     }
 
     .example-topline {
@@ -473,7 +523,7 @@
 
     .example-link {
       display: inline-flex;
-      margin-top: 18px;
+      margin-top: 4px;
       color: #9a4d24;
       font-weight: 900;
       text-decoration: underline;
@@ -489,6 +539,12 @@
       margin: 12px 0 0;
       color: var(--muted);
       font-weight: 650;
+    }
+
+    .example-body p {
+      margin-top: 0;
+      font-size: 15px;
+      line-height: 1.42;
     }
 
     .dark-band {
@@ -801,7 +857,6 @@
       padding: 13px 14px;
       color: var(--white);
       background: rgba(255, 255, 255, .08);
-      outline: none;
     }
 
     select option {
@@ -876,9 +931,11 @@
       .wrap { width: min(1120px, calc(100% - 34px)); }
       .nav { min-height: 68px; }
       .nav-links { gap: 20px; font-size: 14px; }
-      .hero { padding: 34px 0 36px; }
-      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, .96fr); gap: 24px; }
-      h1 { font-size: 58px; }
+      .hero {
+        padding: 58px 0 60px;
+      }
+      .hero-grid { grid-template-columns: minmax(0, .95fr) minmax(320px, 1.05fr); gap: 28px; align-items: center; }
+      h1 { font-size: 56px; }
       h2 { font-size: 38px; }
       .hero-actions { display: flex; flex-wrap: wrap; }
       .hero-points { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -891,8 +948,8 @@
 
     @media (min-width: 1040px) {
       .nav-links a:not(.btn) { display: inline-flex; }
-      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(380px, .88fr); gap: 32px; }
-      h1 { font-size: 64px; }
+      .hero-grid { grid-template-columns: minmax(0, .88fr) minmax(520px, 1.12fr); gap: 48px; }
+      h1 { font-size: 68px; }
       h2 { font-size: 42px; }
       .metric-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .examples-grid,
@@ -903,6 +960,16 @@
     }
 
     @media (max-width: 759px) {
+      .topbar {
+        position: sticky;
+        top: 0;
+      }
+      .nav { min-height: 58px; }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 7px;
+      }
       .nav-links a:not(.btn) { display: none; }
       .nav-links .btn {
         min-height: 42px;
@@ -910,11 +977,27 @@
         font-size: 13px;
       }
       .brand span:last-child { display: none; }
-      h1 { font-size: 39px; }
+      .eyebrow { margin-bottom: 12px; font-size: 11px; }
+      .eyebrow::before { width: 28px; }
+      h1 { font-size: 38px; }
       h2 { font-size: 28px; }
       h3 { font-size: 20px; }
       section { padding: 48px 0; }
       .hero-lead { font-size: 16px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-points {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 18px;
+      }
+      .hero-points div {
+        padding: 9px 6px;
+        text-align: center;
+      }
+      .hero-points span { display: none; }
+      .visual-card { border-radius: 12px; }
+      .visual-url { font-size: 11px; }
+      .visual-proof { grid-template-columns: 1fr; }
       .visual-overlay strong { font-size: 20px; }
       .example-topline {
         align-items: flex-start;
@@ -944,32 +1027,36 @@
   <main>
     <section class="hero" aria-labelledby="page-title">
       <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">LeadCore | сайты под заявки для бизнеса</p>
-          <h1 id="page-title">Сайт, который не стыдно отправить клиенту и вести в рекламу</h1>
-          <p class="hero-lead">Делаю страницы, которые аккуратно выглядят на телефоне, нормально открываются в рекламе и ведут человека к заявке. Без студийной волокиты, бесконечных правок и пустой красоты ради красоты.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">LeadCore | mobile-first сайты под заявки</p>
+          <h1 id="page-title">Сайт под заявки, готовый к рекламе</h1>
+          <p class="hero-lead">Соберу страницу, которую не стыдно отправить клиенту, показать в рекламе и поставить в работу: понятный оффер, доверие, примеры и заявка без лишнего шума.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lead-form">Обсудить мой сайт</a>
             <a class="btn btn-line" href="#examples">Посмотреть примеры</a>
           </div>
           <div class="hero-points" aria-label="Что получает клиент">
-            <div>Понятный оффер без воды и расплывчатых формулировок</div>
-            <div>Мобильная версия, где текст, кнопки и форма выглядят аккуратно</div>
-            <div>Форма заявки и логика, готовая к следующему шагу в рекламе</div>
+            <div><strong>Оффер</strong><span>человек сразу понимает, что вы продаете</span></div>
+            <div><strong>Доверие</strong><span>страница выглядит аккуратно на телефоне</span></div>
+            <div><strong>Заявка</strong><span>контакт уходит в понятный следующий шаг</span></div>
           </div>
         </div>
 
-        <aside class="hero-visual" aria-label="Пример уверенной подачи сайта">
+        <aside class="hero-visual" aria-label="Пример готового первого экрана сайта">
           <div class="visual-card">
             <div class="visual-top">
               <div class="visual-dots"><span></span><span></span><span></span></div>
-              <div class="visual-url">leadcore.by/landing</div>
+              <div class="visual-url">пример готовой подачи</div>
             </div>
             <div class="visual-image-wrap">
-              <img src="/assets/examples/site-main-20260601-filled.webp" width="1200" height="750" alt="Пример заполненного первого экрана сайта LeadCore" />
+              <img src="/assets/examples/leadcore-home-20260601-live.webp" width="1280" height="800" alt="Пример главного экрана LeadCore с понятным оффером и заявкой" />
+            </div>
+            <div class="visual-proof" aria-label="Что видно в примере">
+              <span>сильный первый экран</span>
+              <span>понятный CTA</span>
+              <span>заявка без тупика</span>
             </div>
           </div>
-          <div class="visual-note">Вы получаете не картинку ради картинки, а рабочую страницу для рекламы, переписки и первых заявок.</div>
         </aside>
       </div>
     </section>
@@ -1159,8 +1246,8 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Примеры к пакетам</p>
-          <h2>Сначала смотрим уровень, потом выбираем формат</h2>
-          <p class="lead">Три реальные страницы показывают разную глубину упаковки: быстрый вход, полноценный лендинг и расширенную систему с несколькими точками входа.</p>
+          <h2>3 формата, которые можно сразу использовать как ориентир</h2>
+          <p class="lead">Каждый пример привязан к своему уровню пакета: входной сайт, полноценная страница на 12 блоков и усиленный формат с несколькими точками входа.</p>
         </div>
         <div class="examples-grid">
           <article class="example-card">
@@ -1189,7 +1276,7 @@
 
           <article class="example-card">
             <div class="example-media">
-              <img src="/assets/examples/site-main-20260601-filled.webp" width="1200" height="750" alt="Пример сайта под усиленный пакет 1790 рублей" loading="lazy" />
+              <img src="/assets/examples/leadcore-home-20260601-live.webp" width="1280" height="800" alt="Пример сайта под усиленный пакет 1790 рублей" loading="lazy" />
             </div>
             <div class="example-body">
               <div class="example-topline"><span>Усиленный формат | 12 + 3 страницы</span><span>leadcore.by</span></div>
@@ -1334,7 +1421,7 @@
           </div>
           <div class="field">
             <label for="contact">Телефон или Telegram</label>
-            <input id="contact" name="contact" type="text" autocomplete="tel" required maxlength="80" placeholder="+375... или @username" />
+            <input id="contact" name="contact" type="text" autocomplete="tel" required maxlength="80" placeholder="+375… или @username" />
           </div>
           <div class="field">
             <label for="package">Какой пакет ближе?</label>
@@ -1527,7 +1614,7 @@
         return;
       }
 
-      setNote("Отправляю заявку в Telegram...", "");
+      setNote("Отправляю заявку в Telegram…", "");
       submitButton.disabled = true;
 
       try {
