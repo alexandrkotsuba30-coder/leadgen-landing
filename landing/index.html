@@ -1,44 +1,51 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru-BY">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Создание лендинга за 725 р. | Сайт под заявки | LeadCore</title>
-  <meta name="description" content="Создание одностраничного лендинга за 725 р.: структура продаж, мобильная версия, форма заявки, отправка в Telegram, Яндекс Метрика и базовая SEO-подготовка." />
+  <title>Сайт, который не стыдно вести в рекламу | LeadCore</title>
+  <meta name="description" content="Mobile-first сайт под заявки для бизнеса: 12 блоков, понятный оффер, доверие, примеры, форма связи и подготовка к рекламе без студийной волокиты." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://leadcore.by/landing/" />
+  <link rel="alternate" hreflang="ru-BY" href="https://leadcore.by/landing/" />
+  <link rel="alternate" hreflang="x-default" href="https://leadcore.by/landing/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
-  <meta property="og:title" content="Лендинг за 725 р. под заявки - LeadCore" />
-  <meta property="og:description" content="Одностраничный сайт под продукт, услугу или проект: тексты, структура, мобильная версия, форма, Telegram и Метрика." />
+  <meta property="og:title" content="Сайт под заявки, который можно сразу показывать клиентам" />
+  <meta property="og:description" content="12 блоков, mobile-first, оффер, доверие, примеры и форма заявки. Страница под рекламу, переписку и первые обращения." />
   <meta property="og:url" content="https://leadcore.by/landing/" />
   <meta property="og:site_name" content="LeadCore" />
-  <meta property="og:image" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
-  <meta property="og:image:secure_url" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
+  <meta property="og:image" content="https://leadcore.by/assets/og-leadcore-landing-20260601.png" />
+  <meta property="og:image:secure_url" content="https://leadcore.by/assets/og-leadcore-landing-20260601.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Лендинг за 725 р. под заявки - LeadCore" />
-  <meta name="twitter:description" content="Быстрый одностраничный сайт с формой, Telegram и метрикой для проверки предложения." />
-  <meta name="twitter:image" content="https://leadcore.by/assets/og-leadcore-main-20260512.png" />
-  <meta name="theme-color" content="#111318" />
+  <meta name="twitter:title" content="Сайт под заявки, который можно сразу показывать клиентам" />
+  <meta name="twitter:description" content="12 блоков, mobile-first, оффер, доверие, примеры и форма заявки. Страница под рекламу и первые обращения." />
+  <meta name="twitter:image" content="https://leadcore.by/assets/og-leadcore-landing-20260601.png" />
+  <meta name="theme-color" content="#101114" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon.svg" />
+  <link rel="preload" as="image" href="/assets/examples/site-main-20260601-filled.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800&display=swap" rel="stylesheet" /></noscript>
   <style>
     :root {
-      --ink: #111318;
-      --paper: #f4f1e8;
-      --white: #fff;
-      --muted: #657080;
-      --line: rgba(17, 19, 24, .14);
-      --soft: rgba(255, 255, 255, .12);
-      --lime: #baff32;
-      --cyan: #45c7d8;
-      --orange: #ff8a1e;
-      --shadow: 0 26px 80px rgba(17, 19, 24, .18);
+      --ink: #101114;
+      --ink-2: #1d232b;
+      --paper: #f5efe4;
+      --paper-2: #efe7d9;
+      --white: #ffffff;
+      --muted: #667080;
+      --line: rgba(16, 17, 20, .12);
+      --line-dark: rgba(255, 255, 255, .14);
+      --lime: #c4ff2f;
+      --cyan: #61d7e0;
+      --orange: #ff9f46;
+      --shadow: 0 18px 54px rgba(16, 17, 20, .12);
     }
 
     * { box-sizing: border-box; }
@@ -47,38 +54,52 @@
     body {
       margin: 0;
       min-width: 320px;
+      background:
+        radial-gradient(circle at top right, rgba(196, 255, 47, .13), transparent 24%),
+        linear-gradient(180deg, #f7f3ea 0%, #f1eadf 100%);
       color: var(--ink);
       font-family: "Onest", "Segoe UI", sans-serif;
       line-height: 1.5;
-      background:
-        radial-gradient(circle at 12% 6%, rgba(186,255,50,.28), transparent 28%),
-        radial-gradient(circle at 88% 18%, rgba(69,199,216,.18), transparent 26%),
-        linear-gradient(135deg, #f4f1e8 0%, #ece8d7 48%, #dfe8d8 100%);
+      text-rendering: optimizeLegibility;
       overflow-x: hidden;
     }
 
-    a { color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--lime);
+      outline-offset: 4px;
+    }
 
     .wrap {
-      width: min(1160px, calc(100% - 32px));
+      width: min(1120px, calc(100% - 24px));
       margin: 0 auto;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      border-bottom: 1px solid rgba(17,19,24,.1);
-      background: rgba(244,241,232,.82);
-      backdrop-filter: blur(18px);
+      z-index: 30;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(16, 17, 20, .9);
+      color: var(--white);
+      backdrop-filter: blur(14px);
     }
 
     .nav {
-      min-height: 72px;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
     }
 
     .brand {
@@ -86,614 +107,902 @@
       align-items: center;
       gap: 10px;
       font-weight: 900;
-      letter-spacing: -.03em;
-      text-decoration: none;
+      white-space: nowrap;
     }
 
     .brand-mark {
-      width: 44px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       display: grid;
       place-items: center;
-      border-radius: 999px;
+      border-radius: 6px;
       background: var(--lime);
       color: var(--ink);
-      font-size: 13px;
       font-weight: 900;
-      box-shadow: 0 14px 35px rgba(186,255,50,.32);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      font-weight: 800;
+      gap: 16px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 13px;
+      font-weight: 750;
     }
 
-    .nav-links a {
-      padding: 10px 12px;
-      color: #3c4652;
-      text-decoration: none;
-      border-radius: 999px;
-    }
-
-    .nav-links a:hover { background: rgba(255,255,255,.56); }
+    .nav-links a:hover { color: var(--white); }
 
     .btn {
       min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       border: 1px solid transparent;
-      border-radius: 999px;
-      padding: 13px 20px;
-      color: var(--ink);
-      font: inherit;
+      border-radius: 10px;
+      padding: 13px 18px;
       font-weight: 900;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+      line-height: 1.1;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: linear-gradient(90deg, var(--lime), #d7ff66 58%, var(--cyan)); box-shadow: 0 18px 44px rgba(186,255,50,.24); }
-    .btn-dark { color: var(--white); background: var(--ink); border-color: rgba(255,255,255,.08); }
-    .btn-ghost { background: rgba(255,255,255,.48); border-color: rgba(17,19,24,.14); }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--lime); color: var(--ink); box-shadow: 0 14px 34px rgba(196, 255, 47, .2); }
+    .btn-dark { background: var(--ink); color: var(--white); }
+    .btn-line { border-color: rgba(255, 255, 255, .26); color: var(--white); background: rgba(255, 255, 255, .04); }
+    .btn-light { border-color: rgba(16, 17, 20, .1); color: var(--ink); background: rgba(255, 255, 255, .92); }
+    .btn-wide { width: 100%; }
 
-    .hero { padding: 62px 0 38px; }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .hero-card,
-    .visual-card {
-      border: 1px solid rgba(17,19,24,.12);
-      border-radius: 36px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-card {
+    .hero {
       position: relative;
-      padding: clamp(28px, 5vw, 58px);
-      background: rgba(255,255,255,.58);
+      overflow: hidden;
+      padding: 22px 0 30px;
+      background:
+        radial-gradient(circle at top right, rgba(97, 215, 224, .14), transparent 26%),
+        radial-gradient(circle at top left, rgba(196, 255, 47, .14), transparent 18%),
+        linear-gradient(180deg, #181c22 0%, #101114 100%);
+      color: var(--white);
     }
 
-    .hero-card::before {
+    .hero::before {
       content: "";
       position: absolute;
-      width: 560px;
-      height: 18px;
-      top: 142px;
-      left: -160px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--lime), var(--cyan));
-      transform: rotate(-42deg);
-      opacity: .55;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .03)),
+        linear-gradient(90deg, rgba(255, 255, 255, .015) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, .015) 1px, transparent 1px);
+      background-size: auto, 32px 32px, 32px 32px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.95), rgba(0,0,0,.25));
       pointer-events: none;
     }
 
-    .eyebrow {
+    .hero-grid {
       position: relative;
       z-index: 1;
+      display: grid;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin: 0 0 20px;
-      color: #43513f;
-      font-size: 13px;
+      margin: 0 0 14px;
+      color: var(--lime);
+      font-size: 12px;
       font-weight: 900;
-      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
       width: 30px;
-      height: 2px;
-      border-radius: 999px;
+      height: 3px;
       background: var(--lime);
     }
 
-    h1, h2, h3 { margin: 0; letter-spacing: -.045em; }
+    h1, h2, h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
 
     h1 {
-      position: relative;
-      z-index: 1;
-      max-width: 780px;
+      max-width: 11ch;
       font-family: "Unbounded", "Onest", sans-serif;
-      font-size: clamp(40px, 6.4vw, 78px);
-      line-height: .94;
+      font-size: 44px;
+      line-height: 1.03;
     }
 
     h2 {
       font-family: "Unbounded", "Onest", sans-serif;
-      font-size: clamp(31px, 4vw, 54px);
-      line-height: 1.02;
+      font-size: 31px;
+      line-height: 1.08;
     }
 
-    .hero-text,
-    .lead {
-      color: #4d5866;
-      font-size: clamp(17px, 2vw, 22px);
-      font-weight: 650;
+    h3 {
+      font-size: 22px;
+      line-height: 1.14;
     }
 
-    .hero-text {
-      position: relative;
-      z-index: 1;
-      max-width: 660px;
-      margin: 22px 0 0;
-      font-size: clamp(18px, 2.1vw, 23px);
+    .hero-lead {
+      max-width: 34rem;
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, .78);
+      font-size: 18px;
+      font-weight: 700;
     }
 
     .hero-actions {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .trust-row {
-      position: relative;
-      z-index: 1;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin: 30px 0 0;
-      padding: 0;
-      list-style: none;
+      margin-top: 24px;
     }
 
-    .trust-row li {
-      min-height: 96px;
-      padding: 15px;
-      border: 1px solid rgba(17,19,24,.12);
-      border-radius: 20px;
-      background: rgba(255,255,255,.56);
-      color: #3e4651;
+    .hero-points {
+      display: grid;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .hero-points div {
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .06);
+      color: rgba(255, 255, 255, .8);
+      font-size: 14px;
       font-weight: 800;
     }
 
-    .trust-row strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--ink);
-      font-size: 24px;
-      line-height: 1;
+    .hero-visual {
+      display: grid;
+      gap: 12px;
     }
 
-    .visual-card {
-      position: relative;
-      min-height: 600px;
-      background: #111318;
-      color: var(--white);
-    }
-
-    .visual-card::before {
-      content: "";
-      position: absolute;
-      inset: -15% -25% auto auto;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: rgba(186,255,50,.28);
-      filter: blur(18px);
-    }
-
-    .browser-mock {
-      position: relative;
-      z-index: 1;
-      margin: 26px;
-      min-height: 440px;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 28px;
-      background: radial-gradient(circle at 78% 15%, rgba(69,199,216,.18), transparent 32%), linear-gradient(160deg, #191e25 0%, #101114 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    .visual-card,
+    .visual-note {
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 12px;
       overflow: hidden;
+      background: rgba(255, 255, 255, .05);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, .24);
     }
 
-    .browser-top {
+    .visual-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 16px 18px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-
-    .dots { display: flex; gap: 7px; }
-    .dots span { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.3); }
-    .dots span:first-child { background: var(--lime); }
-
-    .url-pill {
-      max-width: 230px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      color: rgba(255,255,255,.72);
-      font-size: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .mock-content {
-      display: grid;
-      grid-template-columns: 1fr .72fr;
-      gap: 18px;
-      padding: 28px;
-      align-items: center;
-    }
-
-    .mock-title {
-      font-family: "Unbounded", "Onest", sans-serif;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: .95;
-      letter-spacing: -.06em;
-    }
-
-    .mock-lines { display: grid; gap: 10px; margin: 22px 0; }
-    .mock-lines span { height: 12px; border-radius: 999px; background: rgba(255,255,255,.18); }
-    .mock-lines span:nth-child(1) { width: 86%; background: var(--lime); }
-    .mock-lines span:nth-child(2) { width: 72%; }
-    .mock-lines span:nth-child(3) { width: 58%; background: rgba(69,199,216,.72); }
-
-    .mock-cta {
-      display: inline-flex;
+      gap: 10px;
       padding: 11px 14px;
-      border-radius: 999px;
-      background: var(--lime);
-      color: var(--ink);
-      font-weight: 900;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      background: rgba(0, 0, 0, .18);
     }
 
-    .phone-card {
-      min-height: 270px;
-      border-radius: 28px;
-      padding: 16px;
-      background: #f7f4ea;
-      color: var(--ink);
-      transform: rotate(2deg);
-      box-shadow: 0 28px 60px rgba(0,0,0,.28);
+    .visual-dots {
+      display: flex;
+      gap: 6px;
     }
 
-    .phone-card .mini-bar {
-      width: 54px;
-      height: 6px;
-      margin: 0 auto 18px;
-      border-radius: 999px;
-      background: rgba(17,19,24,.18);
+    .visual-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .28);
     }
 
-    .phone-card strong { display: block; font-size: 24px; line-height: 1.05; letter-spacing: -.04em; }
-    .phone-card p { margin: 12px 0 16px; color: #5d6875; font-size: 14px; font-weight: 700; }
-    .phone-card .fieldline { height: 40px; margin-top: 10px; border-radius: 14px; background: rgba(17,19,24,.08); }
+    .visual-dots span:first-child { background: var(--lime); }
 
-    .price-stamp {
+    .visual-url {
+      color: rgba(255, 255, 255, .72);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .visual-image-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .visual-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .visual-overlay {
       position: absolute;
-      right: 24px;
-      bottom: 22px;
-      z-index: 2;
-      width: 186px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 12px;
+      background: rgba(16, 17, 20, .76);
+      backdrop-filter: blur(10px);
+    }
+
+    .visual-overlay span {
+      display: inline-flex;
+      margin-bottom: 8px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(196, 255, 47, .15);
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .visual-overlay strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .visual-overlay p,
+    .visual-note {
+      color: rgba(255, 255, 255, .76);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .visual-note {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    section { padding: 58px 0; }
+
+    section[id] {
+      scroll-margin-top: 86px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: #97542b;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .metric-grid,
+    .examples-grid,
+    .card-grid,
+    .package-grid,
+    .faq-grid,
+    .form-layout,
+    .footer-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+
+    .metric-card,
+    .example-card,
+    .logic-card,
+    .package-card,
+    .faq-item,
+    .form-copy,
+    .lead-form,
+    .legal-card,
+    .dark-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .88);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .metric-card,
+    .logic-card,
+    .package-head,
+    .package-body,
+    .faq-item,
+    .form-copy,
+    .lead-form,
+    .legal-card,
+    .dark-card {
       padding: 18px;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 26px;
-      background: rgba(255,255,255,.08);
-      backdrop-filter: blur(16px);
     }
 
-    .price-stamp span { display: block; color: rgba(255,255,255,.62); font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-    .price-stamp strong { display: block; margin-top: 2px; color: var(--lime); font-family: "Unbounded", "Onest", sans-serif; font-size: 34px; line-height: 1; letter-spacing: -.06em; }
-
-    section { padding: 42px 0; }
-    .section-head { max-width: 760px; margin-bottom: 24px; }
-    .section-kicker { margin: 0 0 10px; color: #6c7660; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-    .lead { margin: 14px 0 0; }
-
-    .grid-3, .grid-2 { display: grid; gap: 16px; }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .card {
-      min-height: 190px;
-      padding: 24px;
-      border: 1px solid rgba(17,19,24,.12);
-      border-radius: 28px;
-      background: rgba(255,255,255,.58);
-      box-shadow: 0 18px 48px rgba(17,19,24,.08);
+    .metric-card strong {
+      display: block;
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: 30px;
+      line-height: 1;
     }
 
-    .card.dark {
+    .metric-card span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .example-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .example-media {
+      aspect-ratio: 16 / 10;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper-2);
+      overflow: hidden;
+    }
+
+    .example-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .example-body {
+      padding: 18px;
+    }
+
+    .example-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .example-link {
+      display: inline-flex;
+      margin-top: 18px;
+      color: #9a4d24;
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .logic-card p,
+    .example-body p,
+    .faq-item p,
+    .dark-card p,
+    .package-summary {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .dark-band {
+      background:
+        radial-gradient(circle at top right, rgba(196, 255, 47, .1), transparent 24%),
+        linear-gradient(180deg, #171a20 0%, #101114 100%);
       color: var(--white);
-      background: linear-gradient(160deg, #20252d, #111318);
-      border-color: rgba(255,255,255,.12);
     }
 
-    .card h3 { font-size: 24px; line-height: 1.05; }
-    .card p, .card li { color: #596575; font-size: 16px; font-weight: 650; }
-    .card.dark p, .card.dark li { color: rgba(255,255,255,.72); }
-    .card ul { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
-    .card li::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 9px; border-radius: 50%; background: var(--lime); vertical-align: middle; }
+    .dark-band .section-kicker { color: var(--lime); }
+    .dark-band .lead { color: rgba(255, 255, 255, .72); }
 
-    .band-dark {
-      margin: 44px 0;
-      padding: 64px 0;
-      color: var(--white);
-      background: radial-gradient(circle at 10% 14%, rgba(186,255,50,.18), transparent 26%), radial-gradient(circle at 90% 80%, rgba(69,199,216,.16), transparent 30%), #101114;
+    .dark-card {
+      border-color: var(--line-dark);
+      background: rgba(255, 255, 255, .05);
+      color: rgba(255, 255, 255, .82);
+      box-shadow: none;
     }
 
-    .band-dark .section-kicker { color: var(--lime); }
-    .band-dark .lead { color: rgba(255,255,255,.72); }
-    .band-dark .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); box-shadow: none; }
-    .band-dark .card p, .band-dark .card li { color: rgba(255,255,255,.72); }
+    .dark-card p,
+    .dark-list li { color: rgba(255, 255, 255, .76); }
 
-    .includes {
+    .dark-list,
+    .clean-list,
+    .settings-list,
+    .form-copy ul,
+    .legal-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
-    .check-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
-    .check-list li { padding: 14px 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: rgba(255,255,255,.05); color: rgba(255,255,255,.78); font-weight: 750; }
-    .check-list li strong { color: var(--white); }
-
-    .not-included {
-      border: 1px solid rgba(255,138,30,.34);
-      border-radius: 28px;
-      padding: 24px;
-      background: rgba(255,138,30,.08);
-    }
-
-    .not-included h3 { color: #ffd3ad; }
-
-    .process {
-      counter-reset: step;
-      display: grid;
-      gap: 12px;
+      gap: 10px;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .process li {
-      counter-increment: step;
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 14px;
-      align-items: start;
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.58);
-      border: 1px solid rgba(17,19,24,.12);
+    .dark-list li,
+    .form-copy li {
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .05);
+      font-weight: 750;
     }
 
-    .process li::before {
+    .package-section {
+      background:
+        radial-gradient(circle at top right, rgba(196, 255, 47, .08), transparent 20%),
+        var(--white);
+    }
+
+    .package-proof-section {
+      padding-bottom: 26px;
+      background: var(--white);
+    }
+
+    .package-proof-section + .package-section {
+      padding-top: 26px;
+    }
+
+    .package-card {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(245, 240, 232, .98));
+    }
+
+    .package-card.is-main {
+      border-color: rgba(196, 255, 47, .8);
+      box-shadow: 0 24px 68px rgba(196, 255, 47, .18);
+      background: linear-gradient(180deg, rgba(196, 255, 47, .12), rgba(255, 255, 255, .98) 34%);
+    }
+
+    .package-head {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .package-label {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(16, 17, 20, .08);
+      color: #46515d;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .package-card.is-main .package-label {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .package-price {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin-top: 12px;
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .package-price small {
+      color: var(--muted);
+      font-family: "Onest", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .package-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .plan-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric-box {
+      padding: 12px;
+      border: 1px solid rgba(16, 17, 20, .08);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .75);
+    }
+
+    .metric-box strong {
+      display: block;
+      font-family: "Unbounded", "Onest", sans-serif;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .metric-box span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.3;
+    }
+
+    .subhead {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .clean-list li {
+      position: relative;
+      padding-left: 20px;
+      color: #4d5663;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .clean-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--orange);
+    }
+
+    .settings-box {
+      padding: 14px;
+      border: 1px solid rgba(16, 17, 20, .08);
+      border-radius: 10px;
+      background: rgba(16, 17, 20, .04);
+    }
+
+    .settings-box strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .settings-list {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .package-foot {
+      margin-top: auto;
+      display: grid;
+      gap: 10px;
+    }
+
+    .package-note {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(16, 17, 20, .06);
+      color: #404a57;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .package-card.is-main .package-note {
+      background: rgba(196, 255, 47, .18);
+      color: var(--ink);
+    }
+
+    .process-list {
+      counter-reset: step;
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .process-list li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .88);
+      box-shadow: var(--shadow);
+    }
+
+    .process-list li::before {
       content: counter(step, decimal-leading-zero);
-      width: 54px;
+      width: 48px;
       height: 44px;
       display: grid;
       place-items: center;
-      border-radius: 16px;
+      border-radius: 10px;
       background: var(--ink);
       color: var(--lime);
       font-weight: 900;
     }
 
-    .process strong { display: block; font-size: 18px; }
-    .process span { display: block; margin-top: 3px; color: #5b6675; font-weight: 650; }
-
-    .offer-strip {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-      margin-top: 18px;
-      padding: 22px;
-      border-radius: 28px;
-      background: var(--lime);
-      color: var(--ink);
+    .process-list strong {
+      display: block;
+      font-size: 18px;
     }
 
-    .offer-strip p { margin: 6px 0 0; color: rgba(17,19,24,.74); font-weight: 750; }
+    .process-list span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 650;
+    }
 
-    .form-section { padding: 58px 0 74px; }
-    .form-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: 18px; align-items: stretch; }
-    .form-panel, .form-copy { border: 1px solid rgba(255,255,255,.12); border-radius: 32px; background: rgba(255,255,255,.06); }
-    .form-copy { padding: clamp(24px, 4vw, 42px); }
-    .form-copy h2 { color: var(--white); }
-    .form-copy ul { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
-    .form-copy li { padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,.06); color: rgba(255,255,255,.76); font-weight: 750; }
+    .faq-item summary {
+      cursor: pointer;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 900;
+    }
 
-    .lead-form { display: grid; gap: 14px; padding: clamp(18px, 4vw, 32px); }
-    .field { display: grid; gap: 7px; }
-    label { color: rgba(255,255,255,.74); font-size: 14px; font-weight: 850; }
-
-    input, textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 15px 16px;
+    .form-section {
+      background: var(--ink);
       color: var(--white);
-      background: rgba(255,255,255,.08);
-      font: inherit;
+    }
+
+    .form-copy,
+    .lead-form {
+      border-color: var(--line-dark);
+      background: rgba(255, 255, 255, .06);
+      box-shadow: none;
+    }
+
+    .form-copy .lead { color: rgba(255, 255, 255, .74); }
+
+    .lead-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .trap-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      color: rgba(255, 255, 255, .76);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      min-height: 50px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 10px;
+      padding: 13px 14px;
+      color: var(--white);
+      background: rgba(255, 255, 255, .08);
       outline: none;
     }
 
-    textarea { min-height: 124px; resize: vertical; }
-    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.4); }
-    input:focus, textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 4px rgba(186,255,50,.1); }
-
-    .trap-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-    .form-note { min-height: 24px; margin: 0; color: rgba(255,255,255,.68); font-weight: 750; }
-    .form-note.success { color: var(--lime); }
-    .form-note.error { color: #ffb4a3; }
-
-    .footer { padding: 38px 0; border-top: 1px solid rgba(17,19,24,.12); background: rgba(255,255,255,.42); }
-    .footer-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
-    .legal-card { padding: 22px; border: 1px solid rgba(17,19,24,.12); border-radius: 24px; background: rgba(255,255,255,.58); }
-    .legal-card h3 { margin-bottom: 12px; font-size: 20px; }
-    .legal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; color: #3e4652; font-weight: 700; }
-    .legal-list span { display: block; color: #8a919d; font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
-    .legal-details { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(17,19,24,.12); color: #4c5663; font-weight: 650; }
-    .legal-details summary { cursor: pointer; color: var(--ink); font-weight: 900; }
-
-    @media (max-width: 920px) {
-      .hero-grid, .grid-3, .grid-2, .includes, .form-grid, .footer-grid { grid-template-columns: 1fr; }
-      .trust-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .visual-card { min-height: auto; }
-      .mock-content { grid-template-columns: 1fr; }
-      .phone-card { transform: none; }
-      .price-stamp { position: relative; right: auto; bottom: auto; margin: 0 26px 26px; width: auto; }
-      .offer-strip { grid-template-columns: 1fr; }
+    select option {
+      color: var(--ink);
+      background: var(--white);
     }
 
-    @media (max-width: 680px) {
-      .wrap { width: min(100% - 20px, 1160px); }
-      .nav { min-height: 64px; }
+    textarea {
+      min-height: 124px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: rgba(255, 255, 255, .42); }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--lime);
+      box-shadow: 0 0 0 4px rgba(196, 255, 47, .12);
+    }
+
+    .form-note {
+      min-height: 24px;
+      margin: 0;
+      color: rgba(255, 255, 255, .72);
+      font-weight: 750;
+    }
+
+    .form-note.success { color: var(--lime); }
+    .form-note.error { color: #ffb49f; }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, .92);
+    }
+
+    .legal-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .legal-list {
+      color: #3d4652;
+      font-weight: 700;
+    }
+
+    .legal-list span {
+      display: block;
+      color: #858d99;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .legal-details {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: #4c5663;
+      font-weight: 650;
+    }
+
+    .legal-details summary {
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    @media (min-width: 760px) {
+      .wrap { width: min(1120px, calc(100% - 34px)); }
+      .nav { min-height: 68px; }
+      .nav-links { gap: 20px; font-size: 14px; }
+      .hero { padding: 34px 0 36px; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, .96fr); gap: 24px; }
+      h1 { font-size: 58px; }
+      h2 { font-size: 38px; }
+      .hero-actions { display: flex; flex-wrap: wrap; }
+      .hero-points { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .metric-grid,
+      .card-grid,
+      .faq-grid,
+      .footer-grid,
+      .form-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (min-width: 1040px) {
+      .nav-links a:not(.btn) { display: inline-flex; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(380px, .88fr); gap: 32px; }
+      h1 { font-size: 64px; }
+      h2 { font-size: 42px; }
+      .metric-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .examples-grid,
+      .card-grid,
+      .package-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .form-layout { grid-template-columns: minmax(0, .92fr) minmax(360px, 1.08fr); }
+    }
+
+    @media (max-width: 759px) {
       .nav-links a:not(.btn) { display: none; }
-      .nav-links .btn { min-height: 42px; padding: 10px 13px; font-size: 13px; white-space: nowrap; }
+      .nav-links .btn {
+        min-height: 42px;
+        padding: 10px 12px;
+        font-size: 13px;
+      }
       .brand span:last-child { display: none; }
-      .hero { padding-top: 34px; }
-      .hero-card, .visual-card { border-radius: 28px; }
-      h1 { font-size: clamp(30px, 8.8vw, 40px); line-height: 1; letter-spacing: -.055em; }
-      h2 { font-size: clamp(28px, 9vw, 42px); }
-      .hero-card { padding: 24px 16px; }
-      .hero-text { font-size: 17px; }
-      .hero-actions .btn { width: 100%; }
-      .trust-row { grid-template-columns: 1fr; }
-      .trust-row li { min-height: auto; }
-      .browser-mock { margin: 14px; border-radius: 22px; }
-      .mock-content { padding: 20px; }
-      .phone-card { min-height: auto; }
-      section { padding: 34px 0; }
-      .band-dark { padding: 46px 0; margin: 28px 0; }
-      .card { min-height: auto; padding: 20px; border-radius: 22px; }
-      .process li { grid-template-columns: 1fr; }
-      .form-section { padding-bottom: 54px; }
-      .footer { padding: 26px 0; }
+      h1 { font-size: 39px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 20px; }
+      section { padding: 48px 0; }
+      .hero-lead { font-size: 16px; }
+      .visual-overlay strong { font-size: 20px; }
+      .example-topline {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="LeadCore"><span class="brand-mark">LC</span><span>LeadCore</span></a>
+      <a class="brand" href="/">
+        <span class="brand-mark">LC</span>
+        <span>LeadCore</span>
+      </a>
       <nav class="nav-links" aria-label="Навигация">
-        <a href="#included">Что входит</a>
+        <a href="#examples">Примеры</a>
         <a href="#process">Процесс</a>
-        <a href="/pdf/">PDF</a>
-        <a class="btn btn-primary" href="#lead-form">Заказать</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#lead-form">Обсудить сайт</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="page-title">
       <div class="wrap hero-grid">
-        <div class="hero-card">
-          <p class="eyebrow">Создание лендинга за 725 р.</p>
-          <h1>Лендинг под заявки за 725 р.</h1>
-          <p class="hero-text">Соберу одностраничный сайт под один продукт, услугу или проект: понятный первый экран, структура продаж, мобильная версия, форма заявки, отправка в Telegram и базовая аналитика.</p>
+        <div>
+          <p class="eyebrow">LeadCore | сайты под заявки для бизнеса</p>
+          <h1 id="page-title">Сайт, который не стыдно отправить клиенту и вести в рекламу</h1>
+          <p class="hero-lead">Делаю страницы, которые аккуратно выглядят на телефоне, нормально открываются в рекламе и ведут человека к заявке. Без студийной волокиты, бесконечных правок и пустой красоты ради красоты.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#lead-form">Хочу лендинг за 725 р.</a>
-            <a class="btn btn-ghost" href="https://t.me/Alexandr_K1503" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="btn btn-primary" href="#lead-form">Обсудить мой сайт</a>
+            <a class="btn btn-line" href="#examples">Посмотреть примеры</a>
           </div>
-          <ul class="trust-row">
-            <li><strong>725 р.</strong>за готовый лендинг</li>
-            <li><strong>3-7</strong>дней при готовых вводных</li>
-            <li><strong>90%</strong>фокус на мобильном трафике</li>
-            <li><strong>TG</strong>заявки сразу в Telegram</li>
-          </ul>
+          <div class="hero-points" aria-label="Что получает клиент">
+            <div>Понятный оффер без воды и расплывчатых формулировок</div>
+            <div>Мобильная версия, где текст, кнопки и форма выглядят аккуратно</div>
+            <div>Форма заявки и логика, готовая к следующему шагу в рекламе</div>
+          </div>
         </div>
 
-        <aside class="visual-card" aria-label="Визуальный пример лендинга">
-          <div class="browser-mock">
-            <div class="browser-top">
-              <div class="dots"><span></span><span></span><span></span></div>
-              <div class="url-pill">leadcore.by/landing/</div>
+        <aside class="hero-visual" aria-label="Пример уверенной подачи сайта">
+          <div class="visual-card">
+            <div class="visual-top">
+              <div class="visual-dots"><span></span><span></span><span></span></div>
+              <div class="visual-url">leadcore.by/landing</div>
             </div>
-            <div class="mock-content">
-              <div>
-                <div class="mock-title">Ваш оффер в понятную страницу</div>
-                <div class="mock-lines"><span></span><span></span><span></span></div>
-                <div class="mock-cta">Оставить заявку</div>
-              </div>
-              <div class="phone-card">
-                <div class="mini-bar"></div>
-                <strong>Лендинг под заявки</strong>
-                <p>Коротко, ясно, с формой и доверием. Без лишней красоты ради красоты.</p>
-                <div class="fieldline"></div>
-                <div class="fieldline"></div>
-                <div class="fieldline"></div>
-              </div>
+            <div class="visual-image-wrap">
+              <img src="/assets/examples/site-main-20260601-filled.webp" width="1200" height="750" alt="Пример заполненного первого экрана сайта LeadCore" />
             </div>
           </div>
-          <div class="price-stamp"><span>Пакет</span><strong>725 р.</strong></div>
+          <div class="visual-note">Вы получаете не картинку ради картинки, а рабочую страницу для рекламы, переписки и первых заявок.</div>
         </aside>
       </div>
     </section>
 
     <section>
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">Когда это нужно</p>
-          <h2>Если нужен быстрый сайт под одну понятную задачу</h2>
-          <p class="lead">Пакет подходит, когда не нужен большой проект на месяцы. Нужно быстро упаковать предложение, показать его клиентам и принимать заявки.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><h3>Нет сайта или он устарел</h3><p>Нужна аккуратная страница, которую можно отправлять клиентам, ставить в профиль, запускать в рекламу или использовать как презентацию.</p></article>
-          <article class="card"><h3>Есть продукт, но нет упаковки</h3><p>Помогу разложить предложение: кому подходит, что входит, почему вам можно доверять и что делать дальше.</p></article>
-          <article class="card"><h3>Нужен старт без лишнего бюджета</h3><p>Собираем базовую посадочную страницу, форму, метрику и Telegram. Рекламу можно подключить следующим этапом.</p></article>
-        </div>
+      <div class="wrap metric-grid">
+        <div class="metric-card"><strong>5 секунд</strong><span>столько есть у страницы, чтобы зацепить и не потерять человека</span></div>
+        <div class="metric-card"><strong>mobile-first</strong><span>страница сначала должна нормально работать на телефоне, а потом уже на десктопе</span></div>
+        <div class="metric-card"><strong>1 действие</strong><span>наверху должно быть понятно, что делать дальше: написать, позвонить или оставить заявку</span></div>
+        <div class="metric-card"><strong>без стыда</strong><span>сайт должен выглядеть так, чтобы ссылку можно было смело отправлять клиенту и в рекламу</span></div>
       </div>
     </section>
 
-    <section id="included" class="band-dark">
-      <div class="wrap includes">
-        <div>
-          <p class="section-kicker">Что входит</p>
-          <h2>За 725 р. вы получаете не шаблон, а рабочую основу под заявки</h2>
-          <p class="lead">Это базовый лендинг. Его задача - быстро и понятно объяснить предложение, убрать лишние вопросы и привести человека к форме заявки.</p>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Что должен делать сайт</p>
+          <h2>Не просто “быть”, а помогать получать обращения</h2>
+          <p class="lead">Нормальный сайт для услуги или бизнеса закрывает три задачи: объясняет предложение, вызывает доверие и доводит человека до контакта без лишнего сопротивления.</p>
         </div>
-        <div class="card dark">
-          <h3>Состав пакета</h3>
-          <ul>
-            <li>Одностраничный лендинг под один продукт, услугу или проект</li>
-            <li>Структура продаж: первый экран, боли, решение, доверие, этапы, форма</li>
-            <li>Короткие тексты без воды и сложных формулировок</li>
-            <li>Адаптация под мобильные, потому что большая часть трафика с телефона</li>
-            <li>Форма заявки с отправкой в Telegram</li>
-            <li>Подключение Яндекс Метрики, если счётчик уже есть</li>
-            <li>Базовая SEO-подготовка: title, description, заголовки, social preview</li>
-            <li>Публикация на Vercel или подготовка к подключению вашего домена</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wrap" style="margin-top: 18px;">
-        <div class="grid-2">
-          <div class="not-included">
-            <h3>Что не входит в пакет 725 р.</h3>
-            <ul class="check-list">
-              <li><strong>Настройка рекламных кампаний</strong> - это следующий пакет за 1421 р.</li>
-              <li><strong>Глубокая стратегия и аналитика</strong> - это расширенный запуск за 3480 р.</li>
-              <li><strong>CRM, квизы, сложные интеграции</strong> - обсуждаются отдельно, если они реально нужны.</li>
-            </ul>
-          </div>
-          <div class="card dark">
-            <h3>Почему так честнее</h3>
-            <p>За 725 р. мы не обещаем поток клиентов. Мы делаем сильную базу: страницу, которая нормально объясняет предложение и готова принимать заявки. Если нужна реклама и тест трафика, лучше сразу смотреть пакет 1421 р.</p>
-          </div>
+        <div class="card-grid">
+          <article class="logic-card">
+            <h3>Объяснять суть быстро</h3>
+            <p>Человек без созвона понимает, что вы предлагаете, для кого это подходит и чем вы отличаетесь от остальных.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Снимать сомнения</h3>
+            <p>Кейсы, этапы, отзывы, факты, примеры и аккуратная подача снимают главные вопросы ещё до переписки.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Доводить до действия</h3>
+            <p>Если кнопка, форма и сценарий контакта неочевидны, страница теряет деньги ещё до запуска рекламы.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -701,35 +1010,64 @@
     <section>
       <div class="wrap">
         <div class="section-head">
-          <p class="section-kicker">Логика страницы</p>
-          <h2>Что делает лендинг продающим</h2>
-          <p class="lead">Красивый блок сам по себе не продаёт. Продаёт связка: понятный оффер, доказательства, конкретика и простое действие.</p>
+          <p class="section-kicker">Почему заказывают</p>
+          <h2>Клиент покупает не “сайт”, а уверенность в том, что страница будет работать</h2>
+          <p class="lead">Поэтому важен не набор декоративных блоков, а то, как страница ведет человека: от первого впечатления до заявки.</p>
         </div>
-        <div class="grid-3">
-          <article class="card"><h3>Первый экран</h3><p>Человек за 3-5 секунд понимает, что вы предлагаете, для кого это и зачем оставлять заявку.</p></article>
-          <article class="card"><h3>Доверие</h3><p>Показываем факты: опыт, примеры, фото, отзывы, сертификаты, условия, этапы работы или другие доказательства.</p></article>
-          <article class="card"><h3>Форма</h3><p>Минимум полей, крупная кнопка, понятный призыв. Заявка сразу приходит в Telegram, чтобы не терять обращение.</p></article>
+        <div class="card-grid">
+          <article class="logic-card">
+            <h3>Сильный оффер</h3>
+            <p>Не размытый “полный спектр услуг”, а конкретное обещание с понятной пользой для человека.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Аргументы по ходу чтения</h3>
+            <p>Важные доказательства стоят там, где у человека возникает сомнение, а не где их удобно было вставить.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Контакт без трения</h3>
+            <p>Когда человек готов написать, ему не нужно искать, куда нажать и что делать дальше.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Что входит в хороший сайт</p>
+          <h2>Нормальная страница собирается из понятных смысловых частей</h2>
+          <p class="lead">Нужен не хаотичный набор блоков, а правильная последовательность: оффер, выгоды, доверие, ответы на вопросы и понятная заявка.</p>
+        </div>
+        <div class="card-grid">
+          <article class="logic-card">
+            <h3>Первый экран</h3>
+            <p>Оффер, короткое объяснение, сильное действие и нормальное первое впечатление на телефоне.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Блоки доверия</h3>
+            <p>Кейсы, этапы, факты, визуалы, примеры и всё, что помогает человеку поверить вам быстрее.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Финальный контакт</h3>
+            <p>Форма, кнопки, мессенджеры и сценарий заявки, который не ломается в последний момент.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="process">
-      <div class="wrap grid-2">
+      <div class="wrap">
         <div class="section-head">
           <p class="section-kicker">Процесс</p>
           <h2>Как проходит работа</h2>
-          <p class="lead">Без бесконечных созвонов и хаоса. Сначала быстро собираем вводные, потом делаем страницу, проверяем и запускаем.</p>
-          <div class="offer-strip">
-            <div><strong>Если после лендинга захотите рекламу</strong><p>Можно перейти к пакету 1421 р.: лендинг + настройка необходимых рекламных кампаний.</p></div>
-            <a class="btn btn-dark" href="/brief/">Заполнить бриф</a>
-          </div>
+          <p class="lead">Сначала быстро собираем вводные, потом делаем структуру, дизайн, настройки и приводим страницу к запуску без лишних кругов.</p>
         </div>
-        <ol class="process">
-          <li><div><strong>Вы оставляете заявку</strong><span>Ниша, контакт, что нужно продвигать и есть ли материалы.</span></div></li>
-          <li><div><strong>Собираю структуру</strong><span>Формулирую первый экран, блоки доверия, оффер и путь к заявке.</span></div></li>
-          <li><div><strong>Делаю дизайн и мобильную версию</strong><span>Страница должна нормально смотреться на телефоне, а не только на большом экране.</span></div></li>
-          <li><div><strong>Подключаю форму и метрику</strong><span>Заявки идут в Telegram, аналитика готова к первому трафику.</span></div></li>
-          <li><div><strong>Публикую и отдаю ссылку</strong><span>Вы получаете готовую страницу, которую уже можно показывать клиентам.</span></div></li>
+        <ol class="process-list">
+          <li><div><strong>Короткий бриф</strong><span>Ниша, оффер, контакты, материалы, примеры и задача, под которую нужен сайт.</span></div></li>
+          <li><div><strong>Структура страницы</strong><span>Собираем последовательность блоков и логику заявки, чтобы человек не терялся по пути.</span></div></li>
+          <li><div><strong>Дизайн и сборка</strong><span>Сначала проверяем мобильный экран, затем подтягиваем десктоп и общую композицию.</span></div></li>
+          <li><div><strong>Настройки и правки</strong><span>Подключаем нужные элементы по пакету и делаем один согласованный раунд правок.</span></div></li>
+          <li><div><strong>Публикация</strong><span>Отдаю рабочую ссылку или публикую на вашем домене. После этого можно вести страницу в рекламу.</span></div></li>
         </ol>
       </div>
     </section>
@@ -737,36 +1075,259 @@
     <section>
       <div class="wrap">
         <div class="section-head">
-          <p class="section-kicker">Для каких ниш</p>
-          <h2>Подходит для бизнеса, где нужно быстро объяснить предложение</h2>
-          <p class="lead">Лендинг можно собрать под услуги, товары, локальные проекты, обучение, недвижимость, ремонт, мебель, B2B или отдельный оффер.</p>
+          <p class="section-kicker">После публикации</p>
+          <h2>Сайт должен быть базой для следующего шага, а не тупиком</h2>
+          <p class="lead">После запуска на сайт можно спокойно насаживать рекламу, аналитику, дополнительные посадочные страницы и более управляемую обработку заявок.</p>
         </div>
-        <div class="grid-3">
-          <article class="card"><h3>Ремонт и строительство</h3><p>Ремонт квартир, потолки, кухни, двери, мебель, электрика, сантехника, клининг после ремонта.</p></article>
-          <article class="card"><h3>Обучение и консультации</h3><p>Курсы, наставничество, разовые консультации, локальные образовательные продукты.</p></article>
-          <article class="card"><h3>Недвижимость и B2B</h3><p>Отдельные объекты, оценка, юридические услуги, B2B-предложения и локальные сервисы.</p></article>
+        <div class="card-grid">
+          <article class="logic-card">
+            <h3>Запуск рекламы</h3>
+            <p>Когда страница уже собрана нормально, запускать трафик проще и безопаснее для бюджета.</p>
+          </article>
+          <article class="logic-card">
+            <h3>Дополнительные входы</h3>
+            <p>Если появляются новые офферы или направления, их проще докрутить на готовой базе, чем начинать всё заново.</p>
+          </article>
+          <article class="logic-card">
+            <h3>CRM и уведомления</h3>
+            <p>Следующим этапом можно вести обращения в Telegram, таблицу, CRM или более управляемую систему.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="band-dark form-section" id="lead-form">
-      <div class="wrap form-grid">
+    <section class="dark-band">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Границы работы</p>
+          <h2>Чтобы пакет не превращался в бесконечную кастомную разработку</h2>
+          <p class="lead">У каждого пакета есть понятный объём. Это помогает держать срок, нормальную маржу и не размывать продукт ещё до продажи.</p>
+        </div>
+        <div class="card-grid">
+          <div class="dark-card">
+            <h3>Что считается отдельно</h3>
+            <ul class="dark-list">
+              <li>новые концепции и дополнительные варианты дизайна</li>
+              <li>правки сверх одного согласованного раунда</li>
+              <li>сложный копирайтинг, когда тексты нужно собирать почти с нуля</li>
+            </ul>
+          </div>
+          <div class="dark-card">
+            <h3>Что не входит по умолчанию</h3>
+            <ul class="dark-list">
+              <li>CRM, квизы, каталоги, калькуляторы и сложные интеграции</li>
+              <li>домен, платные сервисы, хостинг и рекламный бюджет</li>
+              <li>ведение рекламы и тесты трафика, если это не отдельный этап</li>
+            </ul>
+          </div>
+          <div class="dark-card">
+            <h3>Почему это важно</h3>
+            <p>Когда объём заранее понятен, клиент получает предсказуемый срок и цену, а проект не разваливается на бесконечные “ещё чуть-чуть”.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">FAQ</p>
+          <h2>Что лучше понять до старта</h2>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>Сколько времени занимает сайт?</summary>
+            <p>Зависит от объёма и того, насколько быстро есть материалы и обратная связь. Если вводные собраны, работа идёт быстро.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно потом подключить рекламу?</summary>
+            <p>Да. Страница как раз собирается так, чтобы после публикации её можно было дальше использовать в платном трафике.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Вы даёте гарантию заявок?</summary>
+            <p>Нет. Сайт готовит бизнес к заявкам, но количество обращений зависит от трафика, оффера, цены, ниши и обработки входящих.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что нужно, чтобы начать?</summary>
+            <p>Ниша, основная услуга, контакты, примеры, логотип или название, фотографии, цены и любые материалы, которые уже есть.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="package-proof-section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Примеры к пакетам</p>
+          <h2>Сначала смотрим уровень, потом выбираем формат</h2>
+          <p class="lead">Три реальные страницы показывают разную глубину упаковки: быстрый вход, полноценный лендинг и расширенную систему с несколькими точками входа.</p>
+        </div>
+        <div class="examples-grid">
+          <article class="example-card">
+            <div class="example-media">
+              <img src="/assets/examples/losa-20260601-live.webp" width="960" height="613" alt="Пример сайта под входной пакет 590 рублей" loading="lazy" />
+            </div>
+            <div class="example-body">
+              <div class="example-topline"><span>Входной формат | 6 блоков</span><span>losa.by</span></div>
+              <h3>Одна услуга без перегруза</h3>
+              <p>Подходит, когда нужно быстро и аккуратно упаковать одно предложение, дать нормальную ссылку клиенту и выйти в онлайн без лишней глубины.</p>
+              <a class="example-link" href="https://losa.by/" target="_blank" rel="noopener">Открыть losa.by</a>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-media">
+              <img src="/assets/examples/petrovsky-park-20260530.webp" width="960" height="613" alt="Пример сайта под основной пакет 890 рублей" loading="lazy" />
+            </div>
+            <div class="example-body">
+              <div class="example-topline"><span>Основной формат | 12 блоков</span><span>petrovsky-park.by</span></div>
+              <h3>Полноценный лендинг под заявки</h3>
+              <p>Ориентир для бизнеса, которому уже нужны доверие, аргументы, структура и готовность вести человека от первого экрана до контакта.</p>
+              <a class="example-link" href="https://petrovsky-park.by/" target="_blank" rel="noopener">Открыть petrovsky-park.by</a>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-media">
+              <img src="/assets/examples/site-main-20260601-filled.webp" width="1200" height="750" alt="Пример сайта под усиленный пакет 1790 рублей" loading="lazy" />
+            </div>
+            <div class="example-body">
+              <div class="example-topline"><span>Усиленный формат | 12 + 3 страницы</span><span>leadcore.by</span></div>
+              <h3>Несколько входов для роста</h3>
+              <p>Подходит, когда одной страницы уже мало: нужны отдельные направления, больше точек входа и более широкая упаковка под рост.</p>
+              <a class="example-link" href="https://leadcore.by/" target="_blank" rel="noopener">Открыть leadcore.by</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="package-section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Пакеты</p>
+          <h2>Выберите объём под задачу и нужную глубину страницы</h2>
+          <p class="lead">Первый пакет подходит как быстрый вход. Второй чаще всего закрывает задачу бизнеса без лишнего перегруза. Третий нужен, когда кроме главной страницы уже нужны дополнительные входы.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package-card">
+            <div class="package-head">
+              <span class="package-label">Быстрый старт</span>
+              <h3>Входной сайт <span class="subhead">6 блоков + базовые настройки</span></h3>
+              <div class="package-price">590 <small>р.</small></div>
+            </div>
+            <div class="package-body">
+              <p class="package-summary">Для одной услуги, быстрого входа или базового сайта, который нужно собрать аккуратно и без лишней глубины.</p>
+              <div class="plan-metrics">
+                <div class="metric-box"><strong>6</strong><span>блоков на одной странице</span></div>
+                <div class="metric-box"><strong>3</strong><span>базовые настройки</span></div>
+              </div>
+              <ul class="clean-list">
+                <li>главный блок, выгоды, услуга, доверие, форма, контакты</li>
+                <li>мобильная адаптация и базовый десктоп</li>
+                <li>форма заявки или кнопки связи</li>
+              </ul>
+              <div class="settings-box">
+                <strong>Подойдёт, если нужно:</strong>
+                <ul class="settings-list">
+                  <li>быстро выйти в онлайн</li>
+                  <li>дать нормальную ссылку клиенту</li>
+                  <li>собрать аккуратную основу без сложной глубины</li>
+                </ul>
+              </div>
+              <div class="package-foot">
+                <div class="package-note">Хороший входной вариант, если задача простая и не требует большой длины страницы.</div>
+                <a class="btn btn-dark btn-wide" href="#lead-form" data-package-link="590 р. - 6 блоков + 3 настройки">Выбрать пакет</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card is-main">
+            <div class="package-head">
+              <span class="package-label">Самый частый выбор</span>
+              <h3>Рабочий лендинг <span class="subhead">12 блоков + хорошие настройки</span></h3>
+              <div class="package-price">890 <small>р.</small></div>
+            </div>
+            <div class="package-body">
+              <p class="package-summary">Для бизнеса, который хочет не просто “страницу”, а уверенную продающую основу, которую можно спокойно отправлять клиентам и вести в рекламу.</p>
+              <div class="plan-metrics">
+                <div class="metric-box"><strong>12</strong><span>блоков с полноценной структурой</span></div>
+                <div class="metric-box"><strong>5</strong><span>хороших настроек под работу сайта</span></div>
+              </div>
+              <ul class="clean-list">
+                <li>сильный оффер, преимущества, доверие, кейсы, FAQ, форма</li>
+                <li>нормальная глубина, чтобы не выглядеть пусто в рекламе</li>
+                <li>подготовка к дальнейшему трафику и аналитике</li>
+              </ul>
+              <div class="settings-box">
+                <strong>Внутри пакета:</strong>
+                <ul class="settings-list">
+                  <li>форма заявки и удобные способы связи</li>
+                  <li>Яндекс Метрика и базовые цели</li>
+                  <li>UTM-готовность</li>
+                  <li>SEO-структура страницы</li>
+                  <li>social preview для мессенджеров</li>
+                </ul>
+              </div>
+              <div class="package-foot">
+                <div class="package-note">Самый понятный баланс между ценой, глубиной страницы и готовностью к дальнейшему запуску.</div>
+                <a class="btn btn-primary btn-wide" href="#lead-form" data-package-link="890 р. - 12 блоков + 5 настроек">Выбрать пакет</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div class="package-head">
+              <span class="package-label">Расширенный</span>
+              <h3>Расширенный сайт <span class="subhead">12 блоков + усиление + 3 страницы</span></h3>
+              <div class="package-price">1790 <small>р.</small></div>
+            </div>
+            <div class="package-body">
+              <p class="package-summary">Для бизнеса, которому уже мало одной главной страницы и нужны отдельные входы под услуги, сегменты или направления.</p>
+              <div class="plan-metrics">
+                <div class="metric-box"><strong>12 + 18</strong><span>главная + 3 страницы по 6 блоков</span></div>
+                <div class="metric-box"><strong>7</strong><span>настроек и более широкая подготовка</span></div>
+              </div>
+              <ul class="clean-list">
+                <li>основная страница на 12 блоков</li>
+                <li>3 дополнительные страницы по 6 блоков</li>
+                <li>шире база для роста и масштабирования</li>
+              </ul>
+              <div class="settings-box">
+                <strong>Подойдёт, если нужно:</strong>
+                <ul class="settings-list">
+                  <li>разложить сайт на несколько направлений</li>
+                  <li>сделать отдельные входы под услуги</li>
+                  <li>сразу собрать более серьёзную упаковку бизнеса</li>
+                </ul>
+              </div>
+              <div class="package-foot">
+                <div class="package-note">Имеет смысл, когда сайт уже должен работать как более широкий продукт, а не только как одна страница.</div>
+                <a class="btn btn-dark btn-wide" href="#lead-form" data-package-link="1790 р. - 12 блоков + 7 настроек + 3 допстраницы">Выбрать пакет</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead-form" class="form-section">
+      <div class="wrap form-layout">
         <div class="form-copy">
           <p class="section-kicker">Заявка</p>
-          <h2>Хотите лендинг за 725 р.?</h2>
-          <p class="lead">Оставьте контакт. Я посмотрю задачу и скажу, можно ли уложиться в базовый пакет или лучше сразу делать запуск с рекламными кампаниями.</p>
+          <h2>Получить оценку сайта</h2>
+          <p class="lead">Напишите, что у вас за бизнес и какая задача у сайта. Я посмотрю, какой формат лучше подойдёт и можно ли закрыть задачу в одном из готовых пакетов.</p>
           <ul>
-            <li>Ответ придёт лично от меня</li>
-            <li>Заявка сразу попадает в Telegram</li>
-            <li>Если вводных мало, начнём с короткого брифа</li>
+            <li>Ответ приходит лично от Александра</li>
+            <li>Заявка сразу уходит в Telegram</li>
+            <li>Если задача шире пакета, границы проговариваются до старта</li>
           </ul>
         </div>
-        <form id="leadForm" class="form-panel lead-form" novalidate>
+        <form id="leadForm" class="lead-form" novalidate>
           <div class="trap-field" aria-hidden="true">
             <label for="website">Сайт</label>
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
-          <input type="hidden" id="package" name="package" value="Лендинг - 725 р." />
           <div class="field">
             <label for="name">Имя</label>
             <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Александр" />
@@ -776,22 +1337,22 @@
             <input id="contact" name="contact" type="text" autocomplete="tel" required maxlength="80" placeholder="+375... или @username" />
           </div>
           <div class="field">
-            <label for="niche">Что нужно продвинуть?</label>
-            <textarea id="niche" name="niche" maxlength="1000" placeholder="Например: кухни под заказ в Минске, нужен лендинг с формой заявки"></textarea>
+            <label for="package">Какой пакет ближе?</label>
+            <select id="package" name="package">
+              <option>Пока не выбрал</option>
+              <option>590 р. - 6 блоков + 3 настройки</option>
+              <option>890 р. - 12 блоков + 5 настроек</option>
+              <option>1790 р. - 12 блоков + 7 настроек + 3 допстраницы</option>
+              <option>Нужен разбор по задаче</option>
+            </select>
           </div>
-          <button id="leadFormButton" class="btn btn-primary" type="submit">Заказать лендинг</button>
+          <div class="field">
+            <label for="niche">Бизнес, ниша или задача</label>
+            <textarea id="niche" name="niche" maxlength="1000" placeholder="Например: нужен сайт для кухни под заказ, чтобы после этого запускать рекламу по Минску"></textarea>
+          </div>
+          <button id="leadFormButton" class="btn btn-primary" type="submit">Получить оценку сайта</button>
           <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
         </form>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">SEO-блок</p>
-          <h2>Создание лендинга для бизнеса</h2>
-          <p class="lead">LeadCore делает одностраничные сайты для предпринимателей и малого бизнеса: лендинг под заявки, запуск продукта, локальную услугу, отдельный оффер или рекламную кампанию. Главный фокус - не просто дизайн, а понятная структура, мобильная версия, форма заявки, аналитика и готовность к первому трафику.</p>
-        </div>
       </div>
     </section>
   </main>
@@ -826,8 +1387,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Создание лендинга за 725 р.",
-    "description": "Одностраничный лендинг под заявки: структура, тексты, мобильная версия, форма, Telegram, Яндекс Метрика и базовая SEO-подготовка.",
+    "name": "Создание сайта для бизнеса под заявки",
+    "description": "Mobile-first сайты под заявки для бизнеса: 12 блоков, понятный оффер, доверие, примеры, форма связи и подготовка к рекламе.",
     "provider": {
       "@type": "Person",
       "name": "Александр Коцуба",
@@ -836,9 +1397,11 @@
     },
     "areaServed": "BY",
     "offers": {
-      "@type": "Offer",
-      "price": "725",
+      "@type": "AggregateOffer",
       "priceCurrency": "BYN",
+      "lowPrice": "590",
+      "highPrice": "1790",
+      "offerCount": "3",
       "url": "https://leadcore.by/landing/"
     }
   }
@@ -888,9 +1451,21 @@
       }
     })();
 
+    function readUtms() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        utm_source: params.get("utm_source") || "",
+        utm_medium: params.get("utm_medium") || "",
+        utm_campaign: params.get("utm_campaign") || "",
+        utm_content: params.get("utm_content") || "",
+        utm_term: params.get("utm_term") || ""
+      };
+    }
+
     const leadForm = document.getElementById("leadForm");
     const note = document.getElementById("formNote");
     const submitButton = document.getElementById("leadFormButton");
+    const packageSelect = document.getElementById("package");
     const telegramFallback = "https://t.me/Alexandr_K1503";
 
     function setNote(text, state) {
@@ -898,22 +1473,31 @@
       note.className = `form-note ${state || ""}`.trim();
     }
 
+    document.querySelectorAll("[data-package-link]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const value = link.getAttribute("data-package-link");
+        if (!value) return;
+        packageSelect.value = value;
+      });
+    });
+
     function trackLead() {
       if (typeof window.gtag === "function") {
-        window.gtag("event", "lead_submit", { event_category: "form", page_type: "landing_725" });
-        window.gtag("event", "landing_lead_submit", { event_category: "form" });
+        window.gtag("event", "lead_submit", { event_category: "form", page_type: "websites_landing" });
+        window.gtag("event", "websites_landing_lead_submit", { event_category: "form" });
       }
       if (typeof window.ym === "function" && analyticsState.yandexMetrikaId) {
         window.ym(analyticsState.yandexMetrikaId, "reachGoal", "lead_submit");
-        window.ym(analyticsState.yandexMetrikaId, "reachGoal", "landing_lead_submit");
+        window.ym(analyticsState.yandexMetrikaId, "reachGoal", "websites_landing_lead_submit");
       }
     }
 
     function openTelegramFallback(payload) {
       const text = [
-        "Заявка на лендинг за 725 р. с leadcore.by/landing",
+        "Заявка на сайт с leadcore.by/landing",
         `Имя: ${payload.name}`,
         `Контакт: ${payload.contact}`,
+        `Пакет: ${payload.packageName}`,
         `Задача: ${payload.niche || "-"}`
       ].join("\n");
       window.open(`${telegramFallback}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
@@ -925,10 +1509,12 @@
       const payload = {
         name: document.getElementById("name").value.trim(),
         contact: document.getElementById("contact").value.trim(),
-        packageName: document.getElementById("package").value,
+        packageName: packageSelect.value,
         niche: document.getElementById("niche").value.trim(),
         website: document.getElementById("website").value.trim(),
-        page: window.location.href
+        page: window.location.href,
+        source: "websites_landing",
+        ...readUtms()
       };
 
       if (!payload.name || !payload.contact) {
