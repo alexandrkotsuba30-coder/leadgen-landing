@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="LeadCore mark">
+  <rect width="512" height="512" rx="112" fill="#101114"/>
+  <path d="M356 154c-31-28-72-40-115-34-74 11-129 73-129 149 0 84 65 147 149 147 43 0 81-16 108-45" fill="none" stroke="#F8FAFC" stroke-width="42" stroke-linecap="round"/>
+  <path d="M178 332l69-68 58 30 70-108" fill="none" stroke="#37D67A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="178" cy="332" r="27" fill="#37D67A"/>
+  <circle cx="247" cy="264" r="24" fill="#37D67A"/>
+  <circle cx="305" cy="294" r="24" fill="#37D67A"/>
+  <circle cx="375" cy="186" r="30" fill="#37D67A"/>
+</svg>

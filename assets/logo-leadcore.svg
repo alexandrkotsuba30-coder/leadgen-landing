@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 256" role="img" aria-label="LeadCore reverse">
+  <rect width="980" height="256" rx="36" fill="#101114"/>
+  <g transform="translate(24 24) scale(.40625)">
+    <rect width="512" height="512" rx="112" fill="#F8FAFC"/>
+    <path d="M356 154c-31-28-72-40-115-34-74 11-129 73-129 149 0 84 65 147 149 147 43 0 81-16 108-45" fill="none" stroke="#101114" stroke-width="42" stroke-linecap="round"/>
+    <path d="M178 332l69-68 58 30 70-108" fill="none" stroke="#37D67A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="178" cy="332" r="27" fill="#37D67A"/>
+    <circle cx="247" cy="264" r="24" fill="#37D67A"/>
+    <circle cx="305" cy="294" r="24" fill="#37D67A"/>
+    <circle cx="375" cy="186" r="30" fill="#37D67A"/>
+  </g>
+  <text x="268" y="148" fill="#F8FAFC" font-family="Manrope, Inter, Segoe UI, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="-5">LeadCore</text>
+  <text x="274" y="188" fill="#37D67A" font-family="Manrope, Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" letter-spacing="5.5">LEAD CORE GROWTH</text>
+</svg>
